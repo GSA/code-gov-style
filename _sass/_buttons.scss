@@ -1,0 +1,47 @@
+/* overrides all buttons */
+button {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 0.5em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #0071bc;
+  border: 0;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+
+  &:focus, &:hover {
+    background-color: $brand-teal !important;
+    border-color: $brand-teal !important;
+  }
+
+  &.tag {
+    border-radius: 3px;
+    padding: .25rem 1.25rem;
+  }
+
+  &.transparent {
+    background-color: transparent;
+    border: 2px solid $color-white;
+  }
+
+  &.dark {
+    background-color: $brand-blue-gray-dark;
+    color: $color-white;
+    font-weight: bold;
+    padding: 0.25rem 1.25rem;
+  }
+}
