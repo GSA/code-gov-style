@@ -1,0 +1,25 @@
+{
+  "name": "@code.gov/code-gov-style",
+  "version": "0.0.1",
+  "description": "Style for code.gov including buttons, banners, and cards. Inspired by and somewhat based on USWDS.",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GSA/code-gov-style.git"
+  },
+  "keywords": [
+    "style",
+    "code.gov",
+    "scss",
+    "usa",
+    "css"
+  ],
+  "author": "Daniel J. Dufour",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/GSA/code-gov-style/issues"
+  },
+  "homepage": "https://github.com/GSA/code-gov-style#readme"
+}
