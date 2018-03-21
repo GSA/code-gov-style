@@ -15,7 +15,7 @@ title: "Buttons"
 
 # Transparent Buttons
 
-<div class="hero-header">
+<div class="banner">
   <button class="transparent">Button</button>
 </div>
 

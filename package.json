@@ -3,8 +3,7 @@
   "version": "0.0.1",
   "description": "Style for code.gov including buttons, banners, and cards. Inspired by and somewhat based on USWDS.",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GSA/code-gov-style.git"
@@ -21,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/GSA/code-gov-style/issues"
   },
-  "homepage": "https://github.com/GSA/code-gov-style#readme"
+  "homepage": "https://github.com/GSA/code-gov-style#readme",
+  "dependencies": {
+    "bourbon": "^4.2.7",
+    "bourbon-neat": "^1.8.0"
+  }
 }

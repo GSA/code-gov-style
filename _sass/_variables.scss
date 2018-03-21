@@ -1,3 +1,6 @@
+@import '../node_modules/bourbon/app/assets/stylesheets/bourbon';
+@import '../node_modules/bourbon-neat/app/assets/stylesheets/neat';
+
 $helvetica: (
   "Helvetica Neue",
   "Helvetica",
@@ -67,3 +70,21 @@ $color-cool-blue-lightest:   #dce4ef; // lighten($color-cool-blue, 90%)
 
 $featured-dark:               rgba(50, 58, 69, 1);
 $featured-light:              rgba(215, 215, 215, 1);
+
+$font-bold:                   700 !default;
+
+$lead-font-size:              2rem !default;
+$small-font-size:             1.4rem !default;
+
+$small-screen: 481px;
+$medium-screen: 600px;
+$large-screen: 860px;
+$extra-large-screen: 1024px;
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}

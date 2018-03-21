@@ -5,7 +5,7 @@ html {
   line-height: 1.15;
 
   body {
-    background-color: #ffffff;
+    background-color: $color-white;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-feature-settings: "kern", "liga", "pnum";
     font-size: 14px;
@@ -13,5 +13,9 @@ html {
     margin: 0;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+
+    ul {
+      list-style-type: none;
+    }
   }
 }

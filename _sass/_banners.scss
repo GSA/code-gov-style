@@ -22,16 +22,31 @@
 }
 
 .banner {
-  height: 90vh;
+  background: url('/code-gov-style/assets/img/american_flag_1920x1280_gradient.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  margin-bottom: 2rem;
+  padding-bottom: 8rem;
+  padding-top: 8rem;
   position: relative;
+  text-align: center;
 
-  @media screen and (min-width: $small-screen) {
-    padding: 16rem 0 16rem;
+  &.large {
+
+    @media screen and (min-width: $small-screen) {
+      padding: 16rem 0 16rem;
+    }
+
+    height: 34vh;
   }
 
-  h1 {
+  .banner-title {
+    color: #ffffff;
+    font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
     font-size: 2em;
     margin-bottom: 0;
+    margin-top: 0;
+    text-transform: uppercase;
 
     @media screen and (min-width: $small-screen) {
       font-size: 2.8em;
@@ -40,6 +55,7 @@
     @media screen and (min-width: $medium-screen) {
       font-size: 3.2em;
     }
+
   }
 
   p {
@@ -56,39 +72,4 @@
       font-size: 1.4em;
     }
   }
-
-  input {
-    max-width: 670px;
-    margin: 0 auto;
-  }
-
-  .usa-button {
-    box-shadow: 0 3px 7px rgba($color-black, 0.1);
-    font-size: 1em;
-    margin: 0 auto;
-    max-width: 12em;
-
-    @media screen and (min-width: $small-screen) {
-      font-size: 1.2em;
-      max-width: none;
-    }
-  }
-}
-
-
-.hero-header {
-    background: url('/code-gov-style/assets/img/american_flag_1920x1280_gradient.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    margin-bottom: 2rem;
-    padding-bottom: 8rem;
-    padding-top: 8rem;
-    text-align: center;
-
-    h1 {
-      font-size: 4rem;
-      margin-top: 0;
-      color: #ffffff;
-      text-transform: uppercase;
-    }
 }
