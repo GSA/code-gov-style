@@ -1,13 +1,9 @@
-@import '../node_modules/bourbon/app/assets/stylesheets/bourbon';
-@import '../node_modules/bourbon-neat/app/assets/stylesheets/neat';
-
 $helvetica: (
   "Helvetica Neue",
   "Helvetica",
   "Arial",
   sans-serif,
 );
-
 
 $header-font-family: 'TT Lakes', $helvetica;
 
@@ -87,4 +83,17 @@ $extra-large-screen: 1024px;
     content: "";
     display: block;
   }
+}
+
+/*
+@function calc-width($num-columns) {
+  @return ;
+}
+*/
+
+@mixin span-columns($num-columns) {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: $num-columns * 6.17215333333% + ($num-columns - 1) * 2.35765%;
 }

@@ -6,16 +6,27 @@ html {
 
   body {
     background-color: $color-white;
+    box-sizing: border-box;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-feature-settings: "kern", "liga", "pnum";
     font-size: 14px;
     line-height: 1.42857143;
     margin: 0;
     overflow-x: hidden;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
+
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
+
 
     ul {
       list-style-type: none;
+      padding-left: 0;
     }
   }
 }

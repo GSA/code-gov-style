@@ -22,7 +22,5 @@
   },
   "homepage": "https://github.com/GSA/code-gov-style#readme",
   "dependencies": {
-    "bourbon": "^4.2.7",
-    "bourbon-neat": "^1.8.0"
   }
 }

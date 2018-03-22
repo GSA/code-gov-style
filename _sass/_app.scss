@@ -4,14 +4,6 @@
   }
 }
 
-.app-footer {
-  text-align: center;
-
-  @media screen and (min-width: $small-screen) {
-    text-align: left;
-  }
-}
-
 .agency-logos {
   li {
     display: inline-block;
@@ -154,22 +146,6 @@
       margin-bottom: 5px;
       margin-top: 5px;
       width: 124px;
-    }
-  }
-}
-
-.footer-links {
-  margin-bottom: 1rem;
-
-  a {
-    font-size: 0.9em;
-  }
-
-  li {
-    display: inline-block;
-
-    &:not(:last-of-type) {
-      margin-right: 1em;
     }
   }
 }
