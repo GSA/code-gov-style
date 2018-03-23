@@ -6,8 +6,8 @@ footer {
   margin-right: auto;
   padding-bottom: 3rem;
   padding-top: 0.75rem;
-  padding-right: 3rem;
-  padding-left: 3rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   text-align: left;
 
   // center if on small mobile device
@@ -24,18 +24,23 @@ footer {
     color: $color-gray-lighter;
   }
 
-  .footer-links {
-    margin-bottom: 1rem;
+  .footer-content {
 
-    a {
-      font-size: 0.9em;
-    }
+     @extend .indented;
 
-    li {
-      display: inline-block;
+    .footer-links {
+      margin-bottom: 1rem;
 
-      &:not(:last-of-type) {
-        margin-right: 1em;
+      a {
+        font-size: 0.9em;
+      }
+
+      li {
+        display: inline-block;
+
+        &:not(:last-of-type) {
+          margin-right: 1em;
+        }
       }
     }
   }

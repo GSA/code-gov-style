@@ -7,20 +7,28 @@ title: "Footers"
 
 # Normal Footer
 <footer>
-  Hi. I'm a footer.
+  <div class="footer-content">
+    Hi. I'm a footer.
+  </div>
 </footer>
 ```
 <footer>
-  Hi. I'm a footer.
+  <div class="footer-content">
+    Hi. I'm a footer.
+  </div>
 </footer>
 ```
 
 # Dark Footer
 <footer class="dark">
-  Hi. I'm a footer.
+  <div class="footer-content">
+    Hi. I'm a footer.
+  </div>
 </footer>
 ```
 <footer class="dark">
-  Hi. I'm a footer.
+  <div class="footer-content">
+    Hi. I'm a footer.
+  </div>
 </footer>
 ```

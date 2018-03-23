@@ -23,6 +23,26 @@ html {
       box-sizing: inherit;
     }
 
+    *:focus {
+      outline: none;
+    }
+
+    a:focus {
+      box-shadow: none;
+    }
+
+    h3 {
+      font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 1.3em;
+    }
+
+    p {
+      line-height: 1.5;
+      margin-bottom: 1em;
+      margin-top: 1em;
+    }
 
     ul {
       list-style-type: none;

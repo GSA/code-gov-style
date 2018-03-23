@@ -26,6 +26,7 @@ button {
   &:focus, &:hover {
     background-color: $brand-teal !important;
     border-color: $brand-teal !important;
+    transition: all 0.2s ease;
   }
 
   &.tag {
