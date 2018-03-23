@@ -19,6 +19,11 @@ footer {
     padding-top: 2rem;
   }
 
+  &.dark {
+    background-color: $color-gray-dark;
+    color: $color-gray-lighter;
+  }
+
   .footer-links {
     margin-bottom: 1rem;
 

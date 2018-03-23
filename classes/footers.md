@@ -14,3 +14,13 @@ title: "Footers"
   Hi. I'm a footer.
 </footer>
 ```
+
+# Dark Footer
+<footer class="dark">
+  Hi. I'm a footer.
+</footer>
+```
+<footer class="dark">
+  Hi. I'm a footer.
+</footer>
+```

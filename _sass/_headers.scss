@@ -34,7 +34,7 @@
   }
 
   &.block--dark.not-at-top {
-    background-color: $brand-blue-gray-dark;
+    background-color: $color-gray-dark;
     box-shadow: 0 0 10px 0 $color-black;
 
     @media screen and (min-width: $small-screen) {
@@ -132,7 +132,7 @@
 }
 
 .search-box {
-  background-color: $brand-blue-gray-dark;
+  background-color: $color-gray-dark;
   display: none;
   padding: 0.5rem 2rem;
   position: fixed;
