@@ -84,15 +84,40 @@ $extra-large-screen: 1024px;
   }
 }
 
-/*
-@function calc-width($num-columns) {
-  @return ;
-}
-*/
-
 @mixin span-columns($num-columns) {
-    display: block;
-    float: left;
-    margin-right: 2.35765%;
-    width: $num-columns * 6.17215333333% + ($num-columns - 1) * 2.35765%;
+  @media screen and (min-width: $medium-screen) {
+    // 12 * colwidth + 11 * gutterwidth = 100%
+    $column-width: 5%;
+    $gutter-width: (100% - 12 * $column-width) / 11;
+    display: inline-block;
+    margin-left: $gutter / 2;
+    margin-right: $gutter / 2;
+    vertical-align: top;
+    width: $num-columns * $column-width + ($num-columns - 1) * $gutter-width;
+
+    &:first-child {
+      margin-left: 0%;
+    }
+
+    &:last-child {
+      margin-right: 0%;
+    }
+  }
+}
+
+
+.width-quarter {
+  @include @extend .width-quarter;
+}
+.width-third {
+  @include @extend .width-third;
+}
+.width-half {
+  @include @extend .width-half;
+}
+.width-three-quarters {
+  @extend .width-three-quarters;
+}
+.width-whole {
+  @include @extend .width-whole;
 }

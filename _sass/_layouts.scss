@@ -11,26 +11,6 @@
   }
 }
 
-
-.width-one-third {
-  @media screen and (min-width: $medium-screen) {
-    display: inline-block;
-    margin-left: 1.5%;
-    margin-right: 1.5%;
-    vertical-align: top;
-    width: 30.25%;
-
-    &:first-child {
-      margin-left: 0%;
-    }
-
-    &:last-child {
-      margin-right: 0%;
-    }
-
-  }
-}
-
 .l-block--extra-large {
   padding: 3rem 0 1.5rem;
 
