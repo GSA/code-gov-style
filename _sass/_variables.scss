@@ -88,10 +88,10 @@ $extra-large-screen: 1024px;
   @media screen and (min-width: $medium-screen) {
     // 12 * colwidth + 11 * gutterwidth = 100%
     $column-width: 5%;
-    $gutter-width: (100% - 12 * $column-width) / 11;
+    $gutter-width: (99% - 12 * $column-width) / 11;
     display: inline-block;
-    margin-left: $gutter / 2;
-    margin-right: $gutter / 2;
+    margin-left: $gutter-width / 2;
+    margin-right: $gutter-width / 2;
     vertical-align: top;
     width: $num-columns * $column-width + ($num-columns - 1) * $gutter-width;
 
@@ -107,17 +107,17 @@ $extra-large-screen: 1024px;
 
 
 .width-quarter {
-  @include @extend .width-quarter;
+  @include span-columns(3);
 }
 .width-third {
-  @include @extend .width-third;
+  @include span-columns(4);
 }
 .width-half {
-  @include @extend .width-half;
+  @include span-columns(6);
 }
 .width-three-quarters {
-  @extend .width-three-quarters;
+  @include span-columns(9);
 }
 .width-whole {
-  @include @extend .width-whole;
+  @include span-columns(12);
 }

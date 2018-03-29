@@ -154,7 +154,7 @@ li.dashboard-agency {
     @include clearfix;
 
     div {
-      @include @extend .width-half;
+      @extend .width-half;
     }
 
     h3 {
