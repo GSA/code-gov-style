@@ -85,39 +85,67 @@ $extra-large-screen: 1024px;
 }
 
 @mixin span-columns($num-columns) {
-  @media screen and (min-width: $medium-screen) {
-    // 12 * colwidth + 11 * gutterwidth = 100%
-    $column-width: 5%;
-    $gutter-width: (99% - 12 * $column-width) / 11;
-    display: inline-block;
-    margin-left: $gutter-width / 2;
-    margin-right: $gutter-width / 2;
-    vertical-align: top;
-    width: $num-columns * $column-width + ($num-columns - 1) * $gutter-width;
+  // 12 * colwidth + 11 * gutterwidth = 100%
+  $column-width: 5%;
+  $gutter-width: (97.6% - 12 * $column-width) / 11;
+  display: inline-block;
+  margin-left: $gutter-width / 2;
+  margin-right: $gutter-width / 2;
+  vertical-align: top;
+  width: $num-columns * $column-width + ($num-columns - 1) * $gutter-width;
 
-    &:first-child {
-      margin-left: 0%;
-    }
-
-    &:last-child {
-      margin-right: 0%;
-    }
+  &:first-child {
+    margin-left: 0%;
   }
+
+  &:last-child {
+    margin-right: 0%;
+  }
+}
+
+@mixin width-quarter() {
+  @include span-columns(3);
+}
+
+@mixin width-third() {
+  @include span-columns(4);
+}
+
+@mixin width-half() {
+  @include span-columns(6);
+}
+
+@mixin width-three-quarters() {
+  @include span-columns(9);
+}
+
+@mixin width-whole {
+  @include span-columns(12);
 }
 
 
 .width-quarter {
-  @include span-columns(3);
+  @media screen and (min-width: $medium-screen) {
+    @include width-quarter();
+  }
 }
 .width-third {
-  @include span-columns(4);
+  @media screen and (min-width: $medium-screen) {
+    @include width-third();
+  }
 }
 .width-half {
-  @include span-columns(6);
+  @media screen and (min-width: $medium-screen) {
+    @include width-half();
+  }
 }
 .width-three-quarters {
-  @include span-columns(9);
+  @media screen and (min-width: $medium-screen) {
+    @include width-three-quarters();
+  }
 }
 .width-whole {
-  @include span-columns(12);
+  @media screen and (min-width: $medium-screen) {
+    @include width-whole();
+  }
 }

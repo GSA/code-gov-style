@@ -3,7 +3,7 @@
 
 .sidebar-docs {
   @media screen and (min-width: $medium-screen) {
-    @extend .width-quarter;
+    @include width-quarter();
   }
 }
 
@@ -12,7 +12,7 @@
   padding: 1em 1em 2em;
 
   @media screen and (min-width: $medium-screen) {
-    @extend .width-three-quarters;
+    @include width-three-quarters();
     padding: 2em 2em 3em;
   }
 
@@ -154,7 +154,7 @@ li.dashboard-agency {
     @include clearfix;
 
     div {
-      @extend .width-half;
+      @include width-half();
     }
 
     h3 {

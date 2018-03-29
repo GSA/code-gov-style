@@ -14,6 +14,13 @@ There are basically the following classes:
 **note:** These classes currently cover all of the width scenarios.  If you need,
 another width class, please create one.
 
+**note:** These classes don't apply on mobile.  If you want greater control over widths, like placing them inside of media queries, use the mixin versions of these classes with.  This is because SASS doesn't allow you to extend a class inside of a media query.
+- @include width-quarter();
+- @include width-third();
+- @include width-half();
+- @include width-three-quarters();
+- @include width-whole();
+
 <style>
 [class*='width-'] {
   background-color: green;
