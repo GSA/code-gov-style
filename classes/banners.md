@@ -1,16 +1,40 @@
 ---
 layout: classes
-title: "Headers"
+title: "Banners"
 ---
 
-## Below you will find the headers used by code.gov
+## Below you will find the banners used by code.gov
 
-# Normal Header
+# Normal Banner
 <div class="banner">
-  <div class="banner-title">Normal Banner</div>
+  <div class="banner-title">Browse Projects</div>
 </div>
 ```
 <div class="banner">
-  <div class="banner-title">Normal Banner</div>
+  <div class="banner-title">Browse Projects</div>
+</div>
+```
+
+# Banner with Subtitle
+<div class="banner">
+  <div class="banner-title">Help Wanted</div>
+  <div class="banner-subtitle">Discover how you can get involved and make America's Code better</div>  
+</div>
+```
+<div class="banner">
+  <div class="banner-title">Help Wanted</div>
+  <div class="banner-subtitle">Discover how you can get involved and make America's Code better</div>  
+</div>
+```
+
+# Large Banner
+<div class="banner large">
+  <div class="banner-title">SHARING AMERICA'S CODE</div>
+  <div class="banner-subtitle">Unlock the tremendous potential of the Federal Government’s software.</div>  
+</div>
+```
+<div class="banner large">
+  <div class="banner-title">SHARING AMERICA'S CODE</div>
+  <div class="banner-subtitle">Unlock the tremendous potential of the Federal Government’s software.</div>  
 </div>
 ```

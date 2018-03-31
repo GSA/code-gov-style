@@ -58,6 +58,23 @@
 
   }
 
+  .banner-subtitle {
+    color: $color-white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    margin: 2rem auto 3rem;
+    max-width: 40rem;
+
+    @media screen and (min-width: $small-screen) {
+      font-size: 1.2em;
+    }
+
+    @media screen and (min-width: $medium-screen) {
+      font-size: 1.4em;
+    }
+  }
+
+
   p {
     color: $color-gray-lighter;
     font-size: 1em;

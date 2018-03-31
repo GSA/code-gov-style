@@ -35,13 +35,17 @@ $color-secondary-lightest:   #f9dede; // lighten($color-secondary, 90%)
 
 $color-white:                #ffffff;
 $color-black:                #000000;
+$color-black-light:          #212121;
+
+$color-blue:                 #0071bc;
 
 $color-gray-dark:            #323a45;
 $color-gray:                 #5b616b; // lighten($color-gray-dark, 20%)
 $color-gray-medium:          #757575; // lightest gray that passes color contrast
 $color-gray-light:           #aeb0b5; // lighten($color-gray-dark, 60%)
 $color-gray-lighter:         #e4e4e4; // lighten($color-gray-dark, 80%)
-$color-gray-lightest:        #f6f6f6; // lighten($color-gray-dark, 91%)
+$color-gray-second-lightest: #f6f6f6; // lighten($color-gray-dark, 91%)
+$color-gray-lightest:        #f1f1f1;
 
 $color-gray-warm-dark:       #494440;
 $color-gray-warm-light:      #e4e2e0; // lighten($color-gray-warm-dark, 90%)
@@ -62,6 +66,9 @@ $color-cool-blue:            #205493;
 $color-cool-blue-light:      #4773aa; // lighten($color-cool-blue, 20%)
 $color-cool-blue-lighter:    #8ba6ca; // lighten($color-cool-blue, 60%)
 $color-cool-blue-lightest:   $color-gray-cool-light; // lighten($color-cool-blue, 90%)
+
+$color-subnav-selection:     #485568;
+$color-subnav-background:    #e9e9e9;
 
 $featured-dark:               rgba(50, 58, 69, 1);
 $featured-light:              rgba(215, 215, 215, 1);
@@ -115,6 +122,10 @@ $extra-large-screen: 1024px;
   @include span-columns(6);
 }
 
+@mixin width-two-thirds() {
+  @include span-columns(8);
+}
+
 @mixin width-three-quarters() {
   @include span-columns(9);
 }
@@ -137,6 +148,11 @@ $extra-large-screen: 1024px;
 .width-half {
   @media screen and (min-width: $medium-screen) {
     @include width-half();
+  }
+}
+.width-two-thirds {
+  @media screen and (min-width: $medium-screen) {
+    @include width-two-thirds();
   }
 }
 .width-three-quarters {

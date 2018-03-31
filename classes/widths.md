@@ -8,6 +8,7 @@ There are basically the following classes:
 - .width-quarter
 - .width-third
 - .width-half
+- .width-two-thirds
 - .width-three-quarters
 - .width-whole
 
@@ -18,6 +19,7 @@ another width class, please create one.
 - @include width-quarter();
 - @include width-third();
 - @include width-half();
+- @include width-two-thirds();
 - @include width-three-quarters();
 - @include width-whole();
 
@@ -71,6 +73,19 @@ Fit two columns inside tag
 <div>
   <div class="width-half">I'm the first half</div>
   <div class="width-half">I'm the second half</div>
+</div>
+```
+
+# Two-Thirds Width
+Fit two columns inside tag
+<div>
+  <div class="width-two-thirds">I'm the first two thirds</div>
+  <div class="width-third">I'm the last third</div>
+</div>
+```
+<div>
+  <div class="width-two-thirds">I'm the first two thirds</div>
+  <div class="width-third">I'm the last third</div>
 </div>
 ```
 
