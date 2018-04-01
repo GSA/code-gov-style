@@ -14,3 +14,11 @@ title: "Inputs"
 ```
 
 ---
+
+# Checkboxes
+<input id="checkbox-1" type="checkbox">
+<label for="checkbox-1">Checkable Option</label>
+```
+<input type="checkbox">
+<label>Checkable Option</label>
+```

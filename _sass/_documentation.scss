@@ -20,15 +20,6 @@
     padding: 2.5em 2em;
   }
 
-  a {
-    color: $brand-teal-dark;
-    text-decoration: underline;
-
-    &:hover {
-      color: $brand-teal;
-    }
-  }
-
   li {
     color: $color-gray;
     margin-left: 15px;
@@ -139,6 +130,10 @@ li.dashboard-agency {
         font-size: 1.25em;
         line-height: 1em;
       }
+    }
+
+    img {
+      width: 100%;
     }
   }
 

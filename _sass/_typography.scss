@@ -46,25 +46,6 @@ p {
   }
 }
 
-blockquote {
-  background-color: $color-gray-lightest;
-  border-left: 6px solid $brand-purple;
-  margin: 1.5em 0;
-  padding: 1em 1em 1em 2.5em;
-
-  p {
-    font-size: 0.95em;
-
-    &:first-child {
-      margin-top: 0;
-    }
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-}
-
 code {
   background-color: $brand-blue-gray;
   border-radius: 3px;

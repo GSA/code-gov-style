@@ -5,7 +5,15 @@ title: "Quotes"
 
 <p>Sometimes you'll want to put something quotes.</p>
 
-# Normal Quote
+# Simple Quote
+<blockquote>Agencies should strengthen internal capacity to efficiently and securely deliver OSS as part of regular operations.</blockquote>
+```
+<blockquote>Agencies should strengthen internal capacity to efficiently and securely deliver OSS as part of regular operations.</blockquote>
+```
+
+---
+
+# Quote with Apostrophes
 <div class="quote">
   <blockquote>It’s the latest in a long line of high-profile victories for the open source movement.</blockquote>
   <div class="attribution">
@@ -27,6 +35,8 @@ title: "Quotes"
   </div>
 </div>
 ```
+
+---
 
 # Light Quote
 Sometimes you want to put a quote over a dark background.

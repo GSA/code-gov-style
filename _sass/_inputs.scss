@@ -10,12 +10,14 @@ input {
   margin: 0 auto;
   padding: 1rem 0.7em;
 
+  /*
   &[type=checkbox] {
     appearance: none;
     background-color: $color-white;
-    border: 0.1rem solid #5b616b;
-    border-radius: 0;
-    color: #212121;
+    border: 0.05rem solid $color-gray;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px $color-gray-medium;
+    color: $color-black-light;
     cursor: pointer;
     display: inline-block;
     font-feature-settings: "kern", "liga", "pnum";
@@ -23,14 +25,84 @@ input {
     font-size: 1.7rem;
     font-weight: 400;
     height: 2rem;
-    line-height: 1.3;
+    line-height: 2rem;
     margin: 0.2rem 0;
+    margin-right: 0.6em;
     max-width: 46rem;
     overflow: visible;
     -moz-appearance: none;
     padding: 0;
+    text-indent: 0.15em;
     -webkit-appearance: none;
     width: 2rem;
-    vertical-align: bottom;
+    vertical-align: middle;
   }
+  */
+}
+
+
+// custom checkboxes from uswds
+
+// Custom checkboxes
+
+[type=checkbox] {
+  // The actual input element is only visible to screen readers, because
+  // all visual styling is done via the label.
+  @include sr-only();
+
+  .lt-ie9 & {
+    border: 0;
+    float: left;
+    margin: 0.4em 0.4em 0 0;
+    position: static;
+    width: auto;
+  }
+}
+
+[type=checkbox] + label {
+  cursor: pointer;
+  font-weight: 400;
+  margin-bottom: 0.65em;
+}
+
+[type=checkbox] + label::before {
+  background: $color-white;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px $color-gray-medium;
+  content: '\a0';
+  display: inline-block;
+  height: 2rem;
+  line-height: 2rem;
+  margin-right: 0.6em;
+  text-indent: 0.15em;
+  vertical-align: middle\0; // Target IE 11 and below to vertically center inputs
+  width: 2rem;
+}
+
+[type=checkbox]:checked + label::before{
+  background-color: $color-primary;
+  box-shadow: 0 0 0 1px $color-primary;
+}
+
+[type=checkbox]:checked + label::before,
+[type=checkbox]:checked:disabled + label::before {
+  //background-image: url('../img/correct8.png');
+  //background-image: url('../img/correct8.png');
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+[type=checkbox]:disabled + label {
+  color: $color-gray-lighter;
+}
+
+[type=checkbox]:focus + label::before {
+  outline: $focus-outline;
+  outline-offset: 3px;
+}
+
+[type=checkbox]:disabled + label::before {
+  background: $color-gray-lightest;
+  box-shadow: 0 0 0 1px $color-gray-light;
+  cursor: not-allowed;
 }

@@ -18,7 +18,7 @@
 
   .card-title {
     clear: both;
-    color: #0071bc;
+    color: $brand-blue;
     font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
     font-size: 2rem;
     font-weight: 500;
@@ -26,6 +26,10 @@
     margin-bottom: 0;
     margin-top: 0;
     text-decoration: underline;
+
+    &:visited {
+      color: $brand-blue;
+    }
   }
 
   .card-date {

@@ -83,6 +83,21 @@ $medium-screen: 600px;
 $large-screen: 860px;
 $extra-large-screen: 1024px;
 
+$focus-outline: 2px dotted $color-gray-light !default;
+
+// from USWDS
+
+@mixin sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
 @mixin clearfix {
   &::after {
     clear: both;
@@ -110,31 +125,36 @@ $extra-large-screen: 1024px;
   }
 }
 
+@mixin width-sixth() {
+  @include span-columns(2);
+}
 @mixin width-quarter() {
   @include span-columns(3);
 }
-
 @mixin width-third() {
   @include span-columns(4);
 }
-
 @mixin width-half() {
   @include span-columns(6);
 }
-
 @mixin width-two-thirds() {
   @include span-columns(8);
 }
-
 @mixin width-three-quarters() {
   @include span-columns(9);
 }
-
+@mixin width-five-sixth() {
+  @include span-columns(10);
+}
 @mixin width-whole {
   @include span-columns(12);
 }
 
-
+.width-sixth {
+  @media screen and (min-width: $medium-screen) {
+    @include width-sixth();
+  }
+}
 .width-quarter {
   @media screen and (min-width: $medium-screen) {
     @include width-quarter();
@@ -158,6 +178,11 @@ $extra-large-screen: 1024px;
 .width-three-quarters {
   @media screen and (min-width: $medium-screen) {
     @include width-three-quarters();
+  }
+}
+.width-five-sixth {
+  @media screen and (min-width: $medium-screen) {
+    @include width-five-sixth();
   }
 }
 .width-whole {

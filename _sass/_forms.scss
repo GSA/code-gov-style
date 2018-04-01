@@ -1,4 +1,5 @@
 form {
+
     label {
         span {
             font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", "sans-serif";
@@ -25,15 +26,22 @@ form {
           margin-top: 5px;
           margin-bottom: 4px;
 
-          label {
-            font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", "sans-serif";
-            font-feature-settings: "kern", "liga", "pnum";
-            font-size: 1.5rem;
-            font-weight: 400;
-            line-height: 1.5;
-            margin: .2rem;
-            -webkit-font-smoothing: antialiased;
+          li {
+            margin-bottom: .5rem;
+            margin-top: .5rem;
+
+            label {
+              font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", "sans-serif";
+              font-feature-settings: "kern", "liga", "pnum";
+              font-size: 1.5rem;
+              font-weight: 400;
+              line-height: 1.5;
+              margin: .2rem;
+              -webkit-font-smoothing: antialiased;
+            }
           }
+
+
 
         }
       }
