@@ -1,26 +1,3 @@
-.banner-background-container {
-  bottom: 0;
-  height: 100%;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 100%;
-}
-
-.banner-container {
-  left: 50%;
-  margin: 0 auto;
-  //was 55em, changed to 75em to account for search and help wanted
-  max-width: 85em;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  width: 100%;
-}
-
 .banner {
   background: url('/code-gov-style/assets/img/american_flag_1920x1280_gradient.jpg');
   background-attachment: fixed;
@@ -37,7 +14,17 @@
       padding: 16rem 0 16rem;
     }
 
-    height: 34vh;
+    min-height: 34vh;
+
+    .banner-title {
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+    }
+
+    .banner-subtitle {
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+    }
   }
 
   .banner-title {
@@ -58,11 +45,20 @@
 
   }
 
+  .banner-subsection-title {
+    color: #ffffff;
+    font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 3rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-transform: uppercase;
+  }
+
   .banner-subtitle {
     color: $color-white;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1em;
-    margin: 2rem auto 3rem;
+    margin: 0rem auto 3rem;
     max-width: 40rem;
 
     @media screen and (min-width: $small-screen) {
@@ -74,11 +70,14 @@
     }
   }
 
-
-  p {
-    color: $color-gray-lighter;
+  .banner-subsection-subtitle {
+    color: $color-white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1em;
-    margin: 2rem auto 3rem;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
     max-width: 40rem;
 
     @media screen and (min-width: $small-screen) {
@@ -89,4 +88,5 @@
       font-size: 1.4em;
     }
   }
+
 }

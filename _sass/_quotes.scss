@@ -1,0 +1,80 @@
+.quote {
+  max-width: 43em;
+  text-align:left;
+
+  blockquote {
+    background-color: transparent;
+    border-left: none;
+    color: $color-gray-dark;
+    font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 1.75em;
+    font-weight: 500;
+    line-height: 1;
+    margin: 0;
+    margin-bottom: 0.2em;
+    padding: 0;
+    position: relative;
+    text-align: left;
+
+    @media screen and (min-width: $medium-screen) {
+      font-size: 2.2em;
+    }
+
+    &::before {
+      color: $brand-teal;
+      content: '“';
+      font-size: 1.75em;
+      left: -2.5rem;
+      padding-right: .5rem;
+      position: absolute;
+      top: -1.5rem;
+      vertical-align: middle;
+
+      @media screen and (min-width: $medium-screen) {
+        font-size: 2.2em;
+      }
+    }
+
+    &::after {
+      color: $brand-teal;
+      content: '”';
+      font-size: 1.75em;
+      line-height: 0.6;
+      padding-left: .5rem;
+      position: absolute;
+      vertical-align: text-top;
+
+      @media screen and (min-width: $medium-screen) {
+        font-size: 2.2em;
+      }
+    }
+  }
+
+  .attribution {
+    border-top: 1px solid $color-gray;
+    display: inline-block;
+    padding-top: 0.75em;
+
+    .press-logo {
+      max-height: 2em;
+      max-width: 10em;
+    }
+  }
+
+  &.light {
+
+    blockquote {
+      color: $color-white;
+    }
+
+    .attribution {
+      border-top: 1px solid $color-gray-lighter;
+    }
+  }
+}
+
+.banner {
+  .quote {
+    margin: 0 auto;
+  }
+}

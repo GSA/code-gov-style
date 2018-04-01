@@ -27,9 +27,15 @@
       &:hover {
         background-color: $color-gray-lightest;
       }
+
+      &.current {
+        color: $color-blue;
+        font-weight: 700;
+      }
     }
 
-    ul {
+    // first-level list
+    > ul {
       background-color: transparent;
       border-bottom: none;
       border-top: none;
@@ -39,19 +45,45 @@
       margin-top: 0;
       padding: 0;
       position: relative;
-    }
 
-    > ul {
-      > li, >* > li{
+      > li, >* > li {
+
+        // first-level option
         > a {
           &.current {
             border-left: 0.4rem solid $color-blue;
-            color: $color-blue;
-            font-weight: 700;
             padding-left: 1.1rem;
           }
         }
+
+        ul {
+
+          // defaults to hidden but show when user
+          // selects section
+          display: none;
+
+          li {
+            a {
+              padding-left: 2.8rem;
+            }
+            ul {
+              li {
+                a {
+                  padding-left: 3.8rem;
+                }
+              }
+            }
+          }
+        }
       }
+
+      // if li is current display all the lists under it
+      li.current {
+        ul {
+          display: block;
+        }
+      }
+
     }
   }
 }

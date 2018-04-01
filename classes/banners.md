@@ -38,3 +38,19 @@ title: "Banners"
   <div class="banner-subtitle">Unlock the tremendous potential of the Federal Government’s software.</div>  
 </div>
 ```
+
+# Banner with Subsections
+<div class="banner large">
+  <div class="banner-title">SHARING AMERICA'S CODE</div>
+  <div class="banner-subtitle">Unlock the tremendous potential of the Federal Government’s software.</div>  
+  <div class="banner-subsection-title">Help Wanted!</div>
+  <div class="banner-subsection-subtitle">Discover how you can get involved and make America's code better</div>
+</div>
+```
+<div class="banner large">
+  <div class="banner-title">SHARING AMERICA'S CODE</div>
+  <div class="banner-subtitle">Unlock the tremendous potential of the Federal Government’s software.</div>  
+  <div class="banner-subsection-title">Help Wanted!</div>
+  <div class="banner-subsection-subtitle">Discover how you can get involved and make America's code better</div>
+</div>
+```

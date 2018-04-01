@@ -5,6 +5,9 @@ title: "Navbars"
 
 <p>Below you will find the styling used by code.gov for navbars</p>
 
+# Main Navbar
+
+
 # Secondary Navbar
 Designate the active option by assigning the class `active`.
 <nav class="subnav">
