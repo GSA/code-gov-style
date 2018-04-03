@@ -5,6 +5,7 @@ title: "Widths"
 
 ## Below you will find how we assign the width of various page elements
 There are basically the following classes:
+- .width-sixth
 - .width-quarter
 - .width-third
 - .width-half
@@ -16,6 +17,7 @@ There are basically the following classes:
 another width class, please create one.
 
 **note:** These classes don't apply on mobile.  If you want greater control over widths, like placing them inside of media queries, use the mixin versions of these classes with.  This is because SASS doesn't allow you to extend a class inside of a media query.
+- @include width-sixth();
 - @include width-quarter();
 - @include width-third();
 - @include width-half();
@@ -28,6 +30,21 @@ another width class, please create one.
   background-color: green;
 }
 </style>
+
+# Sixth Width
+Fit four columns inside tag
+<div>
+  <div class="width-sixth">I'm the first sixth</div>
+  <div class="width-two-thirds">I'm two thirds or four sixths!</div>
+  <div class="width-sixth">I'm the last sixth</div>
+</div>
+```
+<div>
+  <div class="width-sixth">I'm the first sixth</div>
+  <div class="width-two-thirds">I'm two thirds or four sixths!</div>
+  <div class="width-sixth">I'm the last sixth</div>
+</div>
+```
 
 # Quarter Width
 Fit four columns inside tag
