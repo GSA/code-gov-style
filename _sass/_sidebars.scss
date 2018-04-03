@@ -36,6 +36,10 @@
       padding: 0.85rem 1rem 0.85rem 1.5rem;
       text-decoration: none;
 
+      &:visited {
+        color: $color-black-light;
+      }
+
       &:hover {
         background-color: $color-gray-lightest;
       }
@@ -44,6 +48,23 @@
         color: $color-blue;
         font-weight: 700;
       }
+
+      img {
+        left: 0.5em;
+        max-width: 1.5em;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      img + span {
+        display: inline-block;
+        margin-left: 1.75em;
+      }
+    }
+
+    li {
+      position: relative;
     }
 
     // first-level list
