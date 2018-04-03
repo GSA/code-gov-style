@@ -38,7 +38,6 @@ title: "Sidebars"
 ```
 <nav class="sidebar left">
   <ul>
-
     <li class="current">
       <a class="current">First Section</a>
       <ul>
@@ -53,3 +52,20 @@ title: "Sidebars"
   </ul>
 </nav>
 ```
+
+# Sidebar with Title
+If you'd like to add a title, just add a div with class `sidebar-title`.
+<nav class="sidebar">
+  <div class="sidebar-title">Agencies</div>
+  <ul>
+    <li class="current">
+      <a class="current">Agency for International Development</a>
+    </li>
+    <li>
+      <a>Consumer Financial Protection Bureau</a>
+    </li>
+    <li>
+      <a>Department of Agriculture</a>
+    </li>
+  </ul>
+</nav>

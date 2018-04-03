@@ -11,3 +11,11 @@ For simple, secondary-links that appear in text use the class `secondary-link`.
 ```
 <p></p>
 ```
+
+# Light on Dark
+Sometimes you have a link on a dark background.  Assign the `light` class in such as case.
+<footer class="dark">
+  <div class="footer-content">
+    <p><a class="link light">Hi. I'm a link</a></p>
+  </div>
+</footer>

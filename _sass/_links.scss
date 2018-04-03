@@ -32,22 +32,27 @@ a.link {
     color: $brand-blue-dark;
     font-weight: bold;
   }
-}
 
-.block--dark {
-  a.link {
-    color: $color-gray-lighter;
-
-    &:visited {
+  &.light {
+    a.link {
       color: $color-gray-lighter;
-    }
 
-    &:hover {
-      color: $color-white;
-    }
+      &:visited {
+        color: $color-gray-lighter;
+      }
 
-    &.link--active {
-      color: $color-white;
+      &:hover {
+        color: $color-white;
+      }
+
+      &.link--active {
+        color: $color-white;
+      }
     }
   }
+
+}
+
+.block--dark, footer.dark {
+  @extend a.link.light;
 }

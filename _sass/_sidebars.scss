@@ -3,8 +3,8 @@
   position: relative;
 
   @media screen and (min-width: $medium-screen) {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-bottom: none;
+    border-top: none;
     display: block;
 
     &.left {
@@ -12,6 +12,18 @@
     }
     &.right {
       float: right;
+    }
+
+    .sidebar-title {
+      color: #5b616b;
+      clear: both;
+      display: block;
+      font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 1.3em;
+      margin-bottom: 0.5em;
+      margin-top: 0;
     }
 
     a {
@@ -37,8 +49,8 @@
     // first-level list
     > ul {
       background-color: transparent;
-      border-bottom: none;
-      border-top: none;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
       display: block;
       list-style-type: none;
       margin-bottom: 0;
