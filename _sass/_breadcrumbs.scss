@@ -1,0 +1,38 @@
+ul.breadcrumbs {
+  font-size: 1em;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+
+  li {
+
+    color: $color-black;
+    display: inline-block;
+    font-weight: normal;
+
+    &::before {
+      content: '> ';
+      font-weight: normal;
+    }
+
+    &:first-of-type {
+      &::before {
+        content: '';
+      }
+    }
+
+    a {
+      color: $color-black;
+      font-weight: normal;
+      text-decoration: underline;
+
+      &:visited {
+        color: $color-black;
+      }
+    }
+
+    &:last-child {
+      font-weight: $font-bold;
+    }
+  }
+
+}
