@@ -15,6 +15,17 @@ title: "Inputs"
 
 ---
 
+# Input with Search Icon
+Just add the type `search` to the input and a search icon will appear
+<div class="banner">
+  <input type="search" placeholder="Search Thousands of Projects...">
+</div>
+```
+<input type="search" placeholder="Search Thousands of Projects...">
+```
+
+---
+
 # Checkboxes
 <input id="checkbox-1" type="checkbox">
 <label for="checkbox-1">Checkable Option</label>

@@ -10,34 +10,15 @@ input {
   margin: 0 auto;
   padding: 1rem 0.7em;
 
-  /*
-  &[type=checkbox] {
-    appearance: none;
+  &[type=search] {
     background-color: $color-white;
-    border: 0.05rem solid $color-gray;
-    border-radius: 2px;
-    box-shadow: 0 0 0 1px $color-gray-medium;
-    color: $color-black-light;
-    cursor: pointer;
-    display: inline-block;
-    font-feature-settings: "kern", "liga", "pnum";
-    font-family: sans-serif;
-    font-size: 1.7rem;
-    font-weight: 400;
-    height: 2rem;
-    line-height: 2rem;
-    margin: 0.2rem 0;
-    margin-right: 0.6em;
-    max-width: 46rem;
-    overflow: visible;
-    -moz-appearance: none;
-    padding: 0;
-    text-indent: 0.15em;
-    -webkit-appearance: none;
-    width: 2rem;
-    vertical-align: middle;
+    background-image: url('/code-gov-style/assets/img/search.svg');
+    background-repeat: no-repeat;
+    background-position: .5em center;
+    background-size: 1.7em 1.7em;
+    padding-left: 4rem;
   }
-  */
+
 }
 
 
