@@ -1,5 +1,128 @@
 @import 'variables';
 
+header.main {
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &.white {
+    background-color: $color-white;
+
+    nav.main {
+      background-color: $color-white;
+    }
+  }
+
+  &.dark {
+    background-color: #323a45;
+
+    nav.main {
+      background-color: #323a45;
+
+      ul {
+        li {
+          a {
+            color: $color-gray-lighter;
+            i {
+              color: $color-gray-lighter;
+            }
+            svg {
+              .cls-1 {
+                fill: $color-white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.transparent {
+    background-color: transparent;
+
+    nav.main:not(.not-at-top) {
+      background-color: transparent;
+    }
+  }
+
+  nav.main {
+    box-shadow: none;
+    position: fixed;
+    top: 0;
+    transition: 0.5s box-shadow, 0.5s background-color;
+    width: 100%;
+    z-index: 3;
+
+    @media screen and (min-width: $medium-screen) {
+      font-size: 1em;
+      padding: 1.5rem 2rem;
+      text-align: left;
+    }
+
+    ul {
+      display: inline-block;
+      margin-bottom: 0;
+      margin-top: 0;
+
+      &.right {
+        float: right;
+
+        li {
+          margin-left: 0rem;
+          margin-right: 0rem;
+          padding-left: 1rem;
+          padding-right: 1rem;
+
+          &:not(:first-child) {
+            border-left: 2px solid #5b616b;
+          }
+        }
+      }
+
+      li {
+        display: inline-block;
+        font-weight: bold;
+        text-transform: uppercase;
+        vertical-align: top;
+
+        @media screen and (min-width: $medium-screen) {
+          font-size: 0.8em;
+          margin-left: 2rem;
+        }
+
+        @media screen and (min-width: $large-screen) {
+          font-size: 1em;
+          margin-left: 4rem;
+        }
+
+        a {
+          display: block;
+          line-height: 40px;
+
+          &.active {
+            color: $brand-blue-dark;
+          }
+
+          i {
+            color: #5b616b;
+            font-size: 1.5em;
+            line-height: 40px;
+
+            &:hover {
+              color: $brand-blue-dark;
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+}
+
+/*
 .nav-item {
   display: inline-block;
   font-size: 1em;
@@ -42,13 +165,6 @@
     }
   }
 
-  .search-form {
-    display: none;
-
-    @media screen and (min-width: $large-screen) {
-      display: block;
-    }
-  }
 }
 
 .app-links {
@@ -117,20 +233,6 @@
   }
 }
 
-.search-form {
-  display: none;
-  float: right;
-  width: 90%;
-
-  @media screen and (min-width: $small-screen) {
-    display: block;
-  }
-
-  @media screen and (min-width: $medium-screen) {
-    width: 36rem;
-  }
-}
-
 .search-box {
   background-color: $color-gray-dark;
   display: none;
@@ -186,3 +288,4 @@
     transform: translateX(-50%) translateY(-50%);
   }
 }
+*/

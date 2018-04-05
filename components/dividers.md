@@ -1,5 +1,5 @@
 ---
-layout: classes
+layout: components
 title: "Dividers"
 ---
 
@@ -18,4 +18,17 @@ To divide two sections, just add an `<hr />`.
   <hr />
   <p>Here's the second paragraph</p>
 </div>
+```
+
+---
+
+# Vertical Divider
+You can create a vertical divider, by adding `vertical-divider` class to a div.
+<span>Name</span>
+<div class="vertical-divider"></div>
+<span>Position</span>
+```
+<span>Name</span>
+<div class="vertical-divider"></div>
+<span>Position</span>
 ```

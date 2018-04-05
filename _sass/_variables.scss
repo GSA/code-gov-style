@@ -166,6 +166,8 @@ $focus-outline: 2px dotted $color-gray-light !default;
   }
 }
 .width-half {
+  @include width-whole();
+  
   @media screen and (min-width: $medium-screen) {
     @include width-half();
   }

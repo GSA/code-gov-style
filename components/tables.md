@@ -1,5 +1,5 @@
 ---
-layout: classes
+layout: components
 title: "Tables"
 ---
 

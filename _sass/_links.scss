@@ -16,6 +16,7 @@ a, .default-link {
 }
 
 a.link {
+  border-bottom: 3px solid transparent;
   color: $color-gray;
   text-decoration: none;
 
@@ -24,7 +25,7 @@ a.link {
   }
 
   &:hover {
-    border-bottom: 3px solid #23C0BA;
+    border-color: #23C0BA;
     color: $brand-blue-dark;
   }
 
@@ -54,5 +55,5 @@ a.link {
 }
 
 .block--dark, footer.dark {
-  @extend a.link.light;
+  @extend a, .link, .light;
 }

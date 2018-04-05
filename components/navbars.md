@@ -1,4 +1,13 @@
-<div style="color: black">HEADER</div>
+---
+layout: components
+title: "Navbars"
+---
+
+<p>Below you will find the styling used by code.gov for navbars</p>
+
+# Main Navbar
+The navbar at the top of the page uses this code.  You can also make the navbar transparent by adding the `transparent` class.
+```
 <header class="main white">
   <nav class="main">
     <ul>
@@ -21,3 +30,23 @@
     </ul>
   </nav>
 </header>
+```
+
+# Secondary Navbar
+Designate the active option by assigning the class `active`.
+<nav class="subnav">
+  <div class="indented">
+    <ul>
+      <li><a class="active">How To</a></li>
+      <li><a>Read the Policy</a></li>
+    </ul>
+  </div>
+</nav>
+```
+<nav class="subnav indented">
+  <ul>
+    <li><a class="active">How To</a></li>
+    <li><a>Read the Policy</a></li>
+  </ul>
+</nav>
+```

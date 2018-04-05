@@ -47,10 +47,14 @@
   .banner-subsection-title {
     color: #ffffff;
     font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 0;
     margin-top: 0;
     text-transform: uppercase;
+
+    @media screen and (min-width: $medium-screen) {
+      font-size: 3rem;
+    }
   }
 
   .banner-subtitle {
