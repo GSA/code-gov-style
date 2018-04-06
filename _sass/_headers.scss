@@ -21,17 +21,18 @@ header.main {
     nav.main {
       background-color: #323a45;
 
+      svg {
+        .cls-1 {
+          fill: $color-white;
+        }
+      }
+
       ul {
         li {
           a {
             color: $color-gray-lighter;
             i {
               color: $color-gray-lighter;
-            }
-            svg {
-              .cls-1 {
-                fill: $color-white;
-              }
             }
           }
         }
@@ -61,18 +62,56 @@ header.main {
       text-align: left;
     }
 
+    .svg-container {
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+
+      @media screen and (min-width: $small-screen) {
+        float: left;
+        left: 0;
+        position: relative;
+        transform: none;
+      }
+
+      svg {
+        height: 20px;
+        left: 0;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        top: 0;
+        width: 83px;
+
+        @media screen and (min-width: $medium-screen) {
+          height: 25px;
+          margin-bottom: 7.5px;
+          margin-top: 7.5px;
+          width: 103px;
+        }
+
+        @media screen and (min-width: $large-screen) {
+          height: 30px;
+          margin-bottom: 5px;
+          margin-top: 5px;
+          width: 124px;
+        }
+      }
+    }
+
     ul {
       display: none;
       margin-bottom: 0;
       margin-top: 0;
 
       @media screen and (min-width: $medium-screen) {
-        display: block;
+        display: inline-block;
       }
 
 
       &.right {
-        float: right;
+        position: absolute;
+        right: 2rem;
+        top: 1.75rem;
 
         li {
           margin-left: 0rem;
@@ -82,6 +121,18 @@ header.main {
 
           &:not(:first-child) {
             border-left: 2px solid #5b616b;
+          }
+
+          .follow-us {
+            font-size: 0.75em;
+            text-decoration: none;
+            vertical-align: top;
+
+            @media screen and (min-width: $medium-screen) {
+              .follow-us {
+                display: inline-block;
+              }
+            }
           }
         }
       }

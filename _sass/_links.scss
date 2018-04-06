@@ -13,6 +13,13 @@ a, .default-link {
     color: $brand-teal;
   }
 
+  &.no-underline {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;      
+    }
+  }
+
 }
 
 a.link {

@@ -1,5 +1,25 @@
+@import "/code-gov-style/assets/fonts/fontello-53a8f043/css/code-gov.css";
+
 $icon-color: $color-primary;
 
 .icon {
   color: $icon-color;
+  font-family: "code-gov";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  /* font-size: 120%; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
