@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/GSA/code-gov-style#readme",
   "dependencies": {
-    "@code.gov/code-gov-font": "0.0.1"
+    "@code.gov/code-gov-font": "0.2.0"
   }
 }
