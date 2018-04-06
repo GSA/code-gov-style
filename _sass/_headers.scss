@@ -62,9 +62,14 @@ header.main {
     }
 
     ul {
-      display: inline-block;
+      display: none;
       margin-bottom: 0;
       margin-top: 0;
+
+      @media screen and (min-width: $medium-screen) {
+        display: block;
+      }
+
 
       &.right {
         float: right;
