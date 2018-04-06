@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "Style for code.gov including buttons, banners, and cards. Inspired by and somewhat based on USWDS.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "update-font": "cd bash_scripts && bash update-font.sh"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GSA/code-gov-style.git"
@@ -21,5 +23,7 @@
     "url": "https://github.com/GSA/code-gov-style/issues"
   },
   "homepage": "https://github.com/GSA/code-gov-style#readme",
-  "dependencies": {}
+  "dependencies": {
+    "@code.gov/code-gov-font": "0.0.1"
+  }
 }
