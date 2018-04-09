@@ -39,7 +39,7 @@ button {
   &.transparent {
     background-color: transparent;
     border: 2px solid $color-white;
-    font-weight: 700;    
+    font-weight: 700;
   }
 
   &.dark {
@@ -47,5 +47,10 @@ button {
     color: $color-white;
     font-weight: bold;
     padding: 0.5rem 1.25rem;
+  }
+
+  &.disabled {
+    // making sure it overrides other classes
+    background-color: #d6d7d9 !important;
   }
 }

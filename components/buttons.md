@@ -13,6 +13,14 @@ title: "Buttons"
 
 ---
 
+# Disabled Button
+<button class="disabled">Disabled Button</button>
+```
+<button class="disabled">Disabled Button</button>
+```
+
+---
+
 # Transparent Buttons
 
 <div class="banner">
