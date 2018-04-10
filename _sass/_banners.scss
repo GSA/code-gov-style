@@ -10,10 +10,10 @@
   &.large {
 
     @media screen and (min-width: $small-screen) {
-      padding: 16rem 0 16rem;
+      padding: 26rem 0 16rem;
     }
 
-    min-height: 85vh;
+    min-height: 90vh;
 
     .banner-title {
       margin-bottom: 2rem;
@@ -50,7 +50,6 @@
     font-size: 2rem;
     margin-bottom: 0;
     margin-top: 0;
-    text-transform: uppercase;
 
     @media screen and (min-width: $medium-screen) {
       font-size: 3rem;

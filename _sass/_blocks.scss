@@ -2,21 +2,6 @@
   background-color: darken($color-gray-lightest, 5);
 }
 
-.block--dark {
-  background-color: $color-gray-dark;
-  color: $color-white;
-
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: $color-white;
-  }
-}
-
 .block--light {
   background-color: lighten($color-gray-lightest, 2);
 }

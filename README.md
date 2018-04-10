@@ -11,5 +11,7 @@ The code.gov Style Guide makes the search and usage of CSS classes easier by pro
 ### Legal
 We use the fa-search icon from Font Awesome.  Font Awesome released their fa-search icon under this license https://creativecommons.org/licenses/by/4.0/
 
+We copy-pasted some code from the `hamburgers` library to `_hamburgers.scss`.  Hamburgers was created by Jonsuh.  Hamburgers is released under the MIT License and can be found here https://github.com/jonsuh/hamburgers/blob/master/LICENSE as well as in the licenses folder in this repository.
+
 ### Contact
 Contact Daniel J. Dufour at daniel.dufour@gsa.gov if you have any questions

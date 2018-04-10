@@ -16,7 +16,7 @@ a, .default-link {
   &.no-underline {
     text-decoration: none;
     &:hover {
-      text-decoration: none;      
+      text-decoration: none;
     }
   }
 
@@ -61,6 +61,20 @@ a.link {
 
 }
 
-.block--dark, footer.dark {
-  @extend a, .link, .light;
+header.dark, footer.dark {
+  a {
+    color: $color-gray-lighter;
+
+    &:visited {
+      color: $color-gray-lighter;
+    }
+
+    &:hover {
+      color: $color-white;
+    }
+
+    &.link--active {
+      color: $color-white;
+    }
+  }
 }
