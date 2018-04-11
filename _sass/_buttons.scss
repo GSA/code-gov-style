@@ -52,5 +52,11 @@ button {
   &.disabled {
     // making sure it overrides other classes
     background-color: #d6d7d9 !important;
+    border-color: #d6d7d9 !important;    
+  }
+
+  &:only-child {
+    margin-left: auto;
+    margin-right: auto;
   }
 }

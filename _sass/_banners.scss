@@ -2,6 +2,7 @@
   background: url('/code-gov-style/assets/img/american_flag_1920x1280_gradient.jpg');
   background-attachment: fixed;
   background-size: cover;
+  color: $color-white;
   padding-bottom: 8rem;
   padding-top: 8rem;
   position: relative;
@@ -42,6 +43,13 @@
       font-size: 3.2em;
     }
 
+  }
+
+  .banner-subsection.width-half {
+    @media screen and (max-width: $medium-screen) {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
   }
 
   .banner-subsection-title {
@@ -88,6 +96,14 @@
 
     @media screen and (min-width: $medium-screen) {
       font-size: 1.4em;
+    }
+  }
+
+  a {
+    color: $color-white;
+
+    &.link, :visited {
+      color: $color-white;
     }
   }
 
