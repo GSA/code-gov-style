@@ -85,6 +85,12 @@ $extra-large-screen: 1024px;
 
 $focus-outline: 2px dotted $color-gray-light !default;
 
+@mixin center-vertically {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
 // from USWDS
 
 @mixin sr-only {
@@ -167,7 +173,7 @@ $focus-outline: 2px dotted $color-gray-light !default;
 }
 .width-half {
   @include width-whole();
-  
+
   @media screen and (min-width: $medium-screen) {
     @include width-half();
   }

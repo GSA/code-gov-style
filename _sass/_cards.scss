@@ -27,6 +27,10 @@
     margin-top: 0;
     text-decoration: underline;
 
+    &:hover {
+      color: $brand-teal;
+    }
+
     &:visited {
       color: $brand-blue;
     }

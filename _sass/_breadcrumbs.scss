@@ -5,7 +5,6 @@ ul.breadcrumbs {
 
   li {
 
-    color: $color-black;
     display: inline-block;
     font-weight: normal;
 
@@ -21,13 +20,8 @@ ul.breadcrumbs {
     }
 
     a {
-      color: $color-black;
       font-weight: normal;
       text-decoration: underline;
-
-      &:visited {
-        color: $color-black;
-      }
     }
 
     &:last-child {

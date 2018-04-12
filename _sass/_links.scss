@@ -1,12 +1,12 @@
 a, .default-link {
 
   background-color: transparent;
-  color: $brand-teal-dark;
+  color: $brand-blue;
   cursor: pointer;
   text-decoration: underline;
 
   &:visited:not(:hover) {
-    color: $brand-teal-dark;
+    color: $brand-blue;
   }
 
   &:hover {

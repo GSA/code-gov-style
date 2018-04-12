@@ -3,10 +3,19 @@
   background-attachment: fixed;
   background-size: cover;
   color: $color-white;
+  height: 30vh;
   padding-bottom: 8rem;
   padding-top: 8rem;
   position: relative;
   text-align: center;
+
+  &.medium {
+    height: 60vh;
+
+    @media screen and (min-width: $small-screen) {
+      height: 45vh;
+    }
+  }
 
   &.large {
 
@@ -14,96 +23,123 @@
       padding: 26rem 0 16rem;
     }
 
-    min-height: 90vh;
+    height: 90vh;
+
+    .banner-content {
+      .banner-title {
+        margin-top: 2rem;
+        text-transform: none;
+      }
+
+      .banner-subtitle {
+        margin-bottom: 0rem;
+        @media screen and (min-width: $small-screen) {
+          margin-bottom: 4rem;
+        }
+      }
+
+      button {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+
+    }
+
+  }
+
+  .banner-content {
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
 
     .banner-title {
-      margin-bottom: 2rem;
-      margin-top: 2rem;
+      color: #ffffff;
+      font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+      font-size: 2em;
+      margin-bottom: 0;
+      margin-top: 0;
+      text-transform: uppercase;
+
+      @media screen and (min-width: $small-screen) {
+        font-size: 2.8em;
+      }
+
+      @media screen and (min-width: $medium-screen) {
+        font-size: 3.2em;
+      }
+
+    }
+
+    .banner-subsection {
+      position: relative;
+
+      &.width-half {
+        @media screen and (max-width: $medium-screen) {
+          margin-left: 0px;
+          margin-right: 0px;
+        }
+      }
+
+      .banner-subsection-content {
+        width: 100%;
+      }
+    }
+
+    .banner-subsection-title {
+      color: #ffffff;
+      font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+      font-size: 2rem;
+      margin-bottom: 0;
+      margin-top: 0;
+
+      @media screen and (min-width: $medium-screen) {
+        font-size: 3rem;
+      }
     }
 
     .banner-subtitle {
-      margin-bottom: 2rem;
-      margin-top: 2rem;
-    }
-  }
-
-  .banner-title {
-    color: #ffffff;
-    font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-    font-size: 2em;
-    margin-bottom: 0;
-    margin-top: 0;
-    text-transform: uppercase;
-
-    @media screen and (min-width: $small-screen) {
-      font-size: 2.8em;
-    }
-
-    @media screen and (min-width: $medium-screen) {
-      font-size: 3.2em;
-    }
-
-  }
-
-  .banner-subsection.width-half {
-    @media screen and (max-width: $medium-screen) {
-      margin-left: 0px;
-      margin-right: 0px;
-    }
-  }
-
-  .banner-subsection-title {
-    color: #ffffff;
-    font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-    font-size: 2rem;
-    margin-bottom: 0;
-    margin-top: 0;
-
-    @media screen and (min-width: $medium-screen) {
-      font-size: 3rem;
-    }
-  }
-
-  .banner-subtitle {
-    color: $color-white;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1em;
-    margin: 0rem auto 3rem;
-    max-width: 40rem;
-
-    @media screen and (min-width: $small-screen) {
-      font-size: 1.2em;
-    }
-
-    @media screen and (min-width: $medium-screen) {
-      font-size: 1.4em;
-    }
-  }
-
-  .banner-subsection-subtitle {
-    color: $color-white;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1em;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    max-width: 40rem;
-
-    @media screen and (min-width: $small-screen) {
-      font-size: 1.2em;
-    }
-
-    @media screen and (min-width: $medium-screen) {
-      font-size: 1.4em;
-    }
-  }
-
-  a {
-    color: $color-white;
-
-    &.link, :visited {
       color: $color-white;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1em;
+      margin: 0rem auto 3rem;
+      max-width: 40rem;
+
+      @media screen and (min-width: $small-screen) {
+        font-size: 1.2em;
+      }
+
+      @media screen and (min-width: $medium-screen) {
+        font-size: 1.4em;
+      }
+    }
+
+    .banner-subsection-subtitle {
+      color: $color-white;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1em;
+      margin-bottom: 0;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0;
+      max-width: 60rem;
+
+      @media screen and (min-width: $small-screen) {
+        font-size: 1.2em;
+      }
+
+      @media screen and (min-width: $medium-screen) {
+        font-size: 1.2em;
+      }
+    }
+
+    a {
+      color: $color-white;
+
+      &.link, :visited {
+        color: $color-white;
+      }
     }
   }
 

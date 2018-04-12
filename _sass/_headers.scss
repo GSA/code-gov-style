@@ -64,6 +64,10 @@ header.main {
     width: 100%;
     z-index: 3;
 
+    &.not-at-top {
+      box-shadow: 0 0 10px 0 $color-black;
+    }
+
     @media screen and (min-width: $medium-screen) {
       font-size: 1em;
       padding: 1.5rem 2rem;
@@ -119,7 +123,7 @@ header.main {
       &.right {
         position: absolute;
         right: 2rem;
-        top: 1.75rem;
+        top: 1.5rem;
 
         li {
           margin-left: 0rem;
