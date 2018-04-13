@@ -15,6 +15,19 @@ input {
     font-size: 1.4rem;
   }
 
+  &.no-x {
+
+    ::-webkit-clear-button {
+      -webkit-appearance: none;
+      display: none;
+    }
+
+    ::-ms-clear {
+      display: none;
+    }
+  }
+
+
   &[type=search] {
     background-color: $color-white;
     background-image: url('/code-gov-style/assets/img/icons/search.svg');

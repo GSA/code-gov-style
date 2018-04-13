@@ -26,6 +26,17 @@ Just add the type `search` to the input and a search icon will appear
 
 ---
 
+# Input without X
+To remove the default x button from inside inputs, just add the `no-x` class.
+<div class="banner">
+  <input class="no-x" type="search" placeholder="Search Thousands of Projects...">
+</div>
+```
+<input class="no-x" type="search" placeholder="Search Thousands of Projects...">
+```
+
+---
+
 # Checkboxes
 <input id="checkbox-1" type="checkbox">
 <label for="checkbox-1">Checkable Option</label>
