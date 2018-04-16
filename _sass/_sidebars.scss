@@ -70,8 +70,8 @@
     // first-level list
     > ul {
       background-color: transparent;
-      border-top: 1px solid black;
-      border-bottom: 1px solid black;
+      border-top: none;
+      border-bottom: none;
       display: block;
       list-style-type: none;
       margin-bottom: 0;
@@ -80,6 +80,10 @@
       position: relative;
 
       > li, >* > li {
+
+        &:not(:last-child) {
+          border-bottom: 2px solid $color-gray-lightest;
+        }
 
         // first-level option
         > a {
