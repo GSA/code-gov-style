@@ -4,42 +4,142 @@ footer {
   clear: both;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 3rem;
-  padding-top: 0.75rem;
-  padding-right: 0rem;
-  padding-left: 0rem;
+
+  @media screen and (min-width: $small-screen) {
+    padding-bottom: 3rem;
+    padding-top: 0.75rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
+  }
+  
+  position: relative;
   text-align: left;
 
   // center if on small mobile device
   @media screen and (max-width: $small-screen) {
+    height: auto;
     text-align: center;
+    padding: 2rem;
+
+    // don't show images on mobile
+    img {
+      display: none;
+    }
   }
 
-  @media screen and (min-width: $medium-screen) {
+  @media screen and (min-width: $small-screen) {
+    height: 15rem;
+    padding-bottom: 2rem;
     padding-top: 2rem;
+  }
+
+  .footer-content {
+
+     height: 100%;
+     margin: 0 auto;
+     position: relative;
+
+     .footer-part {
+
+       overflow: hidden;
+
+       @media screen and (max-width: $small-screen) {
+         position: relative;
+         @include width-half();
+       }
+
+       @media screen and (min-width: $small-screen) {
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         width: 50%;
+      }
+
+       ul {
+         li {
+           @media screen and (min-width: $small-screen) {
+             display: inline-block;
+             margin: 2rem;
+             &:first-child {
+               margin-left: 0;
+             }
+             &:last-child {
+               margin-right: 0;
+             }
+           }
+         }
+       }
+
+       &.links {
+
+         text-align: left;
+
+         @media screen and (min-width: $small-screen) {
+           left: 5rem;
+         }
+
+         ul {
+           li {
+             a {
+               border-bottom: 3px solid transparent;
+               color: $color-gray;
+               text-decoration: none;
+
+               &:hover {
+                 border-color: $brand-teal-medium;
+                 color: $brand-blue-dark;
+               }
+
+               &:visited {
+                 color: $color-gray;
+               }
+             }
+           }
+         }
+       }
+
+       &.logos {
+         text-align: right;
+
+         @media screen and (min-width: $small-screen) {
+           right: 5rem;
+         }
+
+         ul {
+           li {
+             a {
+               img {
+                 @media screen and (min-width: $small-screen) {
+                   height: 10rem;
+
+                   + span {
+                     display: none;
+                   }
+                 }
+               }
+             }
+           }
+         }
+       }
+     }
   }
 
   &.dark {
     background-color: $color-gray-dark;
     color: $color-gray-lighter;
-  }
 
-  .footer-content {
+    .footer-content {
+      div.links {
+        ul {
+          li {
+            a {
+              color: $color-gray-lighter;
 
-     @extend .indented;
-
-    .footer-links {
-      margin-bottom: 1rem;
-
-      a {
-        font-size: 0.9em;
-      }
-
-      li {
-        display: inline-block;
-
-        &:not(:last-of-type) {
-          margin-right: 1em;
+              &:visited {
+                color: $color-gray-lighter;
+              }
+            }
+          }
         }
       }
     }

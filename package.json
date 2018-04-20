@@ -1,11 +1,12 @@
 {
   "name": "@code.gov/code-gov-style",
-  "version": "1.0.2",
+  "version": "1.1.1",
   "description": "Style for code.gov including buttons, banners, and cards. Inspired by and somewhat based on USWDS.",
   "main": "index.js",
   "scripts": {
     "serve": "bundle exec jekyll serve",
-    "update-font": "cd bash_scripts && bash update-font.sh"
+    "update-font": "cd bash_scripts && bash update-font.sh",
+    "update-prism": "cd bash_scripts && bash update-prism.sh"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   },
   "homepage": "https://github.com/GSA/code-gov-style#readme",
   "dependencies": {
-    "@code.gov/code-gov-font": "^0.5.0"
+    "@code.gov/code-gov-font": "^0.5.0",
+    "prismjs": "^1.14.0"
   }
 }
