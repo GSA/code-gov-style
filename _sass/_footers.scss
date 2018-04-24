@@ -1,3 +1,5 @@
+$breakpoint: 937.5px;
+
 footer {
 
   background-color: #e9e9e9;
@@ -5,18 +7,18 @@ footer {
   margin-left: auto;
   margin-right: auto;
 
-  @media screen and (min-width: $small-screen) {
+  @media screen and (min-width: $medium-screen) {
     padding-bottom: 3rem;
     padding-top: 0.75rem;
     padding-right: 0rem;
     padding-left: 0rem;
   }
-  
+
   position: relative;
   text-align: left;
 
   // center if on small mobile device
-  @media screen and (max-width: $small-screen) {
+  @media screen and (max-width: $breakpoint) {
     height: auto;
     text-align: center;
     padding: 2rem;
@@ -27,10 +29,10 @@ footer {
     }
   }
 
-  @media screen and (min-width: $small-screen) {
-    height: 15rem;
-    padding-bottom: 2rem;
-    padding-top: 2rem;
+  @media screen and (min-width: $medium-screen) {
+    height: 18rem;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
   }
 
   .footer-content {
@@ -38,17 +40,27 @@ footer {
      height: 100%;
      margin: 0 auto;
      position: relative;
+     text-align: left;
 
      .footer-part {
 
        overflow: hidden;
+       text-align: left;
 
-       @media screen and (max-width: $small-screen) {
-         position: relative;
-         @include width-half();
+       @media screen and (max-width: 400.5px) {
+         padding: 0 1rem;
        }
 
-       @media screen and (min-width: $small-screen) {
+       @media screen and (min-width: 400.5px) {
+         padding: 0 3rem;         
+       }
+
+       @media screen and (max-width: $breakpoint) {
+         display: inline-block;
+         position: relative;
+       }
+
+       @media screen and (min-width: $breakpoint) {
          position: absolute;
          top: 50%;
          transform: translateY(-50%);
@@ -57,7 +69,7 @@ footer {
 
        ul {
          li {
-           @media screen and (min-width: $small-screen) {
+           @media screen and (min-width: $breakpoint) {
              display: inline-block;
              margin: 2rem;
              &:first-child {
@@ -74,7 +86,7 @@ footer {
 
          text-align: left;
 
-         @media screen and (min-width: $small-screen) {
+         @media screen and (min-width: $breakpoint) {
            left: 5rem;
          }
 
@@ -99,22 +111,41 @@ footer {
        }
 
        &.logos {
-         text-align: right;
 
-         @media screen and (min-width: $small-screen) {
+         @media screen and (max-width: $breakpoint) {
+           text-align: left;
+         }
+
+         @media screen and (min-width: $breakpoint) {
            right: 5rem;
+           text-align: right;
          }
 
          ul {
            li {
              a {
                img {
-                 @media screen and (min-width: $small-screen) {
+                 @media screen and (min-width: $breakpoint) {
                    height: 10rem;
 
                    + span {
                      display: none;
                    }
+                 }
+               }
+
+               @media screen and (max-width: $breakpoint) {
+                 border-bottom: 3px solid transparent;
+                 color: $color-gray;
+                 text-decoration: none;
+
+                 &:hover {
+                   border-color: $brand-teal-medium;
+                   color: $brand-blue-dark;
+                 }
+
+                 &:visited {
+                   color: $color-gray;
                  }
                }
              }
@@ -135,8 +166,32 @@ footer {
             a {
               color: $color-gray-lighter;
 
+              &:hover {
+                color: $color-gray-lighter;
+              }
+
               &:visited {
                 color: $color-gray-lighter;
+              }
+            }
+          }
+        }
+      }
+
+      div.logos {
+        ul {
+          li {
+            a {
+              @media screen and (max-width: $breakpoint) {
+                color: $color-gray-lighter;
+
+                &:hover {
+                  color: $color-gray-lighter;
+                }
+
+                &:visited {
+                  color: $color-gray-lighter;
+                }
               }
             }
           }
