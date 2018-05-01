@@ -46,13 +46,14 @@ footer {
 
        overflow: hidden;
        text-align: left;
+       vertical-align: top;
 
        @media screen and (max-width: 400.5px) {
          padding: 0 1rem;
        }
 
        @media screen and (min-width: 400.5px) {
-         padding: 0 3rem;         
+         padding: 0 3rem;
        }
 
        @media screen and (max-width: $breakpoint) {

@@ -41,7 +41,6 @@ title: "Footers"
       <ul>
         <li><a><span>Privacy Policy</span></a></li>
         <li><a><span>Visit Project Page</span></a></li>
-        <li><a><span>Join Mailing List</span></a></li>
       </ul>
     </div>
 
@@ -79,7 +78,6 @@ title: "Footers"
       <ul>
         <li><a><span>Privacy Policy</span></a></li>
         <li><a><span>Visit Project Page</span></a></li>
-        <li><a><span>Join Mailing List</span></a></li>
       </ul>
     </div>
 
