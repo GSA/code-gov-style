@@ -46,6 +46,13 @@ p {
   }
 }
 
+ul {
+  li {
+    color: $text-color;
+  }
+}
+
+
 code {
   background-color: $brand-blue-gray;
   border-radius: 3px;
