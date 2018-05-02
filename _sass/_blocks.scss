@@ -28,3 +28,10 @@
 .block--transparent {
   background-color: transparent;
 }
+
+.markdown {
+  ul {
+    list-style-type: inherit;
+    padding-left: 20px;
+  }
+}
