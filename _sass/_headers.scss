@@ -19,7 +19,7 @@ header.main {
     background-color: #323a45;
 
     nav.main {
-      background-color: #323a45;
+      background-color: rgba(0, 0, 0, 0.847058823529412);
 
       .hamburger-inner {
         background-color: $color-white;
@@ -34,12 +34,31 @@ header.main {
         }
       }
 
-      ul {
-        li {
-          a {
+      > ul {
+        > li {
+          > div {
             color: $color-gray-lighter;
-            i {
-              color: $color-gray-lighter;
+            &:hover {
+              color: white;
+            }
+          }
+
+          ul {
+            li {
+              a {
+                color: $color-gray-lighter;
+                i {
+                  color: $color-gray-lighter;
+                }
+                &:hover {
+                  color: white;
+                }
+              }
+            }
+          }
+          &.expanded {
+            > div {
+              color: white;
             }
           }
         }
@@ -50,7 +69,7 @@ header.main {
   &.transparent {
     background-color: transparent;
 
-    nav.main:not(.not-at-top) {
+    nav.main:not(.not-at-top):not(.expanded) {
       background-color: transparent;
     }
   }
@@ -64,7 +83,7 @@ header.main {
     width: 100%;
     z-index: 3;
 
-    &.not-at-top {
+    &.not-at-top, &.expanded {
       box-shadow: 0 0 10px 0 $color-black;
     }
 
@@ -110,7 +129,18 @@ header.main {
       }
     }
 
-    ul {
+    i {
+      color: #5b616b;
+      font-size: 1.5em;
+      line-height: 40px;
+
+      &:hover {
+        color: $brand-blue-dark;
+      }
+    }
+
+    /* first level ul */
+    > ul {
       display: none;
       margin-bottom: 0;
       margin-top: 0;
@@ -125,14 +155,15 @@ header.main {
         right: 2rem;
         top: 1.5rem;
 
-        li {
+        /* first-level li */
+        > li {
           margin-left: 0rem;
           margin-right: 0rem;
           padding-left: 1rem;
           padding-right: 1rem;
 
           &:not(:first-child) {
-            border-left: 2px solid #5b616b;
+            border-left: 2px solid $color-gray;
           }
 
           .follow-us {
@@ -149,40 +180,100 @@ header.main {
         }
       }
 
-      li {
+      /* first-level li */
+      > li {
         display: inline-block;
         font-weight: bold;
         text-transform: uppercase;
         vertical-align: top;
 
         @media screen and (min-width: $medium-screen) {
-          font-size: 0.8em;
           margin-left: 2rem;
         }
 
         @media screen and (min-width: $large-screen) {
-          font-size: 1em;
           margin-left: 4rem;
         }
 
-        a {
+        /* title of first level option */
+        > div {
+          border-bottom: 4px solid transparent;
+          color: $color-gray;
+          cursor: pointer;
           display: block;
+          font-weight: bold;
           line-height: 40px;
+          text-decoration: none;
+          text-transform: uppercase;
+          vertical-align: top;
 
-          &.active {
-            color: $brand-blue-dark;
+          @media screen and (min-width: $medium-screen) {
+            font-size: 0.8em;
           }
 
-          i {
-            color: #5b616b;
-            font-size: 1.5em;
+          @media screen and (min-width: $large-screen) {
+            font-size: 1em;
+          }
+
+          &:hover {
+            border-color: $brand-teal-medium;
+            color: $brand-blue-dark;
+          }
+        }
+
+        /* sub options */
+        > ul {
+          display: none;
+          position: absolute;
+
+          a {
+            color: $color-gray;
+            display: block;
             line-height: 40px;
+            text-decoration: none;
+
+            @media screen and (min-width: $medium-screen) {
+              font-size: 0.7em;
+            }
+
+            @media screen and (min-width: $large-screen) {
+              font-size: .9em;
+            }
 
             &:hover {
               color: $brand-blue-dark;
             }
+
+
+            &.active {
+              color: $brand-blue-dark;
+            }
           }
         }
+
+        &.expanded {
+          > div {
+            border-color: $brand-teal-medium;
+            color: $brand-blue-dark;
+          }
+          > ul {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  .fork_me {
+    cursor: pointer;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99;
+
+    &:hover {
+      rect {
+        fill: $brand-blue-dark !important;
       }
     }
   }

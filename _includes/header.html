@@ -2,22 +2,159 @@
   <nav class="main">
     <ul>
       <li><a class="link" href="/code-gov-style">code.gov Style Guide</a></li>
-      <li><a class="link" href="/code-gov-style/components/banners">Banners</a></li>
-      <li><a class="link" href="/code-gov-style/components/blocks">Blocks</a></li>
-      <li><a class="link" href="/code-gov-style/components/breadcrumbs">Breadcrumbs</a></li>
-      <li><a class="link" href="/code-gov-style/components/buttons">Buttons</a></li>
-      <li><a class="link" href="/code-gov-style/components/cards">Cards</a></li>
-      <li><a class="link" href="/code-gov-style/components/dividers">Dividers</a></li>
-      <li><a class="link" href="/code-gov-style/components/footers">Footers</a></li>
-      <li><a class="link" href="/code-gov-style/components/forms">Forms</a></li>
-      <li><a class="link" href="/code-gov-style/components/icons">Icons</a></li>
-      <li><a class="link" href="/code-gov-style/components/inputs">Inputs</a></li>
-      <li><a class="link" href="/code-gov-style/components/links">Links</a></li>
-      <li><a class="link" href="/code-gov-style/components/navbars">Navbars</a></li>
-      <li><a class="link" href="/code-gov-style/components/quotes">Quotes</a></li>
-      <li><a class="link" href="/code-gov-style/components/sidebars">Sidebars</a></li>
-      <li><a class="link" href="/code-gov-style/components/tables">Tables</a></li>
-      <li><a class="link" href="/code-gov-style/components/widths">Widths</a></li>
+      <li>
+        <div>Layout</div>
+        <ul id="ul-layout">
+          <li><a href="/code-gov-style/components/blocks">Blocks</a></li>
+          <li><a href="/code-gov-style/components/widths">Widths</a></li>
+        </ul>
+      </li>
+      <li>
+        <div>User Input</div>
+        <ul id="ul-user-input">
+          <li><a href="/code-gov-style/components/forms">Forms</a></li>
+          <li><a href="/code-gov-style/components/inputs">Inputs</a></li>
+        </ul>
+      </li>
+      <li>
+        <div>Typography</div>
+        <ul id="ul-typography">
+          <li><a href="/code-gov-style/components/icons">Icons</a></li>
+          <li><a href="/code-gov-style/components/links">Links</a></li>
+          <li><a href="/code-gov-style/components/quotes">Quotes</a></li>
+        </ul>
+      </li>
+      <li>
+        <div>Navigation</div>
+        <ul id="ul-navigation">
+          <li><a href="/code-gov-style/components/breadcrumbs">Breadcrumbs</a></li>
+          <li><a href="/code-gov-style/components/navbars">Navbars</a></li>
+          <li><a href="/code-gov-style/components/sidebars">Sidebars</a></li>
+        </ul>
+      </li>
+      <li>
+        <div>Info Display</div>
+        <ul id="ul-info-display">
+          <li><a href="/code-gov-style/components/cards">Cards</a></li>
+          <li><a href="/code-gov-style/components/tables">Tables</a></li>
+        </ul>
+      </li>
+      <li>
+        <div>Extra</div>
+        <ul id="ul-extra">
+          <li><a href="/code-gov-style/components/banners">Banners</a></li>
+          <li><a href="/code-gov-style/components/buttons">Buttons</a></li>
+          <li><a href="/code-gov-style/components/dividers">Dividers</a></li>
+          <li><a href="/code-gov-style/components/footers">Footers</a></li>
+        </ul>
+      </li>
     </ul>
   </nav>
+
+  <a href="https://github.com/GSA/code-gov-style" target="_blank">
+    <svg
+      class="fork_me"
+      version="1.2"
+      baseProfile="full"
+      width="250px"
+      height="250px"
+      style="position:fixed; top:0; right:0;"
+      fill="blue"
+      xmlns="http://www.w3.org/2000/svg"
+      >
+
+      <filter id="blur-shadow">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+      </filter>
+
+      <rect width="200%" height="33" y="-100" style="fill:rgb(35, 192, 186); transform:rotate(45deg);" filter="url(#blur-shadow)"></rect>
+
+      <line xmlns="http://www.w3.org/2000/svg" x1="0" x2="1000%" y1="-97" y2="-97" style="stroke:white;stroke-width:2;transform:rotate(45deg);opacity:0.6;" stroke-dasharray="3, 2"/>
+
+      <line xmlns="http://www.w3.org/2000/svg" x1="0" x2="1000%" y1="-70" y2="-70" style="stroke:white;stroke-width:2;transform:rotate(45deg);opacity:0.6;" stroke-dasharray="3, 2"/>
+
+      <text
+        xmlns="http://www.w3.org/2000/svg"
+        x="45%"
+        y="-77"
+        font-family="Helvetica"
+        font-size="15"
+        fill="white"
+        transform="rotate(45)"
+      >Fork me on Github</text>
+    </svg>
+  </a>
+
 </header>
+
+<script>
+
+  function toggleState(tag) {
+
+    let className = tag.className.trim() || "";
+    console.log("className:", className);
+
+    // expanded if expanded set or defaults to collapsed
+    let expanded = className.indexOf("expanded") > -1;
+    console.log(tag, "expanded");
+
+    if (expanded) {
+      // if expanded, set to collapsed (default)
+      tag.className = className.replace("expanded", "").trim();
+    } else {
+      // if collapsed (default), set to expanded
+      console.log("set to expanded");
+      tag.className = (className.trim() + " expanded").trim();
+    }
+  }
+
+  var header = document.querySelector("header.main");
+  var nav = document.querySelector("header.main > nav.main");
+
+  /*
+  nav.onmouseout = event => {
+    console.log("onmouseout");
+    nav.className = nav.className.replace("expanded", "").trim();
+    document.querySelectorAll("nav.main > ul > li > ul.expanded").forEach(subMenu => {
+      subMenu.className = subMenu.className.replace("expanded", "").trim();
+    });
+  };
+  */
+
+  var ul = nav.querySelector("ul");
+  header.querySelectorAll("nav.main > ul > li > div").forEach(div => {
+    div.onclick = (event) => {
+      let target = event.target;
+      console.log("target:", target);
+      let li = target.parentElement;
+      toggleState(li);
+      let selectedSubMenu = target.nextElementSibling;
+
+      if (li.className.indexOf("expanded") > -1) {
+        let pad = 2 * Number(window.getComputedStyle(nav).padding.split(" ")[1].replace("px",""));
+        nav.style.height = pad + ul.clientHeight + selectedSubMenu.clientHeight + "px";
+      } else {
+        nav.style.height = null;
+      }
+
+      // make sure all the other options are collapsed
+      document.querySelectorAll("nav.main > ul > li").forEach(option => {
+        if (option != li) {
+          option.className = option.className.replace("expanded", "").trim();
+        } else {
+          console.log("match");
+        }
+      });
+
+
+      // if there's no open submenus close the nav
+      var numOpenSubMenus = document.querySelectorAll("nav.main > ul > li.expanded").length;
+      console.log("numOpenSubMenus:", numOpenSubMenus);
+      if (numOpenSubMenus == 0) {
+        nav.className = nav.className.replace("expanded", "").trim();
+      } else {
+        nav.className = (nav.className.trim() + " expanded").trim();
+      }
+    };
+  });
+</script>
