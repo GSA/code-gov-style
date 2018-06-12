@@ -36,7 +36,7 @@ header.main {
 
       > ul {
         > li {
-          > div {
+          > div, > a {
             color: $color-gray-lighter;
             &:hover {
               color: white;
@@ -196,7 +196,7 @@ header.main {
         }
 
         /* title of first level option */
-        > div {
+        > div, > a {
           border-bottom: 4px solid transparent;
           color: $color-gray;
           cursor: pointer;
@@ -265,21 +265,25 @@ header.main {
   }
 
   .fork_me {
-    cursor: pointer;
     position: fixed;
     right: 0;
     top: 0;
     z-index: 99;
 
-    &:hover {
-      rect {
-        fill: $brand-blue-dark !important;
-      }
-    }
-    
     display: none;
     @media screen and (min-width: 1000px) {
       display: block;
+    }
+
+    a {
+      cursor: pointer;
+      text-decoration: none;
+
+      &:hover {
+        rect {
+          fill: $brand-blue-dark !important;
+        }
+      }
     }
   }
 }
