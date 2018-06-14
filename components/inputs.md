@@ -15,13 +15,17 @@ title: "Inputs"
 
 ---
 
-# Input with Search Icon
-Just add the type `search` to the input and a search icon will appear
+# Input with Go Button
+Just add a button with the go class after the search input.
 <div class="banner">
-  <input type="search" placeholder="Search Thousands of Projects...">
+  <input placeholder="Search Thousands of Projects...">
+  <button class="go">Go</button>
 </div>
 ```
-<input type="search" placeholder="Search Thousands of Projects...">
+<div class="banner">
+  <input placeholder="Search Thousands of Projects...">
+  <button class="go">Go</button>
+</div>
 ```
 
 ---
