@@ -36,10 +36,15 @@ button {
     padding: .5rem 1.25rem;
   }
 
-  &.transparent {
-    background-color: transparent;
-    border: 2px solid $color-white;
-    font-weight: 700;
+  &.alt {
+    background-color: $brand-teal-medium !important;
+    border: 2px solid $brand-teal-medium;
+    font-weight: bold;
+
+    &:hover {
+      background-color: $brand-teal-dark !important;
+      border-color: $brand-teal-dark !important;
+    }
   }
 
   &.dark {
@@ -52,7 +57,7 @@ button {
   &.disabled {
     // making sure it overrides other classes
     background-color: #d6d7d9 !important;
-    border-color: #d6d7d9 !important;    
+    border-color: #d6d7d9 !important;
   }
 
   &:only-child {

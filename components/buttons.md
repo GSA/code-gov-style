@@ -21,14 +21,14 @@ title: "Buttons"
 
 ---
 
-# Transparent Buttons
+# Alternative Buttons
 
 <div class="banner">
-  <button class="transparent">Button</button>
+  <button class="alt">Button</button>
 </div>
 
 ```
-<button class="transparent">Button</button>
+<button class="alt">Button</button>
 ```
 
 ---
