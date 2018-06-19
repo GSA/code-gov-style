@@ -23,7 +23,13 @@
       padding: 26rem 0 16rem;
     }
 
-    height: 100vh;
+    /* need extra room for virtual buttons that appear on mobile devices */
+    height: 85vh;
+
+    /* want to give show mission a little */
+    @media screen and (min-width: 1200px) {
+      height: 90vh;
+    }
 
     .banner-content {
       .banner-title {
