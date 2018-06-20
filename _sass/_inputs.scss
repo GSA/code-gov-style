@@ -1,4 +1,6 @@
 input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
   background-color: $color-white;
   border: 2px solid $color-white;
   border-radius: 5px;
