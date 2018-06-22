@@ -4,6 +4,8 @@
   "description": "Style for code.gov including buttons, banners, and cards. Inspired by and somewhat based on USWDS.",
   "main": "index.js",
   "scripts": {
+    "concat": "cat web_components/* > assets/js/code_gov_web_components.js",
+    "debug": "npm run concat && npm run serve",
     "serve": "bundle exec jekyll serve",
     "update-font": "cd bash_scripts && bash update-font.sh",
     "update-prism": "cd bash_scripts && bash update-prism.sh"
