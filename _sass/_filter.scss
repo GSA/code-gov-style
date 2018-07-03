@@ -1,0 +1,25 @@
+.filter-box {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 258px;
+
+  .title {
+    background-color: $color-blue;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+  }
+  
+  ul.options {
+    border: 1px solid $color-gray-lighter;
+    margin: 0;
+    padding: 5px 15px;
+    
+    li {
+      margin-bottom: 15px;
+      margin-top: 15px;
+    }
+  }
+  
+}
