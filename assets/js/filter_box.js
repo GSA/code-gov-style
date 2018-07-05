@@ -6,11 +6,38 @@
 
             // establish prototype chain
             super();
+            
+            this.collapsed = true;
         }
 
 
         // fires after the element has been attached to the DOM
         connectedCallback() {
+          this.update();
+        }
+
+        getHTML() {
+          let showText = this.options.length >= 4 ? (this.collapsed ? "Show more" : "Show less") : null;
+          
+          return `
+            <div class="title">${this.title}</div>
+            <ul class="options">
+              ${this.options.map((option, index) => {
+                if (index >= 4 && this.collapsed) return;
+                else return '<li><input type="checkbox" id="' + option.value + '" value="' + option.value + '"><label for="' + option.value + '"><span>' + option.name + '</span></label></li>';
+              }).join("\n")}
+              ${showText ? '<li><span class="showMore">' + showText + '</span></li>' : ''}
+            </ul>
+          `;          
+        }
+        
+        get values() {
+          return Array.from(this.querySelectorAll(":checked")).map(tag => tag.value);
+        }
+
+        update() {
+            this.innerHTML = "";
+          
             // creating a container for the editable-list component
             const container = document.createElement('div');
           
@@ -45,17 +72,8 @@
             addElementButton.addEventListener('click', this.addListItem, false);
             */
         }
-        
-        getHTML() {
-          return `
-            <div class="title">${this.title}</div>
-            <ul class="options">
-              ${this.options.map(option => {
-                return '<li><input type="checkbox" id="' + option.value + '" value="' + option.value + '"><label for="' + option.value + '"><span>' + option.name + '</span></label></li>';
-              }).join("\n")}
-            </ul>
-          `;          
-        }
+
+
     }
 
     // let the browser know about the custom element

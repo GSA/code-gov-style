@@ -11,11 +11,11 @@ title: "Filter"
 # Normal Button
 <filter-box
   title="Computer Language"
-  options='["Assembly", "C", "C#", "C++", "Java", "JavaScript","PHP", "Python", "Ruby", "Visual Basic"]'
+  options='["Assembly", "C", "C#", "C++", "Java", "JavaScript", "PHP", "Python", "Ruby", "Visual Basic"]'
 ></filter-box>
 ```
 <filter-box
   title="Computer Language"
-  options='["Assembly", "C", "C#", "C++", "Java", "JavaScript","PHP", "Python", "Ruby", "Visual Basic"]'
+  options='["Assembly", "C", "C#", "C++", "Java", "JavaScript", "PHP", "Python", "Ruby", "Visual Basic"]'
 ></filter-box>
 ```
