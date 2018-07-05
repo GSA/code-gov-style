@@ -15,7 +15,15 @@
             const container = document.createElement('div');
           
             this.title = this.getAttribute('title');
-            this.options = JSON.parse(this.getAttribute('options')).map(option => {
+            const rawOptions = this.getAttribute('options');
+            let parsedOptions = null;
+            try {
+              parsedOptions = JSON.parse(rawOptions);
+            } catch (error) {
+              console.error("[filter-box] failed to parse rawOptions:", rawOptions);
+              throw error;
+            }
+            this.options = parsedOptions.map(option => {
               return { name: option, value: option, selected: false };
             });
             console.log("options:", this.options);

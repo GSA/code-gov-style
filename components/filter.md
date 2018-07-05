@@ -10,12 +10,12 @@ title: "Filter"
 
 # Normal Button
 <filter-box
-  title="Organization Type"
-  options='["Federal Government","State Government","Local Government"]'
+  title="Computer Language"
+  options='["Assembly", "C", "C#", "C++", "Java", "JavaScript","PHP", "Python", "Ruby", "Visual Basic"]'
 ></filter-box>
 ```
 <filter-box
-  title="Organization Type"
-  options="['Federal Government', 'State Government', 'Local Government']"
+  title="Computer Language"
+  options='["Assembly", "C", "C#", "C++", "Java", "JavaScript","PHP", "Python", "Ruby", "Visual Basic"]'
 ></filter-box>
 ```
