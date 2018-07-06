@@ -81,6 +81,17 @@
               }, false);
             });
             
+            this.querySelectorAll('input').forEach(tag => {
+              tag.addEventListener('change', event => {
+                const li = event.target.parentElement;
+                if (event.target.checked) {
+                  li.className += " checked";
+                } else {
+                  li.className = li.className.replace("checked", "");                  
+                }
+              }, false);
+            });
+            
             /*
             addElementButton.addEventListener('click', this.addListItem, false);
             */

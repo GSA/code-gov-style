@@ -41,6 +41,10 @@ filter-box {
         margin-bottom: 15px;
         margin-top: 15px;
         
+        &.checked {
+          display: block !important;
+        }
+        
         .showMore, .showLess {
           color: $color-blue;
           cursor: pointer;
