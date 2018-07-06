@@ -12,12 +12,24 @@
           return this.className.includes("collapsed");
         }
         
-        set collapsed(newValue) {
+        get showAll() {
+          return this.className.includes("showAll");
+        }
+        
+        setClassName(className, newValue) {
           if (newValue) {
-            this.className = (this.className + " collapsed").trim();
+            this.className = (this.className + " " + className).trim();
           } else {
-            this.className = this.className.replace("collapsed", "").trim();
-          }
+            this.className = this.className.replace(className, "").trim();
+          }          
+        }
+
+        set collapsed(newValue) {
+          this.setClassName("collapsed", newValue);
+        }
+        
+        set showAll(newValue) {
+          this.setClassName("showAll", newValue);
         }
 
 
@@ -28,11 +40,11 @@
 
         getHTML() {
           return `
-            <div class="title">${this.title}</div>
+            <div class="title-bar">${this.title}<i class="icon icon-angle-down"></i><i class="icon icon-angle-up"></i></div>
             <ul class="options">
               ${this.options.map((option, index) => {
                 let className = "";
-                if (index >= 4 && this.collapsed) className += "hideOnCollapsed";
+                if (index >= 4 && this.showAll) className += "hideOnCollapsed";
                 return '<li class="' + className + '"><input type="checkbox" id="' + option.value + '" value="' + option.value + '"><label for="' + option.value + '"><span>' + option.name + '</span></label></li>';
               }).join("\n")}
               ${this.options.length >= 4 ? '<li><span class="showMore">Show more</span><span class="showLess">Show less</span></li>' : ''}
@@ -46,7 +58,7 @@
 
         update() {
 
-            this.collapsed = true;          
+            this.showAll = true;          
           
             this.innerHTML = "";
           
@@ -74,6 +86,13 @@
             // appending the container to the shadow DOM
             this.appendChild(container);            
             
+            this.querySelector(".icon-angle-up").addEventListener('click', _ => {
+              this.setClassName('collapsed', false);
+            }, false);
+
+            this.querySelector(".icon-angle-down").addEventListener('click', _ => {
+              this.setClassName('collapsed', true);
+            }, false);
          
             this.querySelectorAll('.showLess, .showMore').forEach(tag => {
               tag.addEventListener('click', _ => {
@@ -98,7 +117,7 @@
         }
         
         toggleState() {
-          this.collapsed = !this.collapsed;
+          this.showAll = !this.showAll;
         }
 
     }

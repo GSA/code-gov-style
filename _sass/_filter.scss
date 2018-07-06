@@ -1,6 +1,24 @@
 filter-box {
-  
   &.collapsed {
+    .icon-angle-down {
+      display: none;
+    }
+    
+    ul.options {
+      display: none;
+    }
+  }
+  
+  &:not(.collapsed) {
+    .icon-angle-up {
+      display: none;
+    }
+  }
+}
+
+filter-box {
+  
+  &.showAll {
     ul {
       li {
         &.hideOnCollapsed {
@@ -25,11 +43,23 @@ filter-box {
     padding: 0;
     width: 258px;
   
-    .title {
+    .title-bar {
       background-color: $color-blue;
       color: white;
       font-weight: bold;
       padding: 10px;
+      position: relative;
+      
+      i {
+        color: white;
+        cursor: pointer;
+        font-size: 2em;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        user-select: none;
+      }
     }
     
     ul.options {
