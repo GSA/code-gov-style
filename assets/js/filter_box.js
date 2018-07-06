@@ -6,8 +6,18 @@
 
             // establish prototype chain
             super();
-            
-            this.collapsed = true;
+        }
+        
+        get collapsed() {
+          return this.className.includes("collapsed");
+        }
+        
+        set collapsed(newValue) {
+          if (newValue) {
+            this.className = (this.className + " collapsed").trim();
+          } else {
+            this.className = this.className.replace("collapsed", "").trim();
+          }
         }
 
 
@@ -17,18 +27,17 @@
         }
 
         getHTML() {
-          let showText = this.options.length >= 4 ? (this.collapsed ? "Show more" : "Show less") : null;
-          
           return `
             <div class="title">${this.title}</div>
             <ul class="options">
               ${this.options.map((option, index) => {
-                if (index >= 4 && this.collapsed) return;
-                else return '<li><input type="checkbox" id="' + option.value + '" value="' + option.value + '"><label for="' + option.value + '"><span>' + option.name + '</span></label></li>';
+                let className = "";
+                if (index >= 4 && this.collapsed) className += "hideOnCollapsed";
+                return '<li class="' + className + '"><input type="checkbox" id="' + option.value + '" value="' + option.value + '"><label for="' + option.value + '"><span>' + option.name + '</span></label></li>';
               }).join("\n")}
-              ${showText ? '<li><span class="showMore">' + showText + '</span></li>' : ''}
+              ${this.options.length >= 4 ? '<li><span class="showMore">Show more</span><span class="showLess">Show less</span></li>' : ''}
             </ul>
-          `;          
+          `;     
         }
         
         get values() {
@@ -36,6 +45,9 @@
         }
 
         update() {
+
+            this.collapsed = true;          
+          
             this.innerHTML = "";
           
             // creating a container for the editable-list component
@@ -62,17 +74,21 @@
             // appending the container to the shadow DOM
             this.appendChild(container);            
             
+         
+            this.querySelectorAll('.showLess, .showMore').forEach(tag => {
+              tag.addEventListener('click', _ => {
+                this.toggleState();
+              }, false);
+            });
+            
             /*
-            let removeElementButtons = [...this.shadowRoot.querySelectorAll('.editable-list-remove-item')];
-            let addElementButton = this.shadowRoot.querySelector('.editable-list-add-item');
-
-            this.itemList = this.shadowRoot.querySelector('.item-list');
-
-            this.handleRemoveItemListeners(removeElementButtons);
             addElementButton.addEventListener('click', this.addListItem, false);
             */
         }
-
+        
+        toggleState() {
+          this.collapsed = !this.collapsed;
+        }
 
     }
 
