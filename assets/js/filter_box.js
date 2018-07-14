@@ -86,11 +86,11 @@
             // appending the container to the shadow DOM
             this.appendChild(container);            
             
-            this.querySelector(".icon-angle-up").addEventListener('click', _ => {
+            this.querySelector(".icon-angle-down").addEventListener('click', _ => {
               this.setClassName('collapsed', false);
             }, false);
 
-            this.querySelector(".icon-angle-down").addEventListener('click', _ => {
+            this.querySelector(".icon-angle-up").addEventListener('click', _ => {
               this.setClassName('collapsed', true);
             }, false);
          

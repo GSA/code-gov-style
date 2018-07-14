@@ -1,6 +1,6 @@
 filter-box {
   &.collapsed {
-    .icon-angle-down {
+    .icon-angle-up {
       display: none;
     }
     
@@ -10,7 +10,7 @@ filter-box {
   }
   
   &:not(.collapsed) {
-    .icon-angle-up {
+    .icon-angle-down {
       display: none;
     }
   }
