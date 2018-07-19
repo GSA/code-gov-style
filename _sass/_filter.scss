@@ -1,4 +1,6 @@
 filter-box {
+  display: block;
+
   &.collapsed {
     .icon-angle-up {
       display: none;
