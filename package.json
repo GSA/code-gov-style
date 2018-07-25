@@ -1,6 +1,6 @@
 {
   "name": "@code.gov/code-gov-style",
-  "version": "1.7.4",
+  "version": "1.7.5",
   "description": "Style for code.gov including buttons, banners, and cards. Inspired by and somewhat based on USWDS.",
   "main": "index.js",
   "scripts": {
