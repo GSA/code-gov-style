@@ -69,6 +69,13 @@ input {
   cursor: pointer;
   font-weight: 400;
   margin-bottom: 0.65em;
+  position: relative;
+  
+  span {
+    display: inline-block;
+    padding-left: calc(1.75rem + 1em);
+    vertical-align: top;
+  }
 }
 
 [type=checkbox] + label::before {
@@ -79,7 +86,10 @@ input {
   height: 1.75rem;
   line-height: 2rem;
   margin-right: 1em;
+  position: absolute;
   text-indent: 0.15em;
+  top: 50%;
+  transform: translateY(-50%);  
   vertical-align: middle\0; // Target IE 11 and below to vertically center inputs
   width: 1.75rem;
 }
