@@ -57,7 +57,7 @@
                 if (index >= 4 && this.showAll) className += "hideOnCollapsed";
                 return '<li class="' + className + '"><input type="checkbox" id="' + option.value + '" value="' + option.value + '"><label for="' + option.value + '"><span>' + option.name + '</span></label></li>';
               }).join("\n")}
-              ${this.options.length >= 4 ? '<li><span class="showMore">Show more</span><span class="showLess">Show less</span></li>' : ''}
+              ${this.options.length > 4 ? '<li><span class="showMore">Show more</span><span class="showLess">Show less</span></li>' : ''}
             </ul>
           `;     
         }
