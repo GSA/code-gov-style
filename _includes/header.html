@@ -128,14 +128,15 @@
   header.querySelectorAll("nav.main > ul > li > div").forEach(div => {
     div.onclick = (event) => {
       let target = event.target;
-      console.log("target:", target);
       let li = target.parentElement;
       toggleState(li);
       let selectedSubMenu = target.nextElementSibling;
 
       if (li.className.indexOf("expanded") > -1) {
-        let pad = 2 * Number(window.getComputedStyle(nav).padding.split(" ")[1].replace("px",""));
-        nav.style.height = pad + ul.clientHeight + selectedSubMenu.clientHeight + "px";
+        const computedStyle = window.getComputedStyle(nav);
+        const paddingBottom = Number(computedStyle.paddingBottom.replace("px",""));
+        const paddingTop = Number(computedStyle.paddingTop.replace("px",""));
+        nav.style.height = paddingBottom + paddingTop + ul.clientHeight + selectedSubMenu.clientHeight + "px";
       } else {
         nav.style.height = null;
       }
