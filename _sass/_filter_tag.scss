@@ -24,9 +24,9 @@
     transform: translateY(-50%);
 
     &::before {
-      content: '\e801';
+      content: '\1';
       font-family: 'code-gov';
-      font-size: 2em;
+      font-size: 1.3em;
       margin-left: -30px;
       position: absolute;
       top: 50%;

@@ -6,6 +6,7 @@
   "scripts": {
     "bundle_web_components": "cd assets/js && cat web_components/* > web_components.js",
     "serve": "bundle exec jekyll serve",
+    "serve-on-server": "sudo bundle exec jekyll serve --host=0.0.0.0 --port=80",
     "update-font": "cd bash_scripts && bash update-font.sh",
     "update-polyfill": "npm install && cd node_modules/@webcomponents/custom-elements && npm install && npm build && npm test",
     "update-prism": "cd bash_scripts && bash update-prism.sh"
@@ -28,7 +29,7 @@
   },
   "homepage": "https://github.com/GSA/code-gov-style#readme",
   "dependencies": {
-    "@code.gov/code-gov-font": "0.6.1",
+    "@code.gov/code-gov-font": "0.6.3",
     "@webcomponents/custom-elements": "^1.2.0",
     "prismjs": "^1.15.0"
   }
