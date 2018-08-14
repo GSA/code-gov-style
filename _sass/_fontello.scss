@@ -33,6 +33,7 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
+.icon-cancel-thin:before { content: '\e800'; } /* '' */
 .icon-search:before { content: '\e800'; } /* '' */
 .icon-cancel:before { content: '\e801'; } /* '' */
 .icon-ok-circled2:before { content: '\e802'; } /* '' */
