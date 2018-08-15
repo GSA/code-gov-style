@@ -21,13 +21,12 @@
   .corner-tag {
     color: white;
     position: absolute;
+    bottom: auto;
     left: auto;
     right: 0;
     top: 0;
-    padding-bottom: 1em;
-    padding-left: 1em;
-    padding-top: 1em;
-    padding-right: 1em;
+    width: 3.25em;
+    height: 3.25em;
     
     &.high {
       background-color: #33CC66;
@@ -45,8 +44,14 @@
     }
     
     .corner-tag-value {
-      top: 50%;
-      transform: translate(50%, -50%);   
+      display: inline-block;
+      height: 25%;
+      line-height: 0.75;
+      position: absolute;
+      right: 0;
+      top: 12.5%;
+      text-align: center;
+      width: 62.5%;
     }
     
   }
