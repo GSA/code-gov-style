@@ -9,7 +9,7 @@ title: "Corner Tags"
 <div style="max-width: 400px">
   <div class="card">
     <div class="corner-tag high">
-      <div class="corner-tag-value">10</div>
+      <div class="corner-tag-value">10.6</div>
     </div>
     <p>High Value Card</p>
   </div>
@@ -18,7 +18,7 @@ title: "Corner Tags"
 <div style="max-width: 400px">
   <div class="card">
     <div class="corner-tag high">
-      <div class="corner-tag-value">10</div>
+      <div class="corner-tag-value">10.6</div>
     </div>
     <p>High Value Card</p>
   </div>
