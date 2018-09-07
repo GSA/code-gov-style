@@ -16,11 +16,11 @@
     }
 
     get collapsed() {
-      return this.className.includes("collapsed");
+      return this.className.indexOf("collapsed") > -1;
     }
     
     get showAll() {
-      return this.className.includes("showAll");
+      return this.className.indexOf("showAll") > -1;
     }
     
     setClassName(className, newValue) {
