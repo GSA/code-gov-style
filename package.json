@@ -1,10 +1,10 @@
 {
   "name": "@code.gov/code-gov-style",
-  "version": "1.7.12",
+  "version": "1.7.14",
   "description": "Style for code.gov including buttons, banners, and cards. Inspired by and somewhat based on USWDS.",
   "main": "index.js",
   "scripts": {
-    "bundle_web_components": "cd assets/js && cat web_components/* > web_components.js",
+    "bundle_web_components": "cp ./node_modules/@babel/polyfill/dist/polyfill.min.js assets/js/web_components.js && cat assets/js/polyfills/event.js >> assets/js/web_components.js && ./node_modules/@babel/cli/bin/babel.js assets/js/web_components/* >> assets/js/web_components.js",
     "serve": "bundle exec jekyll serve",
     "serve-on-server": "sudo bundle exec jekyll serve --host=0.0.0.0 --port=80",
     "update-font": "cd bash_scripts && bash update-font.sh",
@@ -29,8 +29,16 @@
   },
   "homepage": "https://github.com/GSA/code-gov-style#readme",
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
     "@code.gov/code-gov-font": "0.6.3",
     "@webcomponents/custom-elements": "^1.2.0",
     "prismjs": "^1.15.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-transform-arrow-functions": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0"
   }
 }

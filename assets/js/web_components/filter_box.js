@@ -122,13 +122,13 @@
           this.setClassName('collapsed', true);
         }, false);
 
-        this.querySelectorAll('.showLess, .showMore').forEach(tag => {
+        Array.prototype.slice.call(this.querySelectorAll('.showLess, .showMore')).forEach(tag => {
           tag.addEventListener('click', _ => {
             this.toggleState();
           }, false);
         });
 
-        this.querySelectorAll('input').forEach(tag => {
+        Array.prototype.slice.call(this.querySelectorAll('input')).forEach(tag => {
           tag.addEventListener('change', event => {
             const li = event.target.parentElement;
             if (event.target.checked) {
@@ -142,8 +142,8 @@
         /*
         addElementButton.addEventListener('click', this.addListItem, false);
         */
-        /*global Event*/
-        const event = new Event('change', {});
+        /*global CustomEvent*/
+        const event = new CustomEvent('change', {});
         this.dispatchEvent(event);
     }
 

@@ -17,7 +17,7 @@
   </section>
   <script src="{{ '/assets/js/prism.js' | relative_url }}"></script>
   <script>
-      document.querySelectorAll("pre code").forEach(node => {
+      Array.prototype.slice.call(document.querySelectorAll("pre code")).forEach(function(node) {
         node.className = "language-html";
         node.style.fontSize = "2rem";
         node.innerHTML = Prism.highlight(node.textContent, Prism.languages.html, 'html');

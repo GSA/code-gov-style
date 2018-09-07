@@ -3,8 +3,7 @@ layout: components
 title: "Filter"
 ---
 
-<script src="{{ '/assets/js/web_components/custom-elements.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/web_components/filter_box.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/web_components.js' | relative_url }}"></script>
 
 
 <p>Below you will find the filter boxes used by code.gov</p>
