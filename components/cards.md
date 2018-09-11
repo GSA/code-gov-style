@@ -3,7 +3,7 @@ layout: components
 title: "Cards"
 ---
 
-## Below you will find the cards used by code.gov
+## Below you will find the cards used by {{site.brand}}
 
 # Normal Card
 <div style="max-width: 400px">

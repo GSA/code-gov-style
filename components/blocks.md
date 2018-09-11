@@ -3,7 +3,7 @@ layout: components
 title: "Buttons"
 ---
 
-<p>Below you will find the styling used by code.gov for sections or blocks</p>
+<p>Below you will find the styling used by {{site.brand}} for sections or blocks</p>
 
 # Indentation
 You can indent a div by simply adding class="indented".

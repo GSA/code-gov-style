@@ -3,7 +3,7 @@ layout: components
 title: "Buttons"
 ---
 
-<p>Below you will find the buttons used by code.gov</p>
+<p>Below you will find the buttons used by {{site.brand}}</p>
 
 # Normal Button
 <button>Normal Button</button>

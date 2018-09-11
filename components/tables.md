@@ -3,7 +3,7 @@ layout: components
 title: "Tables"
 ---
 
-## Below you will find the tables used by code.gov
+## Below you will find the tables used by {{site.brand}}
 
 # Normal Footer
 <table>

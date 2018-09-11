@@ -3,7 +3,7 @@ layout: components
 title: "Navbars"
 ---
 
-<p>Below you will find the styling used by code.gov for navbars</p>
+<p>Below you will find the styling used by {{site.brand}} for navbars</p>
 
 # Main Navbar
 The navbar at the top of the page uses this code.  You can also make the navbar transparent by adding the `transparent` class.

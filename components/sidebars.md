@@ -3,7 +3,7 @@ layout: components
 title: "Sidebars"
 ---
 
-<p>Below you will find the styling used by code.gov for sidebars</p>
+<p>Below you will find the styling used by {{site.brand}} for sidebars</p>
 
 # Normal Sidebar
 <nav class="sidebar left">
