@@ -3,7 +3,7 @@ layout: components
 title: "Links"
 ---
 
-<p>Below you will find some links used in code.gov</p>
+<p>Below you will find some links used in {{site.brand}}</p>
 
 # Main Links
 <a class="link">Link with Border</a>

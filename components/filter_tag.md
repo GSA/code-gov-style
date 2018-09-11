@@ -3,7 +3,7 @@ layout: components
 title: "Filter Tag"
 ---
 
-<p>Below you will find the filter tag that is created by filter boxes used by code.gov</p>
+<p>Below you will find the filter tag that is created by filter boxes used by {{site.brand}}</p>
 
 # Simple Filter Tag
 <div class="filter-tag">

@@ -3,7 +3,7 @@ layout: components
 title: "Corner Tags"
 ---
 
-## Below you will find the corner tags affixed to some cards used by code.gov
+## Below you will find the corner tags affixed to some cards used by {{site.brand}}
 
 # High Value
 <div style="max-width: 400px">

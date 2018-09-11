@@ -3,7 +3,7 @@ layout: components
 title: "Dividers"
 ---
 
-<p>Below you will find some dividers used in code.gov</p>
+<p>Below you will find some dividers used in {{site.brand}}</p>
 
 # Horizontal Divider
 To divide two sections, just add an `<hr />`.

@@ -3,7 +3,7 @@ layout: components
 title: "Banners"
 ---
 
-## Below you will find the banners used by code.gov
+## Below you will find the banners used by {{site.brand}}
 
 # Normal Banner
 <div class="banner">

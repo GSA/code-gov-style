@@ -1,55 +1,55 @@
 <header class="main white">
   <nav class="main">
     <ul>
-      <li><a class="link" href="/code-gov-style">code.gov Style Guide</a></li>
+      <li><a class="link" href="{{site.baseurl}}">{{site.brand}} Style Guide</a></li>
       <li>
         <div>Layout</div>
         <ul id="ul-layout">
-          <li><a href="/code-gov-style/components/blocks">Blocks</a></li>
-          <li><a href="/code-gov-style/components/widths">Widths</a></li>
+          <li><a href="{{site.baseurl}}/components/blocks">Blocks</a></li>
+          <li><a href="{{site.baseurl}}/components/widths">Widths</a></li>
         </ul>
       </li>
       <li>
         <div>User Input</div>
         <ul id="ul-user-input">
-          <li><a href="/code-gov-style/components/filter">Filter</a></li>
-          <li><a href="/code-gov-style/components/filter_tag">Filter Tag</a></li>
-          <li><a href="/code-gov-style/components/forms">Forms</a></li>
-          <li><a href="/code-gov-style/components/inputs">Inputs</a></li>
+          <li><a href="{{site.baseurl}}/components/filter">Filter</a></li>
+          <li><a href="{{site.baseurl}}/components/filter_tag">Filter Tag</a></li>
+          <li><a href="{{site.baseurl}}/components/forms">Forms</a></li>
+          <li><a href="{{site.baseurl}}/components/inputs">Inputs</a></li>
         </ul>
       </li>
       <li>
         <div>Typography</div>
         <ul id="ul-typography">
-          <li><a href="/code-gov-style/components/icons">Icons</a></li>
-          <li><a href="/code-gov-style/components/links">Links</a></li>
-          <li><a href="/code-gov-style/components/quotes">Quotes</a></li>
+          <li><a href="{{site.baseurl}}/components/icons">Icons</a></li>
+          <li><a href="{{site.baseurl}}/components/links">Links</a></li>
+          <li><a href="{{site.baseurl}}/components/quotes">Quotes</a></li>
         </ul>
       </li>
       <li>
         <div>Navigation</div>
         <ul id="ul-navigation">
-          <li><a href="/code-gov-style/components/breadcrumbs">Breadcrumbs</a></li>
-          <li><a href="/code-gov-style/components/navbars">Navbars</a></li>
-          <li><a href="/code-gov-style/components/scroll_indicator">Scroll Indicator</a></li>
-          <li><a href="/code-gov-style/components/sidebars">Sidebars</a></li>
+          <li><a href="{{site.baseurl}}/components/breadcrumbs">Breadcrumbs</a></li>
+          <li><a href="{{site.baseurl}}/components/navbars">Navbars</a></li>
+          <li><a href="{{site.baseurl}}/components/scroll_indicator">Scroll Indicator</a></li>
+          <li><a href="{{site.baseurl}}/components/sidebars">Sidebars</a></li>
         </ul>
       </li>
       <li>
         <div>Info Display</div>
         <ul id="ul-info-display">
-          <li><a href="/code-gov-style/components/cards">Cards</a></li>
-          <li><a href="/code-gov-style/components/corner_tags">Corner Tags</a></li>
-          <li><a href="/code-gov-style/components/tables">Tables</a></li>
+          <li><a href="{{site.baseurl}}/components/cards">Cards</a></li>
+          <li><a href="{{site.baseurl}}/components/corner_tags">Corner Tags</a></li>
+          <li><a href="{{site.baseurl}}/components/tables">Tables</a></li>
         </ul>
       </li>
       <li>
         <div>Extra</div>
         <ul id="ul-extra">
-          <li><a href="/code-gov-style/components/banners">Banners</a></li>
-          <li><a href="/code-gov-style/components/buttons">Buttons</a></li>
-          <li><a href="/code-gov-style/components/dividers">Dividers</a></li>
-          <li><a href="/code-gov-style/components/footers">Footers</a></li>
+          <li><a href="{{site.baseurl}}/components/banners">Banners</a></li>
+          <li><a href="{{site.baseurl}}/components/buttons">Buttons</a></li>
+          <li><a href="{{site.baseurl}}/components/dividers">Dividers</a></li>
+          <li><a href="{{site.baseurl}}/components/footers">Footers</a></li>
         </ul>
       </li>
     </ul>
@@ -126,8 +126,8 @@
   */
 
   var ul = nav.querySelector("ul");
-  header.querySelectorAll("nav.main > ul > li > div").forEach(div => {
-    div.onclick = (event) => {
+  Array.prototype.slice.call(header.querySelectorAll("nav.main > ul > li > div")).forEach(function(div) {
+    div.onclick = function(event) {
       let target = event.target;
       let li = target.parentElement;
       toggleState(li);
@@ -143,7 +143,7 @@
       }
 
       // make sure all the other options are collapsed
-      document.querySelectorAll("nav.main > ul > li").forEach(option => {
+      Array.prototype.slice.call(document.querySelectorAll("nav.main > ul > li")).forEach(function(option) {
         if (option != li) {
           option.className = option.className.replace("expanded", "").trim();
         } else {

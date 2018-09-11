@@ -3,7 +3,7 @@ layout: components
 title: "Inputs"
 ---
 
-## Below you will find the inputs used by code.gov
+## Below you will find the inputs used by {{site.brand}}
 
 # Input
 <div class="banner">

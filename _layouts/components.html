@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-  <title>code.gov Style Guide</title>
+  <title>{{site.brand}} Style Guide</title>
   <link rel="stylesheet" href="{{ '/assets/css/code-gov-font-face.css' | relative_url }}" />
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
   <link rel="stylesheet" href="{{ '/assets/css/prism.css' | relative_url }}" />
@@ -17,7 +17,7 @@
   </section>
   <script src="{{ '/assets/js/prism.js' | relative_url }}"></script>
   <script>
-      document.querySelectorAll("pre code").forEach(node => {
+      Array.prototype.slice.call(document.querySelectorAll("pre code")).forEach(function(node) {
         node.className = "language-html";
         node.style.fontSize = "2rem";
         node.innerHTML = Prism.highlight(node.textContent, Prism.languages.html, 'html');

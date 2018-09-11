@@ -3,7 +3,7 @@ layout: components
 title: "Footers"
 ---
 
-## Below you will find the footers used by code.gov
+## Below you will find the footers used by {{site.brand}}
 
 # Normal Footer
 <footer>

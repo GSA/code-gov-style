@@ -3,7 +3,7 @@ layout: components
 title: "Scroll Indicator"
 ---
 
-## Below you will find the scroll indicator used by code.gov
+## Below you will find the scroll indicator used by {{site.brand}}
 
 # Input
 <div class="banner">

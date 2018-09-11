@@ -3,7 +3,7 @@ layout: components
 title: "Icons"
 ---
 
-Code.gov created its own custom font using fontello based on font-awesome.
+{{site.brand}} uses a custom font created using fontello based on font-awesome.
 You can read more about it <a href="https://github.com/GSA/code-gov-font">here</a>.
 
 
