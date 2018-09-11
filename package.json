@@ -1,6 +1,6 @@
 {
   "name": "@code.gov/code-gov-style",
-  "version": "1.7.17",
+  "version": "1.8.0",
   "description": "Style for code.gov including buttons, banners, and cards. Inspired by and somewhat based on USWDS.",
   "main": "index.js",
   "scripts": {
@@ -30,7 +30,7 @@
   "homepage": "https://github.com/GSA/code-gov-style#readme",
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
-    "@code.gov/code-gov-font": "0.6.3",
+    "@code.gov/code-gov-font": "0.7.0",
     "@webcomponents/custom-elements": "^1.2.0",
     "prismjs": "^1.15.0"
   },
