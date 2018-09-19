@@ -11,10 +11,6 @@
 
   &.medium {
     height: 60vh;
-
-    @media screen and (min-width: $small-screen) {
-      height: 45vh;
-    }
   }
 
   &.large {
@@ -143,7 +139,8 @@
     a {
       color: $color-white;
 
-      &.link, :visited {
+      &.link,
+      :visited {
         color: $color-white;
       }
     }
