@@ -29,6 +29,8 @@ html {
 
     a:focus {
       box-shadow: none;
+      outline: 2px dotted $color-gray-light;
+      outline-offset: 3px;
     }
 
     h3 {
