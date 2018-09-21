@@ -3,11 +3,15 @@
   background-attachment: fixed;
   background-size: cover;
   color: $color-white;
-  height: 30vh;
+  height: 112px;
   padding-bottom: 8rem;
   padding-top: 8rem;
   position: relative;
   text-align: center;
+
+  @media screen and (min-width: $medium-screen) {
+    height: 225px;
+  }
 
   &.medium {
     height: 60vh;
@@ -50,11 +54,13 @@
   }
 
   .banner-content {
-
-    position: absolute;
-    top: 50%;
     transform: translateY(-50%);
     width: 100%;
+
+    @media screen and (min-width: $medium-screen) {
+      position: absolute;
+      top: 50%;
+    }
 
     .banner-title {
       color: #ffffff;
@@ -105,7 +111,7 @@
       color: $color-white;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 1em;
-      margin: 0rem auto 3rem;
+      margin: 0 auto;
       max-width: 70rem;
 
       @media screen and (min-width: $small-screen) {
@@ -139,7 +145,7 @@
     a {
       color: $color-white;
 
-      &.link,
+      &.link, 
       :visited {
         color: $color-white;
       }
