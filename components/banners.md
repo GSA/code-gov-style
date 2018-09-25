@@ -55,7 +55,7 @@ title: "Banners"
 <div class="banner large">
   <div class="banner-content">
     <div class="banner-title">SHARING AMERICA'S CODE</div>
-    <div class="banner-subtitle">Unlock the tremendous potential of the Federal Government’s software.</div>  
+    <div class="banner-subtitle">Unlock the tremendous potential of the Federal Government’s software.</div>
     <div class="banner-subsection">
       <div class="banner-subsection-title">Help Wanted!</div>
       <div class="banner-subsection-subtitle">Discover how you can get involved and make America's code better</div>
@@ -66,11 +66,19 @@ title: "Banners"
 <div class="banner large">
   <div class="banner-content">
     <div class="banner-title">SHARING AMERICA'S CODE</div>
-    <div class="banner-subtitle">Unlock the tremendous potential of the Federal Government’s software.</div>  
+    <div class="banner-subtitle">Unlock the tremendous potential of the Federal Government’s software.</div>
     <div class="banner-subsection">
       <div class="banner-subsection-title">Help Wanted!</div>
       <div class="banner-subsection-subtitle">Discover how you can get involved and make America's code better</div>
     </div>
   </div>
 </div>
+```
+
+
+# Web Component Banner
+If you want to use the banner web component, you can do the following
+<Simple-Banner image="img/american_flag_1920x1280_gradient.jpg" title="Browse Projects" />
+```
+<Simple-Banner image="img/american_flag_1920x1280_gradient.jpg" title="Browse Projects" />
 ```
