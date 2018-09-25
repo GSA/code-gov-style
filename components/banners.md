@@ -78,7 +78,7 @@ title: "Banners"
 
 # Web Component Banner
 If you want to use the banner web component, you can do the following
-<Simple-Banner image="img/american_flag_1920x1280_gradient.jpg" title="Browse Projects" />
+<Simple-Banner image="../assets/img/red.png" title="Browse Projects" />
 ```
-<Simple-Banner image="img/american_flag_1920x1280_gradient.jpg" title="Browse Projects" />
+<Simple-Banner image="../assets/img/red.png" title="Browse Projects" />
 ```
