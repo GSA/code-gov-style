@@ -13,5 +13,8 @@ We use the fa-search icon from Font Awesome.  Font Awesome released their fa-sea
 
 We copy-pasted some code from the `hamburgers` library to `_hamburgers.scss`.  Hamburgers was created by Jonsuh.  Hamburgers is released under the MIT License and can be found here https://github.com/jonsuh/hamburgers/blob/master/LICENSE as well as in the licenses folder in this repository.
 
+### FAQS
+Have a question?  Check out our [FAQS](FAQS.md).  If it's not there, feel free to post an issue or email us :-)
+
 ### Contact
 Contact Daniel J. Dufour at daniel.dufour@gsa.gov if you have any questions
