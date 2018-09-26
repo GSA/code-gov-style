@@ -3,9 +3,6 @@ layout: components
 title: "Filter"
 ---
 
-<script src="{{ '/assets/js/web_components.js' | relative_url }}"></script>
-
-
 <p>Below you will find the filter boxes used by {{site.brand}}</p>
 
 # Simple Filter Box

@@ -1,15 +1,17 @@
 {
   "name": "@code.gov/code-gov-style",
-  "version": "1.9.7",
+  "version": "1.9.8",
   "description": "Style for code.gov including buttons, banners, and cards. Inspired by and somewhat based on USWDS.",
   "main": "index.js",
   "scripts": {
-    "bundle_web_components": "cp ./node_modules/@babel/polyfill/dist/polyfill.min.js assets/js/web_components.js && cat assets/js/polyfills/event.js >> assets/js/web_components.js && ./node_modules/@babel/cli/bin/babel.js assets/js/web_components/* >> assets/js/web_components.js",
     "serve": "bundle exec jekyll serve",
     "serve-on-server": "sudo bundle exec jekyll serve --host=0.0.0.0 --port=80",
+    "update-all": "npm i && npm run update-font && npm run update-custom-elements && npm run update-polyfills && npm run update-code-gov-web-components && npm run update-assets",
+    "update-assets": "cp dist/js/* assets/js/. && cp node_modules/prismjs/prism.js assets/js/. && cp node_modules/prismjs/themes/prism.css assets/css/. && cp node_modules/@webcomponents/custom-elements/custom-elements.min.js.map assets/js/.",
+    "update-custom-elements": "npm install -S @webcomponents/custom-elements && cd node_modules/@webcomponents/custom-elements && npm install && npm build",
     "update-font": "cd bash_scripts && bash update-font.sh",
-    "update-polyfill": "npm install && cd node_modules/@webcomponents/custom-elements && npm install && npm build && npm test",
-    "update-prism": "cd bash_scripts && bash update-prism.sh"
+    "update-polyfills": "cat ./node_modules/@babel/polyfill/dist/polyfill.min.js ./node_modules/custom-event-polyfill/polyfill.js ./node_modules/@webcomponents/custom-elements/custom-elements.min.js > dist/js/polyfills.js",
+    "update-code-gov-web-components": "./node_modules/@babel/cli/bin/babel.js src/* > dist/js/code-gov-web-components.js"
   },
   "repository": {
     "type": "git",
@@ -31,7 +33,8 @@
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
     "@code.gov/code-gov-font": "0.7.0",
-    "@webcomponents/custom-elements": "^1.2.0",
+    "@webcomponents/custom-elements": "^1.2.1",
+    "custom-event-polyfill": "^1.0.6",
     "prismjs": "^1.15.0"
   },
   "devDependencies": {
