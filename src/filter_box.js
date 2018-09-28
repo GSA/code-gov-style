@@ -18,23 +18,23 @@
     get collapsed() {
       return this.className.indexOf("collapsed") > -1;
     }
-    
+
     get showAll() {
       return this.className.indexOf("showAll") > -1;
     }
-    
+
     setClassName(className, newValue) {
       if (newValue) {
         this.className = (this.className.replace(className, "") + " " + className).trim();
       } else {
         this.className = this.className.replace(className, "").trim();
-      }          
+      }
     }
 
     set collapsed(newValue) {
       this.setClassName("collapsed", newValue);
     }
-    
+
     set showAll(newValue) {
       this.setClassName("showAll", newValue);
     }
@@ -77,6 +77,9 @@
         parsedOptions = JSON.parse(rawOptions);
       } catch (error) {
         console.error("[filter-box] failed to parse rawOptions:", rawOptions);
+        if (rawOptions.contains("object")) {
+          console.error('It seems that you might have put in an object.  Make sure to convert your object to a JSON string with JSON.stringify');
+        }
         throw error;
       }
       if (parsedOptions) {
@@ -138,7 +141,7 @@
             }
           }, false);
         });
-        
+
         /*
         addElementButton.addEventListener('click', this.addListItem, false);
         */

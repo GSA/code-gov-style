@@ -38,3 +38,9 @@ title: "Filter Tag"
   <div class="filter-tag-title">Environmental Protection Agency</div>
 </div>
 ```
+
+# Filter Tag Web Component
+<filter-tag title="JavaScript" />
+```
+<filter-tag title="JavaScript" />
+```
