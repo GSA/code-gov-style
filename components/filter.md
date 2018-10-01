@@ -5,11 +5,18 @@ title: "Filter"
 
 <p>Below you will find the filter boxes used by {{site.brand}}</p>
 
+
+
 # Simple Filter Box
 <filter-box
   title="Computer Language"
   options='["Assembly", "C", "C#", "C++", "Java", "JavaScript", "PHP", "Python", "Ruby", "Visual Basic"]'
 ></filter-box>
+<script>
+document.querySelector("filter-box").addEventListener('change', function handleChange(event) {
+  console.log("event:", event);
+});
+</script>
 ```
 <filter-box
   title="Computer Language"

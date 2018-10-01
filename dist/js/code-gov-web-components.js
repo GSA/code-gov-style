@@ -225,6 +225,12 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
             } else {
               li.className = li.className.replace("checked", "").trim();
             }
+
+            var newEvent = new CustomEvent('change', {
+              target: _this3
+            });
+
+            _this3.dispatchEvent(newEvent);
           }, false);
         });
         /*

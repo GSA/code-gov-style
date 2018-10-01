@@ -139,6 +139,10 @@
             } else {
               li.className = li.className.replace("checked", "").trim();
             }
+
+            const newEvent = new CustomEvent('change', { target: this });
+            this.dispatchEvent(newEvent);
+
           }, false);
         });
 
