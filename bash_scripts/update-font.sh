@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "starting update-font"
 
 cd ..
