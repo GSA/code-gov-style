@@ -65,3 +65,20 @@ title: "Corner Tags"
   </div>
 </div>
 ```
+
+
+# Web Component
+<div style="max-width: 400px">
+  <div class="card">
+    <quality-tag score="6.81"></quality-tag>
+    <p>Card with Quality Tag as Web Component</p>
+  </div>
+</div>
+```
+<div style="max-width: 400px">
+  <div class="card">
+    <quality-tag score="6.81"></quality-tag>
+    <p>Card with Quality Tag as Web Component</p>
+  </div>
+</div>
+```
