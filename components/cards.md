@@ -115,3 +115,51 @@ If you have a card that you want to split into 2 parts
   </div>
 </div>
 ```
+
+
+# Responsive Details
+If you have a card that has details inline after 600px only
+<div style="max-width: 600px">
+  <div class="card">
+    <div class="card-title">Labor Hours Estimation for Code.gov Open Source Repositories</div>
+    <div class="card-description">Issue Description: This task supports the Code.gov team. We want to estimate total lines of code and total hours and costs for the code that is located in all of our open source repositories. The open source repositories are listed in the agency json...</div>
+    <dl>
+      <dt>Agency:</dt>
+      <dd><a>GSA</a></dd>
+      <dt>Last Updated:</dt>
+      <dd>9/17/2018</dd>
+    </dl>
+    <hr />
+    <dl class="inline-after-600px">
+      <dt>Languages:</dt>
+      <dd>CSS, HTML, JavaScript</dd>
+      <dt>Type:</dt>
+      <dd>Enhancement</dd>
+      <dt>Skill Level:</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+</div>
+```
+<div style="max-width: 600px">
+  <div class="card">
+    <div class="card-title">Labor Hours Estimation for Code.gov Open Source Repositories</div>
+    <div class="card-description">Issue Description: This task supports the Code.gov team. We want to estimate total lines of code and total hours and costs for the code that is located in all of our open source repositories. The open source repositories are listed in the agency json...</div>
+    <dl>
+      <dt>Agency:</dt>
+      <dd><a>GSA</a></dd>
+      <dt>Last Updated:</dt>
+      <dd>9/17/2018</dd>
+    </dl>
+    <hr />
+    <dl class="inline-after-600px">
+      <dt>Languages:</dt>
+      <dd>CSS, HTML, JavaScript</dd>
+      <dt>Type:</dt>
+      <dd>Enhancement</dd>
+      <dt>Skill Level:</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+</div>
+```

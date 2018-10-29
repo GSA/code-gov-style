@@ -127,6 +127,17 @@
         }
       }
     }
+
+    &.inline-after-600px {
+      @media screen and (min-width: 595.5px) {
+        dt {
+          &:before {
+            content: none;
+            white-space: none;
+          }
+        }
+      }
+    }
   }
 
 }
