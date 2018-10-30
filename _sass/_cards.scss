@@ -91,7 +91,7 @@
     display: block;
     margin-left: -1.2em;
     margin-right: -1.25em;
-    margin-bottom: 0;
+    margin-bottom: 2rem;
     margin-top: 2rem;
     max-width: none;
     visibility: visible;
@@ -100,6 +100,8 @@
 
   dl {
     font-size: .85714286em;
+    margin: 0;
+
     dt {
       font-weight: bold;
       display: inline;
@@ -110,10 +112,12 @@
       }
     }
     dd {
-      display: inline;
+      display: inline-block;
       margin-inline-start: 0px;
-      margin-left: 0;
+      margin-left: 15px;
       margin-right: 2rem;
+      margin-bottom: 5px;
+      margin-top: 5px;
       &:last-child {
         margin-right: 0px;
       }
