@@ -1,126 +1,110 @@
 .sidebar {
-  display: none;
   position: relative;
+  border-bottom: none;
+  border-top: none;
+  display: block;
 
-  @media screen and (min-width: $medium-screen) {
-    border-bottom: none;
-    border-top: none;
+  &.left {
+    float: left;
+  }
+  &.right {
+    float: right;
+  }
+
+  .sidebar-title {
+    color: #5b616b;
+    clear: both;
     display: block;
+    font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.3em;
+    margin-bottom: 0.5em;
+    margin-top: 0;
+  }
 
-    &.left {
-      float: left;
-    }
-    &.right {
-      float: right;
-    }
+  a {
+    border: none;
+    color: $color-black-light;
+    display: block;
+    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 0.95em;
+    line-height: 1.3;
+    padding: 0.85rem 1rem 0.85rem 1.5rem;
+    text-decoration: none;
 
-    .sidebar-title {
-      color: #5b616b;
-      clear: both;
-      display: block;
-      font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-      font-size: 2rem;
-      font-weight: 500;
-      line-height: 1.3em;
-      margin-bottom: 0.5em;
-      margin-top: 0;
-    }
-
-    a {
-      border: none;
+    &:visited {
       color: $color-black-light;
-      display: block;
-      font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-      font-size: 0.95em;
-      line-height: 1.3;
-      padding: 0.85rem 1rem 0.85rem 1.5rem;
-      text-decoration: none;
-
-      &:visited {
-        color: $color-black-light;
-      }
-
-      &:hover {
-        background-color: $color-gray-lightest;
-      }
-
-      &.current {
-        color: $color-blue;
-        font-weight: 700;
-      }
-
-      img {
-        left: 0.5em;
-        max-width: 1.5em;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      img + span {
-        display: inline-block;
-        margin-left: 1.75em;
-      }
     }
 
-    li {
-      position: relative;
+    &:hover {
+      background-color: $color-gray-lightest;
     }
 
-    // first-level list
-    > ul {
-      background-color: transparent;
-      border-top: none;
-      border-bottom: none;
-      display: block;
-      list-style-type: none;
-      margin-bottom: 0;
-      margin-top: 0;
-      padding: 0;
-      position: relative;
+    &.current {
+      color: $color-blue;
+      font-weight: 700;
+    }
 
-      > li, >* > li {
+    img {
+      left: 0.5em;
+      max-width: 1.5em;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
 
-        &:not(:last-child) {
-          border-bottom: 2px solid $color-gray-lightest;
+    img + span {
+      display: inline-block;
+      margin-left: 1.75em;
+    }
+  }
+
+  li {
+    position: relative;
+  }
+
+  // first-level list
+  > ul {
+    background-color: transparent;
+    border-top: none;
+    border-bottom: none;
+    display: block;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+    position: relative;
+
+    > li, >* > li {
+
+      &:not(:last-child) {
+        border-bottom: 2px solid $color-gray-lightest;
+      }
+
+      // first-level option
+      > a {
+        &.current {
+          border-left: 0.4rem solid $color-blue;
+          padding-left: 1.1rem;
         }
+      }
 
-        // first-level option
-        > a {
-          &.current {
-            border-left: 0.4rem solid $color-blue;
-            padding-left: 1.1rem;
+      ul {
+
+        li {
+          a {
+            padding-left: 2.8rem;
           }
-        }
-
-        ul {
-
-          // defaults to hidden but show when user
-          // selects section
-          display: none;
-
-          li {
-            a {
-              padding-left: 2.8rem;
-            }
-            ul {
-              li {
-                a {
-                  padding-left: 3.8rem;
-                }
+          ul {
+            li {
+              a {
+                padding-left: 3.8rem;
               }
             }
           }
         }
       }
-
-      // if li is current display all the lists under it
-      li.current {
-        ul {
-          display: block;
-        }
-      }
-
     }
   }
 }
