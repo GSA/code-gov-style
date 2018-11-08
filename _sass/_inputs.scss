@@ -70,12 +70,8 @@ input {
   font-weight: 400;
   margin-bottom: 0.65em;
   position: relative;
-  
-  span {
-    display: inline-block;
-    padding-left: calc(1.75rem + 1em);
-    vertical-align: top;
-  }
+  padding-left: calc(1.5rem + 1em);
+  vertical-align: top;
 }
 
 [type=checkbox] + label::before {
@@ -89,9 +85,10 @@ input {
   position: absolute;
   text-indent: 0.15em;
   top: 50%;
-  transform: translateY(-50%);  
+  transform: translateY(-50%);
   vertical-align: middle\0; // Target IE 11 and below to vertically center inputs
   width: 1.75rem;
+  left: 0rem;
 }
 
 [type=checkbox]:checked + label::before,
