@@ -104,20 +104,25 @@
 
     dt {
       font-weight: bold;
-      display: inline;
+      display: block;
       margin-left: 0px;
-      &:before {
-        content: "\A";
-        white-space: pre;
+      @media screen and (min-width: $medium-screen) {
+        display: inline;
+        &:before {
+          content: "\A";
+          white-space: pre;
+        }
       }
     }
     dd {
       display: inline-block;
       margin-inline-start: 0px;
-      margin-left: 15px;
-      margin-right: 2rem;
       margin-bottom: 5px;
       margin-top: 5px;
+      @media screen and (min-width: $medium-screen) {
+        margin-left: 15px;
+        margin-right: 2rem;
+      }
       &:last-child {
         margin-right: 0px;
       }
