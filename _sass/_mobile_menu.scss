@@ -26,6 +26,13 @@ $item-height: 5rem;
   }
 }
 
+mobile-menu-button.dark {
+  .icon {
+    color: rgb(72, 85, 103);
+  }
+}
+
+
 .mobile-menu {
   background-color: $color-gray-dark;
   bottom: 0;
@@ -75,6 +82,10 @@ $item-height: 5rem;
           border-left: 8px solid $brand-teal;
           font-weight: bold;
           text-decoration: none;
+        }
+
+        &:visited {
+          color: white;
         }
       }
 
@@ -154,6 +165,7 @@ $item-height: 5rem;
   position: fixed;
   right: 0;
   top: 0;
+  top: calc(#{$header-height} + 10px);
   transition: 0.5s opacity;
   z-index: -1;
 

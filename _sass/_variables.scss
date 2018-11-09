@@ -85,6 +85,8 @@ $extra-large-screen: 1024px;
 
 $focus-outline: 2px dotted $color-gray-light !default;
 
+$header-height: 50px;
+
 @mixin center-vertically {
   position: absolute;
   transform: translateY(-50%);
