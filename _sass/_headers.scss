@@ -87,7 +87,7 @@ header.main {
       box-shadow: 0 0 10px 0 $color-black;
     }
 
-    @media screen and (min-width: $medium-screen) {
+    @media screen and (min-width: $header-switch) {
       font-size: 1em;
       padding: 1.5rem 2rem;
       text-align: left;
@@ -98,7 +98,7 @@ header.main {
       transform: translateX(-50%);
       position: absolute;
 
-      @media screen and (min-width: $small-screen) {
+      @media screen and (min-width: $header-switch) {
         float: left;
         left: 0;
         position: relative;
@@ -113,7 +113,7 @@ header.main {
         top: 0;
         width: 83px;
 
-        @media screen and (min-width: $medium-screen) {
+        @media screen and (min-width: $header-switch) {
           height: 25px;
           margin-bottom: 7.5px;
           margin-top: 7.5px;
@@ -145,7 +145,7 @@ header.main {
       margin-bottom: 0;
       margin-top: 0;
 
-      @media screen and (min-width: $medium-screen) {
+      @media screen and (min-width: $header-switch) {
         display: inline-block;
       }
 
@@ -171,7 +171,7 @@ header.main {
             text-decoration: none;
             vertical-align: top;
 
-            @media screen and (min-width: $medium-screen) {
+            @media screen and (min-width: $header-switch) {
               .follow-us {
                 display: inline-block;
               }
@@ -187,7 +187,7 @@ header.main {
         text-transform: uppercase;
         vertical-align: top;
 
-        @media screen and (min-width: $medium-screen) {
+        @media screen and (min-width: $header-switch) {
           margin-left: 2rem;
         }
 
@@ -207,7 +207,7 @@ header.main {
           text-transform: uppercase;
           vertical-align: top;
 
-          @media screen and (min-width: $medium-screen) {
+          @media screen and (min-width: $header-switch) {
             font-size: 0.8em;
           }
 
@@ -232,7 +232,7 @@ header.main {
             line-height: 40px;
             text-decoration: none;
 
-            @media screen and (min-width: $medium-screen) {
+            @media screen and (min-width: $header-switch) {
               font-size: 0.7em;
             }
 
