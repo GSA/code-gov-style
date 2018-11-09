@@ -1,3 +1,6 @@
+$menu-width: 320px;
+$item-height: 5rem;
+
 .mobile-menu-button {
   bottom: 0;
   cursor: pointer;
@@ -20,5 +23,144 @@
     top: 50%;
     transform: translateY(-50%);
     width: 44px;
+  }
+}
+
+.mobile-menu {
+  background-color: $color-gray-dark;
+  bottom: 0;
+  box-shadow: 0 0 10px 0 $color-black;
+  font-size: 1.3em;
+  left: 0;
+  overflow: scroll;
+  position: fixed;
+  top: 0px;
+  transform: translateX(0 - $menu-width - 11px);
+  transition: 0.5s transform ease;
+  width: $menu-width;
+  z-index: 20;
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  > ul {
+    width: $menu-width;
+
+    li {
+      border-bottom: 1px solid $color-cool-blue-light;
+      float: left;
+      width: 100%;
+
+      a {
+        border-left: 8px solid transparent;
+        color: $color-white;
+        display: block;
+        line-height: $item-height;
+        height: 100%;
+        overflow: hidden;
+        text-decoration: none;
+        text-overflow: ellipsis;
+        user-select: none;
+        white-space: nowrap;
+
+
+        &:focus, &:hover {
+          border-left: 8px solid $brand-teal;
+          color: white;
+          text-decoration: none;
+        }
+
+        &.active {
+          border-left: 8px solid $brand-teal;
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+
+      &.collapsed {
+        a.dropdown:after {
+          content: '\f107';
+          float: right;
+          font-family: "code-gov";
+          font-size: 4rem;
+          padding-right: 2rem;
+        }
+      }
+
+      &.expanded {
+        a.dropdown:after {
+          content: '\f106';
+          float: right;
+          font-family: "code-gov";
+          font-size: 4rem;
+          padding-right: 2rem;
+        }
+      }
+    }
+
+    > li {
+
+      &.search {
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        text-align: center;
+
+        input {
+          width: 80%;
+        }
+
+        button.go {
+          margin-right: 0;
+        }
+      }
+
+      > a {
+        padding-left: 1rem;
+      }
+
+      &.expanded {
+        ul {
+          display: block;
+        }
+      }
+
+      > ul {
+        background-color: $brand-blue-gray;
+        display: none;
+
+        > li {
+          background: #485568;
+          &:last-child {
+            border-bottom: none;
+          }
+
+          > a {
+            padding-left: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.mobile-menu-underlay {
+  background-color: $color-gray-dark;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: 0.5s opacity;
+  z-index: -1;
+
+  &.active {
+    background-color: $color-gray-dark;
+    opacity: 0.7;
+    pointer-events: all;
+    z-index: 1;
   }
 }
