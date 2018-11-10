@@ -9,19 +9,22 @@ title: "Filter"
 
 # Simple Filter Box
 <filter-box
-  title="Computer Language"
-  options='["Assembly", "C", "C#", "C++", "Java", "JavaScript", "PHP", "Python", "Ruby", "Visual Basic"]'
+  title="Federal Agency"
+  options='["Consumer Financial Protection Bureau", "Department of Labor", "General Services Administration", "National Aeronautics and Space Administration", "Department of Energy", "Department of Housing and Urban Development"]'
 ></filter-box>
-<script>
+```
+<filter-box
+  title="Federal Agency"
+  options='["Consumer Financial Protection Bureau", "Department of Labor", "General Services Administration", "National Aeronautics and Space Administration", "Department of Energy", "Department of Housing and Urban Development"]'
+></filter-box>
+```
+
+# Listen to Change Event
+You can listen to the filter box change events:
+```javascript
 document.querySelector("filter-box").addEventListener('change', function handleChange(event) {
   console.log("event:", event);
 });
-</script>
-```
-<filter-box
-  title="Computer Language"
-  options='["Assembly", "C", "C#", "C++", "Java", "JavaScript", "PHP", "Python", "Ruby", "Visual Basic"]'
-></filter-box>
 ```
 
 # Advanced Filter Box
