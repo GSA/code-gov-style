@@ -127,12 +127,17 @@ footer {
              a {
                img {
                  @media screen and (min-width: $breakpoint) {
-                   height: 10rem;
+                   height: 7rem;
 
                    + span {
                      display: none;
                    }
                  }
+
+                @media screen and (min-width: 1000px) {
+                  height: 10rem;
+                }
+
                }
 
                @media screen and (max-width: $breakpoint) {
