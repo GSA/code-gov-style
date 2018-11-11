@@ -76,6 +76,12 @@
     }
   }
 
+  // make sure title doesn't extend all the way to the end of the card
+  // if there is a quality tag there
+  quality-tag + .card-title, .corner-tag + .card-title {
+    padding-right: 2em;
+  }
+
   .card-date {
     color: #aeb0b5;
     font-size: 1em;
