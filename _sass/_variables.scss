@@ -80,7 +80,7 @@ $small-font-size:             1.4rem !default;
 
 $small-screen: 481px;
 $medium-screen: 600px;
-$large-screen: 925px;
+$large-screen: 1000px;
 $extra-large-screen: 1024px;
 
 $focus-outline: 2px dotted $color-gray-light !default;
@@ -206,4 +206,4 @@ $hr-color: $brand-teal;
 
 
 /* at what pixels should switch from mobile to desktop menu */
-$header-switch: 700.5px;
+$header-switch: 800.5px;
