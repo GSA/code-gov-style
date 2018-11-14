@@ -19,9 +19,11 @@
   color: $color-white;
   font-size: 3em;
   height: 3rem;
+  left: 50%;
   overflow: hidden;
   padding-top: 1rem;
   position: absolute;
+  transform: translateX(-50%);
   text-decoration: none;
   width: 100%;
 
