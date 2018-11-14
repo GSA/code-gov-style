@@ -523,7 +523,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           category = '';
         }
 
-        this.innerHTML = '<div class="corner-tag ' + category + '"><div class="corner-tag-value">' + rounded + '</div></div>';
+        this.innerHTML = "<div class=\"corner-tag ".concat(category, "\"><div class=\"corner-tag-value\">").concat(rounded, "</div></div>");
       }
     }], [{
       key: "observedAttributes",
