@@ -10,15 +10,18 @@
   z-index: 1000;
 
   li {
-    cursor: pointer;
-    padding: 10px;
-
-    &:hover{
-      background-color: #7baddf;
-    }
+    padding: 0px;
 
     a {
+      cursor: pointer;
+      display: block;
+      padding: 10px;
       text-decoration: none;
+
+      &:hover{
+        background-color: #7baddf;
+      }
+
       span {
         color: black;
       }
