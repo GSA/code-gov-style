@@ -33,7 +33,19 @@
     }
   }
 
-  &:hover, &.activated {
+  @media screen and (min-width: 1100px) {
+    &:hover {
+      .popover {
+        &.desktop {
+          @media (min-width: 801px) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  &.activated {
     .popover {
       &.desktop {
         @media (min-width: 801px) {
