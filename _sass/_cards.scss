@@ -99,6 +99,8 @@
   .card-description {
     font-size: 0.95em;
     margin: 0;
+    margin-bottom: 14px;
+    padding-bottom: .75rem;
   }
 
   hr {
@@ -106,7 +108,7 @@
     display: block;
     margin-left: -1.2em;
     margin-right: -1.25em;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     margin-top: 2rem;
     max-width: none;
     visibility: visible;
@@ -116,6 +118,11 @@
   dl {
     font-size: .85714286em;
     margin: 0;
+
+    &:first-of-type {
+      margin-top: 14px;
+      padding-top: .75em;
+    }
 
     dt {
       font-weight: bold;
