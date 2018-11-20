@@ -20,7 +20,6 @@
         </div>
       `
       this.icon = this.querySelector('.icon')
-      this.getAttr()
       this.update()
     }
 
@@ -30,7 +29,6 @@
 
     attributeChangedCallback(attrName, oldVal, newVal) {
       if (attrName === 'open') {
-        this.getAttr()
         this.update();
       }
     }
@@ -42,10 +40,13 @@
     }
 
     update() {
-      if (this.open) {
-        this.icon.className = 'icon icon-close'
-      } else {
-        this.icon.className = 'icon icon-menu'
+      if (this.icon) {
+        this.getAttr()
+        if (this.open) {
+          this.icon.className = 'icon icon-close'
+        } else {
+          this.icon.className = 'icon icon-menu'
+        }
       }
     }
 
