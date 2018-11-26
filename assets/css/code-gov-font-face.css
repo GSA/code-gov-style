@@ -9,3 +9,15 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face{
+  font-family: 'TT Lakes';
+  src: url('../font/tt_lakes_medium-webfont.eot');
+  src: url('../font/tt_lakes_medium-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../font/tt_lakes_medium-webfont.woff2') format('woff2'),
+       url('../font/tt_lakes_medium-webfont.woff') format('woff'),
+       url('../font/tt_lakes_medium-webfont.ttf') format('truetype'),
+       url('../font/tt_lakes_medium-webfont.svg') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
