@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../font/tt_lakes_medium-webfont.eot');
+  src: url('../font/tt_lakes_medium-webfont.eot') format('embedded-opentype'),
+       url('../font/tt_lakes_medium-webfont-subset.woff2') format("woff2"),
+       url('../font/tt_lakes_medium-webfont-subset.zopfli.woff') format("woff"),
+       url('../font/tt_lakes_medium-webfont-subset.ttf') format("truetype"),
+       url('../font/tt_lakes_medium-webfont.svg') format("svg");
+  unicode-range: U+20-7E;
+}
