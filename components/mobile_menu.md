@@ -31,7 +31,7 @@ You can set the default state to open by setting the open attribute to true
 <div class="mobile-menu">
   <ul>
     <li class="search">
-      <input placeholder="Search Projects...">
+      <input placeholder="Search Projects..." type="search">
       <button class="go">Go</button>
     </li>
     <li class="expanded">
@@ -62,6 +62,10 @@ You can set the default state to open by setting the open attribute to true
 <!-- add open to div class when opened -->
 <div class="mobile-menu">
   <ul>
+    <li class="search">
+      <input placeholder="Search Projects..." type="search">
+      <button class="go">Go</button>
+    </li>
     <li class="expanded">
       <a class="dropdown">About</a>
       <ul>

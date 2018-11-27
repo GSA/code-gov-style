@@ -9,7 +9,7 @@ title: "Autocomplete"
 <div class="banner large">
   <div class="banner-content">
     <div style="margin: 0 auto; position: relative; width: 400px;">
-      <input placeholder="Search Thousands of Projects..." style="width: 100%">
+      <input placeholder="Search Thousands of Projects..." type="search" style="width: 100%">
       <ul class="autocomplete">
         <li>
           <a>
@@ -37,7 +37,7 @@ title: "Autocomplete"
 <div class="banner">
   <div class="banner-content">
     <div style="margin: 0 auto; width: 400px;">
-      <input placeholder="Search Thousands of Projects..." style="width: 100%">
+      <input placeholder="Search Thousands of Projects..." type="search" style="width: 100%">
       <ul class="autocomplete">
         <li>
           <a>
