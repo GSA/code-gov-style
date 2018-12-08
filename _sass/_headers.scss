@@ -1,12 +1,10 @@
-@import 'variables';
+@import "variables";
 
 header.main {
-
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-
 
   &.white {
     background-color: $color-white;
@@ -24,7 +22,8 @@ header.main {
 
       .hamburger-inner {
         background-color: $color-white;
-        &::before, &::after {
+        &::before,
+        &::after {
           background-color: $color-white;
         }
       }
@@ -37,7 +36,8 @@ header.main {
 
       > ul {
         > li {
-          > div, > a {
+          > div,
+          > a {
             color: $color-gray-lighter;
             &:hover {
               color: white;
@@ -77,14 +77,15 @@ header.main {
 
   nav.main {
     box-shadow: none;
-    padding-left: .5rem;
+    padding-left: 0.5rem;
     position: fixed;
     top: 0;
     transition: 0.5s box-shadow, 0.5s background-color;
     width: 100%;
     z-index: 3;
 
-    &.not-at-top, &.expanded {
+    &.not-at-top,
+    &.expanded {
       box-shadow: 0 0 10px 0 $color-black;
     }
 
@@ -152,7 +153,6 @@ header.main {
         display: inline-block;
       }
 
-
       &.right {
         position: absolute;
         right: 2rem;
@@ -187,7 +187,7 @@ header.main {
       > li {
         display: inline-block;
         font-weight: bold;
-        text-transform: uppercase;
+        text-transform: initial;
         vertical-align: top;
 
         @media screen and (min-width: $header-switch) {
@@ -199,7 +199,8 @@ header.main {
         }
 
         /* title of first level option */
-        > div, > a {
+        > div,
+        > a {
           border-bottom: 4px solid transparent;
           color: $color-gray;
           cursor: pointer;
@@ -240,13 +241,12 @@ header.main {
             }
 
             @media screen and (min-width: $large-screen) {
-              font-size: .9em;
+              font-size: 0.9em;
             }
 
             &:hover {
               color: $brand-blue-dark;
             }
-
 
             &.active {
               color: $brand-blue-dark;
