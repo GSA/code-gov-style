@@ -24,7 +24,7 @@ This package is meant to be used with the [code-gov-front-end](https://github.co
 
 ## Link this package to edit Code.gov styles locally
 
-You may want view your style changes in the code-gov-style repo on your local machine for testing. Follow these steps to do so:
+You may want to view your style changes in the code-gov-style repo on your local machine for testing. Follow these steps to do so:
 1. Clone the latest version of the `code-gov-style` repository.
 2. Run `npm install` to install the dependencies required for the package in the `code-gov-style` directory.
 3. Run `npm link` in the root level of the `code-gov-style` directory on your local machine.
