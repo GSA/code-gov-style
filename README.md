@@ -1,20 +1,48 @@
 # code-gov-style
+
 Style for code.gov including buttons, banners, and cards. Inspired by and somewhat based on USWDS.
 
-### link
-https://gsa.github.io/code-gov-style/
+## View
 
-### Purpose
+All style components are [viewable online](https://gsa.github.io/code-gov-style/).
+
+## Purpose
+
 As our code base expands, maintaining and remembering all the CSS class names has become difficult.
 The code.gov Style Guide makes the search and usage of CSS classes easier by providing examples of their usage.  These styles are not meant for usage outside of code.gov.  Feel free to fork this though if you want to create your own style guide :-)
 
-### Legal
+## Install
+
+The repository is distributed with [npm](https://www.npmjs.com/). After [installing npm](https://docs.npmjs.com/getting-started/installing-node), you can install `code-gov-style` with this command: 
+```sh
+$ npm i @code.gov/code-gov-style
+```
+
+## Usage
+
+This package is meant to be used with the [code-gov-front-end](https://github.com/GSA/code-gov-front-end) project. Please follow the [configuration settings](https://github.com/GSA/code-gov-front-end/blob/master/CONFIGURATION.md#style) for the project.
+
+## Link this package to edit Code.gov styles locally
+
+You may want view your style changes in the code-gov-style repo on your local machine for testing. Follow these steps to do so:
+1. Clone the latest version of the `code-gov-style` repository.
+2. Run `npm install` to install the dependencies required for the package in the `code-gov-style` directory.
+3. Run `npm link` in the root level of the `code-gov-style` directory on your local machine.
+4. On the `code-gov-front-end` [project](https://github.com/GSA/code-gov-front-end#getting-started), clone the repository and run `npm install` if you haven’t done this already.
+5. Run `npm link @code.gov/code-gov-style` in the root level of the code-gov-front-end directory on your local machine.
+
+You are now using the latest version of the code.gov design system via your cloned version when running the `code-gov-front-end` site on your local machine. To stop using this version, run `npm unlink @code.gov/code-gov-style` from the root level of the `code-gov-front-end` directory.
+
+## Legal
+
 We use the fa-search icon from Font Awesome.  Font Awesome released their fa-search icon under this license https://creativecommons.org/licenses/by/4.0/
 
 We copy-pasted some code from the `hamburgers` library to `_hamburgers.scss`.  Hamburgers was created by Jonsuh.  Hamburgers is released under the MIT License and can be found here https://github.com/jonsuh/hamburgers/blob/master/LICENSE as well as in the licenses folder in this repository.
 
-### FAQS
+## FAQS
+
 Have a question?  Check out our [FAQS](FAQS.md).  If it's not there, feel free to post an issue or email us :-)
 
-### Contact
+## Contact
+
 Contact Daniel J. Dufour at daniel.dufour@gsa.gov if you have any questions
