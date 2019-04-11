@@ -1,0 +1,38 @@
+{
+  "defaults": {
+  "timeout": 20000,
+  "wait": 1000,
+  "standard": "WCAG2AA",
+  "viewport": {
+      "width": 1000,
+      "height": 1000 
+  }
+},
+    "urls": [
+        "http://localhost:4000",
+        "http://localhost:4000/code-gov-style/components/autocomplete",
+        "http://localhost:4000/code-gov-style/components/banners",
+        "http://localhost:4000/code-gov-style/components/blocks",
+        "http://localhost:4000/code-gov-style/components/breadcrumbs",
+        "http://localhost:4000/code-gov-style/components/breaks",
+        "http://localhost:4000/code-gov-style/components/buttons",
+        "http://localhost:4000/code-gov-style/components/cards",
+        "http://localhost:4000/code-gov-style/components/corner_tags",
+        "http://localhost:4000/code-gov-style/components/dividers",
+        "http://localhost:4000/code-gov-style/components/filter_tag",
+        "http://localhost:4000/code-gov-style/components/filter",
+        "http://localhost:4000/code-gov-style/components/footers",
+        "http://localhost:4000/code-gov-style/components/forms",
+        "http://localhost:4000/code-gov-style/components/icons",
+        "http://localhost:4000/code-gov-style/components/inputs",
+        "http://localhost:4000/code-gov-style/components/links",
+        "http://localhost:4000/code-gov-style/components/mobile_menu",
+        "http://localhost:4000/code-gov-style/components/navbars",
+        "http://localhost:4000/code-gov-style/components/popover",
+        "http://localhost:4000/code-gov-style/components/quotes",
+        "http://localhost:4000/code-gov-style/components/scroll_indicator",
+        "http://localhost:4000/code-gov-style/components/sidebars",
+        "http://localhost:4000/code-gov-style/components/tables",
+        "http://localhost:4000/code-gov-style/components/widths"
+    ]
+}
