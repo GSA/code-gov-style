@@ -29,7 +29,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run linting!
-      - run: npm lint
+      - run: npm run lint
       
 workflows:
   version: 2
