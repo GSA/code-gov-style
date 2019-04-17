@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "bundle exec jekyll serve",
     "serve-on-server": "sudo bundle exec jekyll serve --host=0.0.0.0 --port=80",
-    "test": "./node_modules/.bin/18f-stylelint-rules './_sass/*.scss'",
+    "lint": "stylelint ./_sass/*.scss",
     "update-all": "npm i && npm run update-font && npm run update-custom-elements && npm run update-polyfills && npm run update-code-gov-web-components && npm run update-assets",
     "update-assets": "cp dist/js/* assets/js/. && cp node_modules/prismjs/prism.js assets/js/. && cp node_modules/prismjs/themes/prism.css assets/css/. && cp node_modules/@webcomponents/custom-elements/custom-elements.min.js.map assets/js/.",
     "update-custom-elements": "npm install -S @webcomponents/custom-elements && cd node_modules/@webcomponents/custom-elements && npm install && npm build",
@@ -39,12 +39,13 @@
     "prismjs": "^1.15.0"
   },
   "devDependencies": {
-    "@18f/stylelint-rules": "^2.0.0",
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@babel/plugin-transform-arrow-functions": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
-    "glyphhanger": "^3.0.3"
+    "glyphhanger": "^3.0.3",
+    "stylelint": "^10.0.1",
+    "stylelint-config-standard": "^18.3.0"
   }
 }
