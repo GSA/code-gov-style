@@ -28,8 +28,8 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # run tests!
-      - run: npm test
+      # run linting!
+      - run: npm run lint
       
 workflows:
   version: 2
