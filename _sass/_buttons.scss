@@ -11,7 +11,7 @@ button {
   background-color: #0071bc;
   border: 0;
   border-radius: 5px;
-  color: #ffffff;
+  color: #fff;
   cursor: pointer;
   display: inline-block;
   font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
@@ -23,7 +23,8 @@ button {
   text-decoration: none;
   width: auto;
 
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     background-color: $brand-teal !important;
     border-color: $brand-teal !important;
     transition: all 0.2s ease;
@@ -33,7 +34,7 @@ button {
     border-radius: 3px;
     font-size: 1.4rem;
     font-weight: normal;
-    padding: .5rem 1.25rem;
+    padding: 0.5rem 1.25rem;
   }
 
   &.alt {

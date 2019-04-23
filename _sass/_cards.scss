@@ -29,26 +29,29 @@
     height: 3.75em;
 
     &.high {
-      background-color: #33CC66;
       background: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%22500%22%20width%3D%22700%22%3E%0A%20%20%3Cpolygon%20points%3D%220%2C0%20700%2C0%20700%2C500%200%2C0%22%20fill%3D%22%2333CC66%22%3E%3C%2Fpolygon%3E%0A%3C%2Fsvg%3E");
+      background-color: #3c6;
+
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        background: url("/code-gov-style/assets/img/corner-tags/high.svg")
+        background: url("/code-gov-style/assets/img/corner-tags/high.svg");
       }
     }
 
     &.medium {
-      background-color: #FF9933;
       background: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%22500%22%20width%3D%22700%22%3E%0A%20%20%3Cpolygon%20points%3D%220%2C0%20700%2C0%20700%2C500%200%2C0%22%20fill%3D%22%23FF9933%22%3E%3C%2Fpolygon%3E%0A%3C%2Fsvg%3E");
+      background-color: #f93;
+
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        background: url("/code-gov-style/assets/img/corner-tags/medium.svg")
+        background: url("/code-gov-style/assets/img/corner-tags/medium.svg");
       }
     }
 
     &.low {
-      background-color: #F00;
       background: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%22500%22%20width%3D%22700%22%3E%0A%20%20%3Cpolygon%20points%3D%220%2C0%20700%2C0%20700%2C500%200%2C0%22%20fill%3D%22%23F00%22%3E%3C%2Fpolygon%3E%0A%3C%2Fsvg%3E");
+      background-color: #f00;
+
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        background: url("/code-gov-style/assets/img/corner-tags/low.svg")
+        background: url("/code-gov-style/assets/img/corner-tags/low.svg");
       }
     }
 
@@ -62,7 +65,6 @@
       text-align: center;
       width: 62.5%;
     }
-
   }
 
   .card-title {
@@ -87,7 +89,8 @@
 
   // make sure title doesn't extend all the way to the end of the card
   // if there is a quality tag there
-  quality-tag + .card-title, .corner-tag + .card-title {
+  quality-tag + .card-title,
+  .corner-tag + .card-title {
     padding-right: 2em;
   }
 
@@ -100,7 +103,7 @@
     font-size: 0.95em;
     margin: 0;
     margin-bottom: 14px;
-    padding-bottom: .75rem;
+    padding-bottom: 0.75rem;
   }
 
   hr {
@@ -116,43 +119,48 @@
   }
 
   dl {
-    font-size: .85714286em;
+    font-size: 0.85714286em;
     margin: 0;
 
     &:first-of-type {
       margin-top: 14px;
-      padding-top: .75em;
+      padding-top: 0.75em;
     }
 
     dt {
       font-weight: bold;
       display: block;
-      margin-left: 0px;
+      margin-left: 0;
+
       @media screen and (min-width: $medium-screen) {
         display: inline;
-        &:before {
+
+        &::before {
           content: "\A";
           white-space: pre;
         }
       }
     }
+
     dd {
       display: inline-block;
-      margin-inline-start: 0px;
+      margin-inline-start: 0;
       margin-bottom: 5px;
       margin-top: 5px;
+
       @media screen and (min-width: $medium-screen) {
         margin-left: 15px;
         margin-right: 2rem;
       }
+
       &:last-child {
-        margin-right: 0px;
+        margin-right: 0;
       }
     }
 
     &.inline {
       dt {
-        &:before {
+        &::before {
           content: none;
           white-space: none;
         }
@@ -162,7 +170,7 @@
     &.inline-after-600px {
       @media screen and (min-width: 595.5px) {
         dt {
-          &:before {
+          &::before {
             content: none;
             white-space: none;
           }
@@ -170,5 +178,4 @@
       }
     }
   }
-
 }

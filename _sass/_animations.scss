@@ -4,6 +4,7 @@
     opacity: 0;
     visibility: hidden;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -16,6 +17,7 @@
     opacity: 0;
     visibility: hidden;
   }
+
   to {
     opacity: 1;
     visibility: visible;
@@ -26,9 +28,11 @@
   from {
     color: transparent;
   }
+
   to {
     color: transparent;
   }
+
   50% {
     color: $brand-teal-dark;
   }

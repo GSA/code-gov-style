@@ -16,9 +16,6 @@ filter-box {
       display: none;
     }
   }
-}
-
-filter-box {
 
   &.showAll {
     ul {
@@ -37,7 +34,6 @@ filter-box {
       }
     }
   }
-
 
   .filter-box {
     border: 1px solid $color-gray-light;
@@ -86,7 +82,8 @@ filter-box {
           display: block !important;
         }
 
-        .showMore, .showLess {
+        .showMore,
+        .showLess {
           color: $color-blue;
           cursor: pointer;
           user-select: none;
