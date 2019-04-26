@@ -14,16 +14,16 @@ title: "Forms"
           <div class="category-title">Skill Level</div>
           <ul>
             <li class="category-option">
-              <input type="checkbox">
-              <label>Beginner</label>
+              <input id="beginner" type="checkbox">
+              <label for="beginner">Beginner</label>
             </li>
             <li class="category-option">
-              <input type="checkbox">
-              <label>Intermediate</label>
+              <input id="intermediate" type="checkbox">
+              <label for="intermediate">Intermediate</label>
             </li>
             <li class="category-option">
-              <input type="checkbox">
-              <label>Advanced</label>
+              <input id="advanced" type="checkbox">
+              <label for="advanced">Advanced</label>
             </li>
           </ul>
         </li>
@@ -31,12 +31,12 @@ title: "Forms"
           <div class="category-title">Type</div>
           <ul>
             <li class="category-option">
-              <input type="checkbox">
-              <label>Bug</label>
+              <input id="bug" type="checkbox">
+              <label for="bug">Bug</label>
             </li>
             <li class="category-option">
-              <input type="checkbox">
-              <label>Enhancement</label>
+              <input id="enhancement" type="checkbox">
+              <label for="enhancement">Enhancement</label>
             </li>
           </ul>
         </li>
@@ -53,16 +53,16 @@ title: "Forms"
           <div class="category-title">Skill Level</div>
           <ul>
             <li class="category-option">
-              <input type="checkbox">
-              <label>Beginner</label>
+              <input id="beginner" type="checkbox">
+              <label for="beginner">Beginner</label>
             </li>
             <li class="category-option">
-              <input type="checkbox">
-              <label>Intermediate</label>
+              <input id="intermediate" type="checkbox">
+              <label for="intermediate">Intermediate</label>
             </li>
             <li class="category-option">
-              <input type="checkbox">
-              <label>Advanced</label>
+              <input id="advanced" type="checkbox">
+              <label for="advanced">Advanced</label>
             </li>
           </ul>
         </li>
@@ -70,12 +70,12 @@ title: "Forms"
           <div class="category-title">Type</div>
           <ul>
             <li class="category-option">
-              <input type="checkbox">
-              <label>Bug</label>
+              <input id="bug" type="checkbox">
+              <label for="bug">Bug</label>
             </li>
             <li class="category-option">
-              <input type="checkbox">
-              <label>Enhancement</label>
+              <input id="enhancement" type="checkbox">
+              <label for="enhancement">Enhancement</label>
             </li>
           </ul>
         </li>
