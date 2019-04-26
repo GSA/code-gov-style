@@ -7,14 +7,14 @@ title: "Scroll Indicator"
 
 # Input
 <div class="banner">
-  <a class="scroll-indicator">
+  <a class="scroll-indicator" aria-label="scroll down" href="#">
     <i class="icon icon-angle-down"></i>
   </a>  
 </div>
 
 ```
 <div class="banner">
-  <a class="scroll-indicator">
+  <a class="scroll-indicator" aria-label="scroll down">
     <i class="icon icon-angle-down"></i>
   </a>  
 </div>
