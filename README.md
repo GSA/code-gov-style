@@ -33,6 +33,11 @@ You may want to view your style changes in the code-gov-style repo on your local
 
 You are now using the latest version of the code.gov design system via your cloned version when running the `code-gov-front-end` site on your local machine. To stop using this version, run `npm unlink @code.gov/code-gov-style` from the root level of the `code-gov-front-end` directory.
 
+## Testing
+Our continuous integration pipeline runs linting and accessibility tests on every pull request. Be sure to test your code by running `npm lint` and `npm test-pa11y`.
+
+The accessibility testing configuration is located in the .pa11yci file. We follow the WCAG2AA standard. For more info on the rules being tested checkout the [pa11y wiki](https://github.com/pa11y/pa11y/wiki/HTML-CodeSniffer-Rules)
+
 ## Legal
 
 We use the fa-search icon from Font Awesome.  Font Awesome released their fa-search icon under this license https://creativecommons.org/licenses/by/4.0/
