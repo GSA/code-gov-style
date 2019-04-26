@@ -9,50 +9,6 @@
   position: relative;
   text-align: center;
 
-  @media screen and (min-width: $medium-screen) {
-    height: 225px;
-  }
-
-  &.medium {
-    height: 60vh;
-  }
-
-  &.large {
-
-    @media screen and (min-width: $small-screen) {
-      padding: 26rem 0 16rem;
-    }
-
-    /* need extra room for virtual buttons that appear on mobile devices */
-    height: 85vh;
-
-    /* want to give show mission a little */
-    @media screen and (min-width: 1200px) {
-      height: 90vh;
-    }
-
-    .banner-content {
-      .banner-title {
-        margin-top: 2rem;
-        text-transform: none;
-      }
-
-      .banner-subtitle {
-        margin-bottom: 0rem;
-        @media screen and (min-width: $small-screen) {
-          margin-bottom: 4rem;
-        }
-      }
-
-      button {
-        margin-left: 1rem;
-        margin-right: 1rem;
-      }
-
-    }
-
-  }
-
   .banner-content {
     transform: translateY(-50%);
     width: 100%;
@@ -63,7 +19,7 @@
     }
 
     .banner-title {
-      color: #ffffff;
+      color: #fff;
       font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
       font-size: 2em;
       margin-bottom: 0;
@@ -77,7 +33,6 @@
       @media screen and (min-width: $medium-screen) {
         font-size: 3.2em;
       }
-
     }
 
     .banner-subsection {
@@ -85,8 +40,8 @@
 
       &.width-half {
         @media screen and (max-width: $medium-screen) {
-          margin-left: 0px;
-          margin-right: 0px;
+          margin-left: 0;
+          margin-right: 0;
         }
       }
 
@@ -96,7 +51,7 @@
     }
 
     .banner-subsection-title {
-      color: #ffffff;
+      color: #fff;
       font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
       font-size: 2rem;
       margin-bottom: 0;
@@ -126,7 +81,7 @@
     .banner-subsection-subtitle {
       color: $color-white;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: .9em;
+      font-size: 0.9em;
       margin-bottom: 0;
       margin-left: auto;
       margin-right: auto;
@@ -145,11 +100,52 @@
     a {
       color: $color-white;
 
-      &.link, 
+      &.link,
       :visited {
         color: $color-white;
       }
     }
   }
 
+  @media screen and (min-width: $medium-screen) {
+    height: 225px;
+  }
+
+  &.medium {
+    height: 60vh;
+  }
+
+  &.large {
+    @media screen and (min-width: $small-screen) {
+      padding: 26rem 0 16rem;
+    }
+
+    /* need extra room for virtual buttons that appear on mobile devices */
+    height: 85vh;
+
+    /* want to give show mission a little */
+    @media screen and (min-width: 1200px) {
+      height: 90vh;
+    }
+
+    .banner-content {
+      .banner-title {
+        margin-top: 2rem;
+        text-transform: none;
+      }
+
+      .banner-subtitle {
+        margin-bottom: 0;
+
+        @media screen and (min-width: $small-screen) {
+          margin-bottom: 4rem;
+        }
+      }
+
+      button {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+    }
+  }
 }

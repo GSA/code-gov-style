@@ -19,7 +19,9 @@ html {
     text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
 
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       box-sizing: inherit;
     }
 

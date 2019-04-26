@@ -1,38 +1,40 @@
 @import 'variables';
-
+// global
 @import 'global';
-
 @import 'animations';
-@import 'autocomplete';
-@import 'banners';
-@import 'breaks';
-@import 'blocks';
-@import 'breadcrumbs';
-@import 'buttons';
-@import 'cards';
-@import 'dividers';
+@import 'app';
 @import 'documentation';
+// layout
+@import 'blocks';
+@import 'breaks';
+@import 'layouts';
+@import 'shared-layout';
+// user input
 @import 'filter';
 @import 'filter_tag';
-@import 'fontello';
-@import 'footers';
 @import 'forms';
-@import 'hamburgers';
-@import 'iconography';
 @import 'inputs';
-@import 'layouts';
+// typography
+@import 'typography';
+@import 'fontello';
+@import 'iconography';
 @import 'links';
+@import 'quotes';
+// navigation
+@import 'breadcrumbs';
 @import 'mobile_menu';
 @import 'navbars';
-@import 'popover';
-@import 'quotes';
 @import 'scroll_indicator';
 @import 'sidebars';
-@import 'tables';
-@import 'typography';
-
-@import 'usds-overrides';
-
 @import 'headers';
-@import 'app';
-@import 'shared-layout';
+@import 'hamburgers';
+// info display
+@import 'autocomplete';
+@import 'cards';
+@import 'popover';
+@import 'tables';
+// extra
+@import 'banners';
+@import 'buttons';
+@import 'dividers';
+@import 'footers';
