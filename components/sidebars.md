@@ -99,19 +99,19 @@ If you want to add images for a row in the sidebar.
   <ul>
     <li class="current">
       <a class="current">
-        <img src="/code-gov-style/assets/img/USAID.png">
+        <img src="/code-gov-style/assets/img/USAID.png" alt="USAID">
         <span>Agency for International Development</span>
       </a>
     </li>
     <li>
       <a>
-        <img src="/code-gov-style/assets/img/CFPB.png">
+        <img src="/code-gov-style/assets/img/CFPB.png" alt="CFPB">
         <span>Consumer Financial Protection Bureau</span>
       </a>
     </li>
     <li>
       <a>
-        <img src="/code-gov-style/assets/img/USDA.png">
+        <img src="/code-gov-style/assets/img/USDA.png" alt="USDA">
         <span>Department of Agriculture</span>
       </a>
     </li>
