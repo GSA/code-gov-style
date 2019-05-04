@@ -3,6 +3,12 @@
   "timeout": 20000,
   "wait": 1000,
   "standard": "WCAG2AA",
+  "ignore": [
+      "notice",
+      "warning",
+      "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2"
+      ],
   "viewport": {
       "width": 1000,
       "height": 1000 

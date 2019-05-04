@@ -31,7 +31,7 @@ You can set the default state to open by setting the open attribute to true
 <div class="mobile-menu">
   <ul>
     <li class="search">
-      <input placeholder="Search Projects..." type="search">
+      <input placeholder="Search Projects..." type="search" aria-label="search">
       <button class="go">Go</button>
     </li>
     <li class="expanded">
@@ -63,7 +63,7 @@ You can set the default state to open by setting the open attribute to true
 <div class="mobile-menu">
   <ul>
     <li class="search">
-      <input placeholder="Search Projects..." type="search">
+      <input placeholder="Search Projects..." type="search" aria-label="search">
       <button class="go">Go</button>
     </li>
     <li class="expanded">

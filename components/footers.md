@@ -48,19 +48,19 @@ title: "Footers"
       <ul>
         <li>
           <a>
-            <img src="../assets/img/whitehouse.png">
+            <img src="../assets/img/whitehouse.png" alt="white house logo">
             <span>The White House</span>
           </a>
         </li>
         <li>
           <a>
-            <img src="../assets/img/PIF.png">
+            <img src="../assets/img/PIF.png" alt="pif logo">
             <span>PIF</span>
           </a>
         </li>
         <li>
           <a>
-            <img src="../assets/img/GSA.svg">
+            <img src="../assets/img/GSA.svg" alt="gsa logo">
             <span>GSA</span>
           </a>
         </li>
@@ -85,13 +85,13 @@ title: "Footers"
       <ul>
         <li>
           <a>
-            <img src="../assets/img/whitehouse.png">
+            <img src="../assets/img/whitehouse.png" alt="white house logo">
             <span>The White House</span>
           </a>
         </li>
         <li>
           <a>
-            <img src="../assets/img/PIF.png">
+            <img src="../assets/img/PIF.png" alt="pif logo">
             <span>PIF</span>
           </a>
         </li>

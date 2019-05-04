@@ -27,7 +27,7 @@ another width class, please create one.
 
 <style>
 [class*='width-'] {
-  background-color: green;
+  background-color: gray;
 }
 </style>
 

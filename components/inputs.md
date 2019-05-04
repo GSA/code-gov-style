@@ -7,10 +7,10 @@ title: "Inputs"
 
 # Input
 <div class="banner">
-  <input placeholder="Search Thousands of Projects..." type="search">
+  <input placeholder="Search Thousands of Projects..." type="search" aria-label="search">
 </div>
 ```
-<input placeholder="Search Thousands of Projects..." type="search">
+<input placeholder="Search Thousands of Projects..." type="search" aria-label="search">
 ```
 
 ---
@@ -18,12 +18,12 @@ title: "Inputs"
 # Input with Go Button
 Just add a button with the go class after the search input.
 <div class="banner">
-  <input placeholder="Search Thousands of Projects..." type="search">
+  <input placeholder="Search Thousands of Projects..." type="search" aria-label="search">
   <button class="go">Go</button>
 </div>
 ```
 <div class="banner">
-  <input placeholder="Search Thousands of Projects..." type="search">
+  <input placeholder="Search Thousands of Projects..." type="search" aria-label="search">
   <button class="go">Go</button>
 </div>
 ```
