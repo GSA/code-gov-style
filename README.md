@@ -38,6 +38,12 @@ Our continuous integration pipeline runs linting and accessibility tests on ever
 
 The accessibility testing configuration is located in the .pa11yci file. We follow the WCAG2AA standard. For more info on the rules being tested checkout the [pa11y wiki](https://github.com/pa11y/pa11y/wiki/HTML-CodeSniffer-Rules)
 
+## Deployment
+
+The https://gsa.github.io/code-gov-style/ site is built using GitHub pages from the `master` branch. Any merges to the `master` branch will update the site within a few minutes. 
+
+In order for any style guide changes to be reflected on the `code-gov-front-end`, they must be deplyed to [NPM](https://www.npmjs.com/package/@code.gov/code-gov-style) and the package version that `code-gov-front-end` uses needs to be incremented.
+
 ## Legal
 
 We use the fa-search icon from Font Awesome.  Font Awesome released their fa-search icon under this license https://creativecommons.org/licenses/by/4.0/
