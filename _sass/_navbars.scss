@@ -19,7 +19,8 @@
         padding: 0.75em 1.25em;
         text-decoration: none;
 
-        &.active, &:hover {
+        &.active,
+        &:hover {
           background-color: $color-subnav-selection;
           color: $color-white;
         }

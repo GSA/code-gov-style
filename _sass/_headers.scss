@@ -22,6 +22,7 @@ header.main {
 
       .hamburger-inner {
         background-color: $color-white;
+
         &::before,
         &::after {
           background-color: $color-white;
@@ -39,6 +40,7 @@ header.main {
           > div,
           > a {
             color: $color-gray-lighter;
+
             &:hover {
               color: white;
             }
@@ -48,15 +50,18 @@ header.main {
             li {
               a {
                 color: $color-gray-lighter;
+
                 i {
                   color: $color-gray-lighter;
                 }
+
                 &:hover {
                   color: white;
                 }
               }
             }
           }
+
           &.expanded {
             > div {
               color: white;
@@ -160,8 +165,8 @@ header.main {
 
         /* first-level li */
         > li {
-          margin-left: 0rem;
-          margin-right: 0rem;
+          margin-left: 0;
+          margin-right: 0;
           padding-left: 1rem;
           padding-right: 1rem;
 
@@ -259,6 +264,7 @@ header.main {
             border-color: $brand-teal-medium;
             color: $brand-blue-dark;
           }
+
           > ul {
             display: inline-block;
           }
@@ -272,8 +278,8 @@ header.main {
     right: 0;
     top: 0;
     z-index: 99;
-
     display: none;
+
     @media screen and (min-width: 1200px) {
       display: block;
     }

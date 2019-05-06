@@ -1,7 +1,6 @@
 table {
   border-spacing: 0;
   border-collapse: separate;
-  border-spacing: 0px;
   border-style: solid;
   border-width: 0;
   border-color: grey;
@@ -21,9 +20,7 @@ table {
       display: table-row;
       border-color: inherit;
       vertical-align: inherit;
-    }
 
-    tr {
       th {
         background-color: $color-gray-cool-light;
         border-color: #e4e4e4;
@@ -39,6 +36,7 @@ table {
         &:first-child {
           border-top-left-radius: 5px;
         }
+
         &:last-child {
           border-top-right-radius: 5px;
         }
@@ -52,7 +50,7 @@ table {
         border-color: $color-gray-lighter;
         border-width: 0;
         border-style: solid;
-        font-weight: 400;        
+        font-weight: 400;
         padding-bottom: 1rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
@@ -61,6 +59,7 @@ table {
         &:first-child {
           border-left-width: 1px;
         }
+
         &:last-child {
           border-right-width: 1px;
         }
@@ -69,9 +68,11 @@ table {
       &:last-child {
         td {
           border-bottom-width: 1px;
+
           &:first-child {
             border-bottom-left-radius: 5px;
           }
+
           &:last-child {
             border-bottom-right-radius: 5px;
           }
