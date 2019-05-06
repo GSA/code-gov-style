@@ -30,7 +30,7 @@ jobs:
 
       # run linting!
       - run: npm run lint
-      - run: num run test-pa11y
+      - run: npm run test-pa11y
       
 workflows:
   version: 2
