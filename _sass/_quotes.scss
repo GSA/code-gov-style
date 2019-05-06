@@ -19,7 +19,7 @@ blockquote {
 
 .quote {
   max-width: 43em;
-  text-align:left;
+  text-align: left;
 
   blockquote {
     background-color: transparent;
@@ -44,7 +44,7 @@ blockquote {
       content: '“';
       font-size: 1.75em;
       left: -2.5rem;
-      padding-right: .5rem;
+      padding-right: 0.5rem;
       position: absolute;
       top: -1.5rem;
       vertical-align: middle;
@@ -59,7 +59,7 @@ blockquote {
       content: '”';
       font-size: 1.75em;
       line-height: 0.6;
-      padding-left: .5rem;
+      padding-left: 0.5rem;
       position: absolute;
       vertical-align: text-top;
 
@@ -81,7 +81,6 @@ blockquote {
   }
 
   &.light {
-
     blockquote {
       color: $color-white;
     }

@@ -12,6 +12,7 @@
   &.left {
     float: left;
   }
+
   &.right {
     float: right;
   }
@@ -81,8 +82,8 @@
     padding: 0;
     position: relative;
 
-    > li, >* > li {
-
+    > li,
+    > * > li {
       &:not(:last-child) {
         border-bottom: 2px solid $color-gray-lightest;
       }
@@ -96,11 +97,11 @@
       }
 
       ul {
-
         li {
           a {
             padding-left: 2.8rem;
           }
+
           ul {
             li {
               a {

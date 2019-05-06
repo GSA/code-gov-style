@@ -16,10 +16,10 @@ $brand-blue-gray-light: #71839d;
 $brand-blue-gray: #485568;
 
 $brand-teal: #43ddd7;
-$brand-teal-medium: #23C0BA;
+$brand-teal-medium: #23c0ba;
 $brand-teal-dark: #00847f;
 
-$brand-purple: #42519F;
+$brand-purple: #42519f;
 $brand-purple-dark: #333f7b;
 
 // USWDS Colors
@@ -33,8 +33,8 @@ $color-secondary-darkest:    #981b1e;
 $color-secondary-light:      #e59393; // lighten($color-secondary, 60%)
 $color-secondary-lightest:   #f9dede; // lighten($color-secondary, 90%)
 
-$color-white:                #ffffff;
-$color-black:                #000000;
+$color-white:                #fff;
+$color-black:                #000;
 $color-black-light:          #212121;
 
 $color-blue:                 #0071bc;
@@ -102,7 +102,7 @@ $header-height: 50px;
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
   border: 0;
 }
 
@@ -118,6 +118,7 @@ $header-height: 50px;
   // 12 * colwidth + 11 * gutterwidth = 100%
   $column-width: 5%;
   $gutter-width: (97.6% - 12 * $column-width) / 11;
+
   display: inline-block;
   margin-left: $gutter-width / 2;
   margin-right: $gutter-width / 2;
@@ -136,24 +137,31 @@ $header-height: 50px;
 @mixin width-sixth() {
   @include span-columns(2);
 }
+
 @mixin width-quarter() {
   @include span-columns(3);
 }
+
 @mixin width-third() {
   @include span-columns(4);
 }
+
 @mixin width-half() {
   @include span-columns(6);
 }
+
 @mixin width-two-thirds() {
   @include span-columns(8);
 }
+
 @mixin width-three-quarters() {
   @include span-columns(9);
 }
+
 @mixin width-five-sixth() {
   @include span-columns(10);
 }
+
 @mixin width-whole {
   @include span-columns(12);
 }
@@ -163,16 +171,19 @@ $header-height: 50px;
     @include width-sixth();
   }
 }
+
 .width-quarter {
   @media screen and (min-width: $medium-screen) {
     @include width-quarter();
   }
 }
+
 .width-third {
   @media screen and (min-width: $medium-screen) {
     @include width-third();
   }
 }
+
 .width-half {
   @include width-whole();
 
@@ -180,30 +191,32 @@ $header-height: 50px;
     @include width-half();
   }
 }
+
 .width-two-thirds {
   @media screen and (min-width: $medium-screen) {
     @include width-two-thirds();
   }
 }
+
 .width-three-quarters {
   @media screen and (min-width: $medium-screen) {
     @include width-three-quarters();
   }
 }
+
 .width-five-sixth {
   @media screen and (min-width: $medium-screen) {
     @include width-five-sixth();
   }
 }
+
 .width-whole {
   @media screen and (min-width: $medium-screen) {
     @include width-whole();
   }
 }
 
-
 $hr-color: $brand-teal;
-
 
 /* at what pixels should switch from mobile to desktop menu */
 $header-switch: 800.5px;
