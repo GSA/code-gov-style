@@ -13,7 +13,7 @@ The code.gov Style Guide makes the search and usage of CSS classes easier by pro
 
 ## Install
 
-The repository is distributed with [npm](https://www.npmjs.com/). After [installing npm](https://docs.npmjs.com/getting-started/installing-node), you can install `code-gov-style` with this command: 
+The repository is distributed with [npm](https://www.npmjs.com/). After [installing npm](https://docs.npmjs.com/getting-started/installing-node), you can install `code-gov-style` with this command:
 ```sh
 $ npm i @code.gov/code-gov-style
 ```
@@ -34,13 +34,19 @@ You may want to view your style changes in the code-gov-style repo on your local
 You are now using the latest version of the code.gov design system via your cloned version when running the `code-gov-front-end` site on your local machine. To stop using this version, run `npm unlink @code.gov/code-gov-style` from the root level of the `code-gov-front-end` directory.
 
 ## Testing
-Our continuous integration pipeline runs linting and accessibility tests on every pull request. Be sure to test your code by running `npm lint` and `npm test-pa11y`.
+Our continuous integration pipeline runs linting and accessibility tests on every pull request. Be sure to test your code by doing the following:
+1. Use the `npm run lint` command to lint your `.scss` files.
+
+2. To run web accessibility testing do the following:
+    a. Make sure [ruby](https://www.ruby-lang.org/en/documentation/installation/) and the [bundler gem](https://bundler.io/) are installed on your computer.
+    b. Start a server by running `npm run serve`.
+    c. Use the `npm run test-pa11y` command to run the accessibility test.
 
 The accessibility testing configuration is located in the .pa11yci file. We follow the WCAG2AA standard. For more info on the rules being tested checkout the [pa11y wiki](https://github.com/pa11y/pa11y/wiki/HTML-CodeSniffer-Rules)
 
 ## Deployment
 
-The https://gsa.github.io/code-gov-style/ site is built using GitHub pages from the `master` branch. Any merges to the `master` branch will update the site within a few minutes. 
+The https://gsa.github.io/code-gov-style/ site is built using GitHub pages from the `master` branch. Any merges to the `master` branch will update the site within a few minutes.
 
 In order for any style guide changes to be reflected on the `code-gov-front-end`, they must be deplyed to [NPM](https://www.npmjs.com/package/@code.gov/code-gov-style) and the package version that `code-gov-front-end` uses needs to be incremented.
 
