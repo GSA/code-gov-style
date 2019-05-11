@@ -14,4 +14,4 @@ The following minimum requirements should be satisfied for running the `npm run 
  - bundler
 
 ### Updating Font
-code-gov-style depends on the font from [code-gov-font](https://github.com/GSA/code-gov-style).  In order to use a new version of [code-gov-font](https://github.com/GSA/code-gov-style), update the version in the [package.json](https://github.com/GSA/code-gov-style/blob/master/package.json), run `npm install`, and then run `npm run update-font`.  `npm run update-font` basically copies over the relevant font files from the installed package, so they're in the places that Jekyll expects.
+code-gov-style depends on the font from [code-gov-font](https://github.com/GSA/code-gov-font).  In order to use a new version of [code-gov-font](https://github.com/GSA/code-gov-font), update the version in the [package.json](https://github.com/GSA/code-gov-style/blob/master/package.json), run `npm install`, and then run `npm run update-font`.  `npm run update-font` basically copies over the relevant font files from the installed package, so they're in the places that Jekyll expects.
