@@ -62,4 +62,7 @@ Have a question?  Check out our [FAQS](FAQS.md).  If it's not there, feel free t
 
 ## Contact
 
-Contact Daniel J. Dufour at daniel.dufour@gsa.gov if you have any questions
+Twitter: [@CodeDotGov](https://twitter.com/CodeDotGov)  
+Email: [code@gsa.gov](mailto:code@gsa.gov)  
+LinkedIn: [code-gov](https://www.linkedin.com/company/code-gov/)  
+Join our #opensource-public Slack channel: [https://chat.18f.gov/](https://chat.18f.gov/)
