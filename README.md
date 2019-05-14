@@ -13,10 +13,12 @@ The code.gov Style Guide makes the search and usage of CSS classes easier by pro
 
 ## Install
 
-The repository is distributed with [npm](https://www.npmjs.com/). After [installing npm](https://docs.npmjs.com/getting-started/installing-node), you can install `code-gov-style` with this command:
-```sh
-$ npm i @code.gov/code-gov-style
-```
+Clone the `code-gov-style` repository locally. After cloning locally, follow these steps:
+- In your terminal, run `npm install` to install all dependencies
+- In your terminal, run `bundle install` to add all ruby gems
+  - (Note - your Bundler version should be >1.17.3. To install Bundler, run `gem intall bundler` from your terminal)
+- To serve the [Code.gov Style Guide](https://gsa.github.io/code-gov-style/) locally, in your terminal, run `npm run-script serve`
+  - This should output what the server address is on your local machine.
 
 ## Usage
 
