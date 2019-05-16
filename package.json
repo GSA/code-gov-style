@@ -35,7 +35,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
     "@code.gov/code-gov-font": "0.7.1",
-    "@webcomponents/custom-elements": "^1.2.1",
+    "@webcomponents/custom-elements": "^1.2.4",
     "custom-event-polyfill": "^1.0.6",
     "prismjs": "^1.15.0"
   },
