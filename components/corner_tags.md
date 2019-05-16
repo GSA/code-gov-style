@@ -8,7 +8,7 @@ title: "Corner Tags"
 # High Value
 <div style="max-width: 400px">
   <div class="card">
-    <div class="corner-tag high">
+    <div aria-label="high" class="corner-tag high">
       <div class="corner-tag-value">7.6</div>
     </div>
     <p>High Value Card</p>
@@ -17,7 +17,7 @@ title: "Corner Tags"
 ```
 <div style="max-width: 400px">
   <div class="card">
-    <div class="corner-tag high">
+    <div aria-label="high" class="corner-tag high">
       <div class="corner-tag-value">7.6</div>
     </div>
     <p>High Value Card</p>
@@ -28,7 +28,7 @@ title: "Corner Tags"
 # Medium Value
 <div style="max-width: 400px">
   <div class="card">
-    <div class="corner-tag medium">
+    <div aria-label="medium" class="corner-tag medium">
       <div class="corner-tag-value">5.5</div>
     </div>
     <p>Medium Value Card</p>
@@ -37,7 +37,7 @@ title: "Corner Tags"
 ```
 <div style="max-width: 400px">
   <div class="card">
-    <div class="corner-tag medium">
+    <div aria-label="medium" class="corner-tag medium">
       <div class="corner-tag-value">5.5</div>
     </div>
     <p>Medium Value Card</p>
@@ -49,7 +49,7 @@ title: "Corner Tags"
 # Low Value
 <div style="max-width: 400px">
   <div class="card">
-    <div class="corner-tag low">
+    <div aria-label="low" class="corner-tag low">
       <div class="corner-tag-value">3.5</div>
     </div>
     <p>Low Value Card</p>
@@ -58,7 +58,7 @@ title: "Corner Tags"
 ```
 <div style="max-width: 400px">
   <div class="card">
-    <div class="corner-tag low">
+    <div aria-label="low" class="corner-tag low">
       <div class="corner-tag-value">3.5</div>
     </div>
     <p>Low Value Card</p>

@@ -34,7 +34,7 @@ class QualityTag extends HTMLElement {
     } else {
       category = '';
     }
-    this.innerHTML = `<div class="corner-tag ${category}"><div class="corner-tag-value">${rounded}</div></div>`;
+    this.innerHTML = `<div aria-label="${category}" class="corner-tag ${category}"><div class="corner-tag-value">${rounded}</div></div>`;
   }
 
 }
