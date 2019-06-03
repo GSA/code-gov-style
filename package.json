@@ -37,7 +37,8 @@
     "@code.gov/code-gov-font": "0.7.1",
     "@webcomponents/custom-elements": "^1.2.4",
     "custom-event-polyfill": "^1.0.6",
-    "prismjs": "^1.15.0"
+    "prismjs": "^1.15.0",
+    "uswds": "^2.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
