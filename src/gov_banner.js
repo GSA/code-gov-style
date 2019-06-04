@@ -19,6 +19,9 @@
       this.bannerHeader = document.querySelector('header.usa-banner__header');
       this.accordionContent = document.querySelector('div.usa-banner__content');
       this.addEventListeners();
+      const ariaExpandedValue = this.accordionContent.getAttribute('aria-expanded');
+      console.log('ariaExpandedValue', ariaExpandedValue);
+      console.log('typeof ariaExpandedValue', typeof ariaExpandedValue);
     }
 
     getSvgUri(svgString) {
@@ -30,14 +33,6 @@
     //     this.update();
     //   }
     // }
-
-    handleClick() {
-      if (this.ariaExpandedValue === 'false') {
-        this.expandBanner();
-      } else {
-        this.collaspseBanner();
-      }
-    }
 
     // disconnectedCallback() {
     //   this.buttonToggle.removeEventListener('click', () => {
