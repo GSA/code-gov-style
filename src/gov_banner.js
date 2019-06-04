@@ -5,7 +5,7 @@
     constructor() {
         // establish prototype chain
         super();
-        this.handleClick = this.handleClick.bind(this);
+        // this.handleClick = this.handleClick.bind(this);
     }
 
     // static get observedAttributes() {
@@ -18,7 +18,6 @@
       this.buttonToggle = document.querySelector('button.usa-accordion__button');
       this.bannerHeader = document.querySelector('header.usa-banner__header');
       this.accordionContent = document.querySelector('div.gov-banner');
-      this.ariaExpandedValue = this.accordionContent.getAttribute('aria-expanded');
       this.addEventListeners();
     }
 
@@ -40,12 +39,20 @@
       }
     }
 
-    disconnectedCallback() {
-      this.buttonToggle.removeEventListener('click', this.handleClick);
-    }
+    // disconnectedCallback() {
+    //   this.buttonToggle.removeEventListener('click', () => {
+    //
+    //   });
+    // }
 
     addEventListeners() {
-      this.buttonToggle.addEventListener('click', this.handleClick);
+      this.buttonToggle.addEventListener('click', () => {
+        if (this.accordionContent.getAttribute('aria-expanded') === 'true') {
+          this.collaspseBanner();
+        } else {
+          this.expandBanner();
+        }
+      });
     }
 
     expandBanner() {
@@ -83,8 +90,8 @@
                         <p class="usa-banner__header-action" aria-hidden="true">Here’s how you know</p>
                     </div>
                     <button class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner">
-              <span class="usa-banner__button-text">Here’s how you know</span>
-            </button>
+                      <span class="usa-banner__button-text">Here’s how you know</span>
+                    </button>
                 </div>
             </header>
             <div class="usa-banner__content usa-accordion__content" id="gov-banner" hidden>
