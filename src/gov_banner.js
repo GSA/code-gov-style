@@ -1,13 +1,11 @@
 'use strict';
-import 'uswds';
-
-
 (function() {
   /*global HTMLElement*/
   class GovBanner extends HTMLElement {
     constructor() {
         // establish prototype chain
         super();
+        this.handleClick = this.handleClick.bind(this);
     }
 
     // static get observedAttributes() {
@@ -17,6 +15,11 @@ import 'uswds';
     // fires after the element has been attached to the DOM
     connectedCallback() {
       this.update();
+      this.buttonToggle = document.querySelector('button.usa-accordion__button');
+      this.bannerHeader = document.querySelector('header.usa-banner__header');
+      this.accordionContent = document.querySelector('div.gov-banner');
+      this.ariaExpandedValue = this.accordionContent.getAttribute('aria-expanded');
+      this.addEventListeners();
     }
 
     getSvgUri(svgString) {
@@ -28,6 +31,34 @@ import 'uswds';
     //     this.update();
     //   }
     // }
+
+    handleClick() {
+      if (this.ariaExpandedValue === 'false') {
+        this.expandBanner();
+      } else {
+        this.collaspseBanner();
+      }
+    }
+
+    disconnectedCallback() {
+      this.buttonToggle.removeEventListener('click', this.handleClick);
+    }
+
+    addEventListeners() {
+      this.buttonToggle.addEventListener('click', this.handleClick);
+    }
+
+    expandBanner() {
+      this.accordionContent.removeAttribute('hidden');
+      this.buttonToggle.setAttribute('aria-expanded', 'true');
+      this.bannerHeader.classlist.add('usa-banner__header--expanded');
+    }
+
+    collaspseBanner() {
+      this.accordionContent.setAttribute('hidden', '');
+      this.buttonToggle.setAttribute('aria-expanded', 'false');
+      this.bannerHeader.classlist.remove('usa-banner__header--expanded');
+    }
 
     update() {
       const smallUsFlagURI = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAG1BMVEUdM7EeNLIeM7HgQCDaPh/bPh/bPx/////bPyBEby41AAAAUElEQVQI123MNw4CABDEwD3jC/9/MQ1BQrgeOSkIqYe2o2FZtthXgQLgbHVMZdlsfUQFQnHtjP1+8BUhBDKOqtmfot6ojqPzR7TjdU+f6vkED+IDPhTBcMAAAAAASUVORK5CYII=";
@@ -56,7 +87,7 @@ import 'uswds';
             </button>
                 </div>
             </header>
-            <div class="usa-banner__content usa-accordion__content" id="gov-banner">
+            <div class="usa-banner__content usa-accordion__content" id="gov-banner" hidden>
                 <div class="grid-row grid-gap-lg">
                     <div class="usa-banner__guidance tablet:grid-col-6">
                         <img class="usa-banner__icon usa-media-block__img" src=${dotGovIconURI} alt="Dot gov">
