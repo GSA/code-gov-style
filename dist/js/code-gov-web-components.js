@@ -405,17 +405,21 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     _createClass(GovBanner, [{
       key: "connectedCallback",
       value: function connectedCallback() {
+        var _this = this;
+
         this.update();
         this.buttonToggle = this.querySelector('button.usa-accordion__button');
         this.bannerHeader = this.querySelector('header.usa-banner__header');
         this.accordionContent = this.querySelector('div.usa-banner__content');
-        this.addEventListeners();
-        var ariaExpandedValue = this.buttonToggle.getAttribute('aria-expanded');
-        console.log('ariaExpandedValue', ariaExpandedValue);
-        console.log('typeof ariaExpandedValue', _typeof(ariaExpandedValue));
-        console.log('this.buttonToggle', this.buttonToggle);
-        console.log('this.bannerHeader', this.bannerHeader);
-        console.log('this.accordionContent', this.accordionContent);
+        this.buttonToggle.addEventListener('click', function () {
+          console.log('i got clicked!');
+
+          if (_this.buttonToggle.getAttribute('aria-expanded') === 'true') {
+            _this.collaspseBanner();
+          } else {
+            _this.expandBanner();
+          }
+        });
       }
     }, {
       key: "getSvgUri",
@@ -431,22 +435,17 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       //
       //   });
       // }
+      // addEventListeners() {
+      //   this.buttonToggle.addEventListener('click', () => {
+      //     console.log('i got clicked!');
+      //     if (this.buttonToggle.getAttribute('aria-expanded') === 'true') {
+      //       this.collaspseBanner();
+      //     } else {
+      //       this.expandBanner();
+      //     }
+      //   });
+      // }
 
-    }, {
-      key: "addEventListeners",
-      value: function addEventListeners() {
-        var _this = this;
-
-        this.buttonToggle.addEventListener('click', function () {
-          console.log('i got clicked!');
-
-          if (_this.buttonToggle.getAttribute('aria-expanded') === 'true') {
-            _this.collaspseBanner();
-          } else {
-            _this.expandBanner();
-          }
-        });
-      }
     }, {
       key: "expandBanner",
       value: function expandBanner() {
