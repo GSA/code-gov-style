@@ -1,5 +1,5 @@
 'use strict';
-require('uswds');
+import 'uswds';
 
 
 (function() {
