@@ -410,6 +410,9 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
         this.bannerHeader = document.querySelector('header.usa-banner__header');
         this.accordionContent = document.querySelector('div.usa-banner__content');
         this.addEventListeners();
+        var ariaExpandedValue = this.accordionContent.getAttribute('aria-expanded');
+        console.log('ariaExpandedValue', ariaExpandedValue);
+        console.log('typeof ariaExpandedValue', _typeof(ariaExpandedValue));
       }
     }, {
       key: "getSvgUri",
@@ -420,16 +423,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       //     this.update();
       //   }
       // }
-
-    }, {
-      key: "handleClick",
-      value: function handleClick() {
-        if (this.ariaExpandedValue === 'false') {
-          this.expandBanner();
-        } else {
-          this.collaspseBanner();
-        }
-      } // disconnectedCallback() {
+      // disconnectedCallback() {
       //   this.buttonToggle.removeEventListener('click', () => {
       //
       //   });
