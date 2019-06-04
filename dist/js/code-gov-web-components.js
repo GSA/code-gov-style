@@ -408,7 +408,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
         this.update();
         this.buttonToggle = document.querySelector('button.usa-accordion__button');
         this.bannerHeader = document.querySelector('header.usa-banner__header');
-        this.accordionContent = document.querySelector('div.gov-banner');
+        this.accordionContent = document.querySelector('div.usa-banner__content');
         this.addEventListeners();
       }
     }, {
