@@ -10,7 +10,7 @@
     "test-pa11y": "./node_modules/.bin/pa11y-ci --config .pa11yci",
     "update-all": "npm i && npm run update-font && npm run update-custom-elements && npm run update-polyfills && npm run update-code-gov-web-components && npm run update-assets",
     "update-assets": "cp dist/js/* assets/js/. && cp node_modules/prismjs/prism.js assets/js/. && cp node_modules/@webcomponents/custom-elements/custom-elements.min.js.map assets/js/.",
-    "update-custom-elements": "npm install -S @webcomponents/custom-elements && cd node_modules/@webcomponents/custom-elements && npm install && npm build",
+    "update-custom-elements": "npm install -S @webcomponents/custom-elements && cd node_modules/@webcomponents/custom-elements && npm install",
     "update-font": "cd bash_scripts && bash update-font.sh",
     "update-polyfills": "cat ./node_modules/@babel/polyfill/dist/polyfill.min.js ./node_modules/custom-event-polyfill/polyfill.js ./node_modules/@webcomponents/custom-elements/custom-elements.min.js > dist/js/polyfills.js",
     "update-code-gov-web-components": "./node_modules/@babel/cli/bin/babel.js src/* > dist/js/code-gov-web-components.js"
