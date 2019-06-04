@@ -18,13 +18,15 @@
       this.buttonToggle = this.querySelector('button.usa-accordion__button');
       this.bannerHeader = this.querySelector('header.usa-banner__header');
       this.accordionContent = this.querySelector('div.usa-banner__content');
-      this.addEventListeners();
-      const ariaExpandedValue = this.buttonToggle.getAttribute('aria-expanded');
-      console.log('ariaExpandedValue', ariaExpandedValue);
-      console.log('typeof ariaExpandedValue', typeof ariaExpandedValue);
-      console.log('this.buttonToggle', this.buttonToggle);
-      console.log('this.bannerHeader', this.bannerHeader);
-      console.log('this.accordionContent', this.accordionContent);
+
+      this.buttonToggle.addEventListener('click', () => {
+        console.log('i got clicked!');
+        if (this.buttonToggle.getAttribute('aria-expanded') === 'true') {
+          this.collaspseBanner();
+        } else {
+          this.expandBanner();
+        }
+      });
     }
 
     getSvgUri(svgString) {
@@ -43,16 +45,16 @@
     //   });
     // }
 
-    addEventListeners() {
-      this.buttonToggle.addEventListener('click', () => {
-        console.log('i got clicked!');
-        if (this.buttonToggle.getAttribute('aria-expanded') === 'true') {
-          this.collaspseBanner();
-        } else {
-          this.expandBanner();
-        }
-      });
-    }
+    // addEventListeners() {
+    //   this.buttonToggle.addEventListener('click', () => {
+    //     console.log('i got clicked!');
+    //     if (this.buttonToggle.getAttribute('aria-expanded') === 'true') {
+    //       this.collaspseBanner();
+    //     } else {
+    //       this.expandBanner();
+    //     }
+    //   });
+    // }
 
     expandBanner() {
       this.accordionContent.removeAttribute('hidden');
