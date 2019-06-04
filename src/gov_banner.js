@@ -22,6 +22,9 @@
       const ariaExpandedValue = this.accordionContent.getAttribute('aria-expanded');
       console.log('ariaExpandedValue', ariaExpandedValue);
       console.log('typeof ariaExpandedValue', typeof ariaExpandedValue);
+      console.log('this.buttonToggle', this.buttonToggle);
+      console.log('this.bannerHeader', this.bannerHeader);
+      console.log('this.accordionContent', this.accordionContent);
     }
 
     getSvgUri(svgString) {
@@ -42,6 +45,7 @@
 
     addEventListeners() {
       this.buttonToggle.addEventListener('click', () => {
+        console.log('i got clicked!');
         if (this.accordionContent.getAttribute('aria-expanded') === 'true') {
           this.collaspseBanner();
         } else {

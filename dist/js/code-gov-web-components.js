@@ -413,6 +413,9 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
         var ariaExpandedValue = this.accordionContent.getAttribute('aria-expanded');
         console.log('ariaExpandedValue', ariaExpandedValue);
         console.log('typeof ariaExpandedValue', _typeof(ariaExpandedValue));
+        console.log('this.buttonToggle', this.buttonToggle);
+        console.log('this.bannerHeader', this.bannerHeader);
+        console.log('this.accordionContent', this.accordionContent);
       }
     }, {
       key: "getSvgUri",
@@ -435,6 +438,8 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
         var _this = this;
 
         this.buttonToggle.addEventListener('click', function () {
+          console.log('i got clicked!');
+
           if (_this.accordionContent.getAttribute('aria-expanded') === 'true') {
             _this.collaspseBanner();
           } else {
