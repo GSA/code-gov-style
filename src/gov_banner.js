@@ -1,4 +1,6 @@
 'use strict';
+require('uswds');
+
 
 (function() {
   /*global HTMLElement*/
