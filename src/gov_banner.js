@@ -15,9 +15,9 @@
     // fires after the element has been attached to the DOM
     connectedCallback() {
       this.update();
-      this.buttonToggle = document.querySelector('button.usa-accordion__button');
-      this.bannerHeader = document.querySelector('header.usa-banner__header');
-      this.accordionContent = document.querySelector('div.usa-banner__content');
+      this.buttonToggle = this.querySelector('button.usa-accordion__button');
+      this.bannerHeader = this.querySelector('header.usa-banner__header');
+      this.accordionContent = this.querySelector('div.usa-banner__content');
       this.addEventListeners();
       const ariaExpandedValue = this.accordionContent.getAttribute('aria-expanded');
       console.log('ariaExpandedValue', ariaExpandedValue);
