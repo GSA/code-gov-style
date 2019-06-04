@@ -406,9 +406,9 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       key: "connectedCallback",
       value: function connectedCallback() {
         this.update();
-        this.buttonToggle = document.querySelector('button.usa-accordion__button');
-        this.bannerHeader = document.querySelector('header.usa-banner__header');
-        this.accordionContent = document.querySelector('div.usa-banner__content');
+        this.buttonToggle = this.querySelector('button.usa-accordion__button');
+        this.bannerHeader = this.querySelector('header.usa-banner__header');
+        this.accordionContent = this.querySelector('div.usa-banner__content');
         this.addEventListeners();
         var ariaExpandedValue = this.accordionContent.getAttribute('aria-expanded');
         console.log('ariaExpandedValue', ariaExpandedValue);
