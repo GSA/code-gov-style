@@ -410,7 +410,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
         this.bannerHeader = this.querySelector('header.usa-banner__header');
         this.accordionContent = this.querySelector('div.usa-banner__content');
         this.addEventListeners();
-        var ariaExpandedValue = this.accordionContent.getAttribute('aria-expanded');
+        var ariaExpandedValue = this.buttonToggle.getAttribute('aria-expanded');
         console.log('ariaExpandedValue', ariaExpandedValue);
         console.log('typeof ariaExpandedValue', _typeof(ariaExpandedValue));
         console.log('this.buttonToggle', this.buttonToggle);
@@ -440,7 +440,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
         this.buttonToggle.addEventListener('click', function () {
           console.log('i got clicked!');
 
-          if (_this.accordionContent.getAttribute('aria-expanded') === 'true') {
+          if (_this.buttonToggle.getAttribute('aria-expanded') === 'true') {
             _this.collaspseBanner();
           } else {
             _this.expandBanner();
