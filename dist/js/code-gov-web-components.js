@@ -357,6 +357,7 @@ function (_HTMLElement) {
 
 customElements.define('filter-tag', FilterTag);
 'use strict';
+/*global HTMLElement*/
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -384,120 +385,94 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-(function () {
-  /*global HTMLElement*/
-  var GovBanner =
-  /*#__PURE__*/
-  function (_HTMLElement) {
-    _inherits(GovBanner, _HTMLElement);
+var GovBanner =
+/*#__PURE__*/
+function (_HTMLElement) {
+  _inherits(GovBanner, _HTMLElement);
 
-    function GovBanner() {
-      var _this;
+  function GovBanner() {
+    var _this;
 
-      _classCallCheck(this, GovBanner);
+    _classCallCheck(this, GovBanner);
 
-      // establish prototype chain
-      _this = _possibleConstructorReturn(this, _getPrototypeOf(GovBanner).call(this));
+    // establish prototype chain
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(GovBanner).call(this));
 
-      _this.render();
+    _this.render();
 
-      _this.buttonToggle = _this.querySelector('button.usa-accordion__button');
-      _this.bannerHeader = _this.querySelector('header.usa-banner__header');
-      _this.accordionContent = _this.querySelector('div.usa-banner__content');
+    _this.buttonToggle = _this.querySelector('button.usa-accordion__button');
+    _this.bannerHeader = _this.querySelector('header.usa-banner__header');
+    _this.accordionContent = _this.querySelector('div.usa-banner__content');
 
-      _this.buttonToggle.addEventListener('click', function (event) {
-        console.log('event', event);
-        console.log('i got clicked!');
+    _this.buttonToggle.addEventListener('click', function (event) {
+      console.log('event', event);
+      console.log('i got clicked!');
 
-        if (_this.buttonToggle.getAttribute('aria-expanded') === 'true') {
-          _this.collapseBanner();
-        } else {
-          _this.expandBanner();
-        }
-      }); // this.handleClick = this.handleClick.bind(this);
+      if (_this.buttonToggle.getAttribute('aria-expanded') === 'true') {
+        _this.collapseBanner();
+      } else {
+        _this.expandBanner();
+      }
+    }); // this.handleClick = this.handleClick.bind(this);
 
 
-      return _this;
-    } // static get observedAttributes() {
-    //   return ['image', 'title'];
+    return _this;
+  } // static get observedAttributes() {
+  //   return ['image', 'title'];
+  // }
+  // fires after the element has been attached to the DOM
+  // connectedCallback() {
+  // }
+
+
+  _createClass(GovBanner, [{
+    key: "getSvgUri",
+    value: function getSvgUri(svgString) {
+      return "data:image/svg+xml;base64,".concat(svgString);
+    } // attributeChangedCallback(attrName, oldVal, newVal) {
+    //   if (attrName === 'options') {
+    //     this.render();
+    //   }
     // }
-    // fires after the element has been attached to the DOM
-    // connectedCallback() {
-    //   this.render();
-    //   this.buttonToggle = this.querySelector('button.usa-accordion__button');
-    //   this.bannerHeader = this.querySelector('header.usa-banner__header');
-    //   this.accordionContent = this.querySelector('div.usa-banner__content');
+    // disconnectedCallback() {
+    //   this.buttonToggle.removeEventListener('click', () => {
     //
-    //   this.buttonToggle.addEventListener('click', (event) => {
-    //     console.log('event', event);
-    //     console.log('i got clicked!');
-    //     if (this.buttonToggle.getAttribute('aria-expanded') === 'true') {
-    //       this.collapseBanner();
-    //     } else {
-    //       this.expandBanner();
-    //     }
     //   });
     // }
 
+  }, {
+    key: "expandBanner",
+    value: function expandBanner() {
+      this.accordionContent.removeAttribute('hidden');
+      this.buttonToggle.setAttribute('aria-expanded', 'true');
+      this.bannerHeader.classlist.add('usa-banner__header--expanded');
+    }
+  }, {
+    key: "collapseBanner",
+    value: function collapseBanner() {
+      this.accordionContent.setAttribute('hidden', '');
+      this.buttonToggle.setAttribute('aria-expanded', 'false');
+      this.bannerHeader.classlist.remove('usa-banner__header--expanded');
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var smallUsFlagURI = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAG1BMVEUdM7EeNLIeM7HgQCDaPh/bPh/bPx/////bPyBEby41AAAAUElEQVQI123MNw4CABDEwD3jC/9/MQ1BQrgeOSkIqYe2o2FZtthXgQLgbHVMZdlsfUQFQnHtjP1+8BUhBDKOqtmfot6ojqPzR7TjdU+f6vkED+IDPhTBcMAAAAAASUVORK5CYII=";
+      var dotGovIconSvgString = 'PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NCA1NCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiMyMzc4YzM7fS5jbHMtMntmaWxsOm5vbmU7c3Ryb2tlOiMwMDVlYTI7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5kb3QgZ292IGljb248L3RpdGxlPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTM2LjUsMjAuOTF2MS4zNkgzNS4xNWEwLjcxLDAuNzEsMCwwLDEtLjczLjY4SDE4LjIzYTAuNzEsMC43MSwwLDAsMS0uNzMtMC42OEgxNi4xNFYyMC45MWwxMC4xOC00LjA3Wm0wLDEzLjU3djEuMzZIMTYuMTRWMzQuNDhhMC43MSwwLjcxLDAsMCwxLC43My0wLjY4aDE4LjlBMC43MSwwLjcxLDAsMCwxLDM2LjUsMzQuNDhaTTIxLjU3LDIzLjYydjguMTRoMS4zNlYyMy42MmgyLjcxdjguMTRIMjdWMjMuNjJoMi43MXY4LjE0aDEuMzZWMjMuNjJoMi43MXY4LjE0aDAuNjNhMC43MSwwLjcxLDAsMCwxLC43My42OHYwLjY4SDE3LjVWMzIuNDVhMC43MSwwLjcxLDAsMCwxLC43My0wLjY4aDAuNjNWMjMuNjJoMi43MVoiLz48Y2lyY2xlIGNsYXNzPSJjbHMtMiIgY3g9IjI3IiBjeT0iMjcuMTIiIHI9IjI2Ii8+PC9zdmc+';
+      var httpsIconSvgString = 'PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NCA1NCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiM3MTlmMmE7fS5jbHMtMntmaWxsOm5vbmU7c3Ryb2tlOiM1MzgyMDA7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5odHRwcyBpY29uPC90aXRsZT48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0zNC43MiwzNC44NGExLjI5LDEuMjksMCwwLDEtMS4yOSwxLjI5SDIwLjU3YTEuMjksMS4yOSwwLDAsMS0xLjI5LTEuMjlWMjcuMTJhMS4yOSwxLjI5LDAsMCwxLDEuMjktMS4yOUgyMVYyMy4yNmE2LDYsMCwwLDEsMTIsMHYyLjU3aDAuNDNhMS4yOSwxLjI5LDAsMCwxLDEuMjksMS4yOXY3LjcyWm0tNC4yOS05VjIzLjI2YTMuNDMsMy40MywwLDAsMC02Ljg2LDB2Mi41N2g2Ljg2WiIvPjxjaXJjbGUgY2xhc3M9ImNscy0yIiBjeD0iMjciIGN5PSIyNy4xMiIgcj0iMjYiLz48L3N2Zz4=';
+      var dotGovIconURI = this.getSvgUri(dotGovIconSvgString);
+      var httpsIconURI = this.getSvgUri(httpsIconSvgString);
+      this.innerHTML = "\n    <div class=\"usa-banner\">\n      <div class=\"usa-accordion\">\n          <header class=\"usa-banner__header\">\n              <div class=\"usa-banner__inner\">\n                  <div class=\"grid-col-auto\">\n                      <img class=\"usa-banner__header-flag\" src=".concat(smallUsFlagURI, " alt=\"U.S. flag\">\n                  </div>\n                  <div class=\"grid-col-fill tablet:grid-col-auto\">\n                      <p class=\"usa-banner__header-text\">An official website of the United States government</p>\n                      <p class=\"usa-banner__header-action\" aria-hidden=\"true\">Here\u2019s how you know</p>\n                  </div>\n                  <button class=\"usa-accordion__button usa-banner__button\" aria-expanded=\"false\" aria-controls=\"gov-banner\">\n                    <span class=\"usa-banner__button-text\">Here\u2019s how you know</span>\n                  </button>\n              </div>\n          </header>\n          <div class=\"usa-banner__content usa-accordion__content\" id=\"gov-banner\" hidden>\n              <div class=\"grid-row grid-gap-lg\">\n                  <div class=\"usa-banner__guidance tablet:grid-col-6\">\n                      <img class=\"usa-banner__icon usa-media-block__img\" src=").concat(dotGovIconURI, " alt=\"Dot gov\">\n                      <div class=\"usa-media-block__body\">\n                          <p>\n                              <strong>The .gov means it\u2019s official.</strong>\n                              <br> Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you\u2019re on a federal government site.\n                          </p>\n                      </div>\n                  </div>\n                  <div class=\"usa-banner__guidance tablet:grid-col-6\">\n                      <img class=\"usa-banner__icon usa-media-block__img\" src=").concat(httpsIconURI, " alt=\"Https\">\n                      <div class=\"usa-media-block__body\">\n                          <p>\n                              <strong>The site is secure.</strong>\n                              <br> The <strong>https://</strong> ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely.\n                          </p>\n                      </div>\n                  </div>\n              </div>\n          </div>\n      </div>\n    </div>\n    ");
+    }
+  }]);
 
-    _createClass(GovBanner, [{
-      key: "getSvgUri",
-      value: function getSvgUri(svgString) {
-        return "data:image/svg+xml;base64,".concat(svgString);
-      } // attributeChangedCallback(attrName, oldVal, newVal) {
-      //   if (attrName === 'options') {
-      //     this.render();
-      //   }
-      // }
-      // disconnectedCallback() {
-      //   this.buttonToggle.removeEventListener('click', () => {
-      //
-      //   });
-      // }
-      // addEventListeners() {
-      //   this.buttonToggle.addEventListener('click', () => {
-      //     console.log('i got clicked!');
-      //     if (this.buttonToggle.getAttribute('aria-expanded') === 'true') {
-      //       this.collaspseBanner();
-      //     } else {
-      //       this.expandBanner();
-      //     }
-      //   });
-      // }
-
-    }, {
-      key: "expandBanner",
-      value: function expandBanner() {
-        this.accordionContent.removeAttribute('hidden');
-        this.buttonToggle.setAttribute('aria-expanded', 'true');
-        this.bannerHeader.classlist.add('usa-banner__header--expanded');
-      }
-    }, {
-      key: "collapseBanner",
-      value: function collapseBanner() {
-        this.accordionContent.setAttribute('hidden', '');
-        this.buttonToggle.setAttribute('aria-expanded', 'false');
-        this.bannerHeader.classlist.remove('usa-banner__header--expanded');
-      }
-    }, {
-      key: "render",
-      value: function render() {
-        var smallUsFlagURI = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAG1BMVEUdM7EeNLIeM7HgQCDaPh/bPh/bPx/////bPyBEby41AAAAUElEQVQI123MNw4CABDEwD3jC/9/MQ1BQrgeOSkIqYe2o2FZtthXgQLgbHVMZdlsfUQFQnHtjP1+8BUhBDKOqtmfot6ojqPzR7TjdU+f6vkED+IDPhTBcMAAAAAASUVORK5CYII=";
-        var dotGovIconSvgString = 'PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NCA1NCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiMyMzc4YzM7fS5jbHMtMntmaWxsOm5vbmU7c3Ryb2tlOiMwMDVlYTI7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5kb3QgZ292IGljb248L3RpdGxlPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTM2LjUsMjAuOTF2MS4zNkgzNS4xNWEwLjcxLDAuNzEsMCwwLDEtLjczLjY4SDE4LjIzYTAuNzEsMC43MSwwLDAsMS0uNzMtMC42OEgxNi4xNFYyMC45MWwxMC4xOC00LjA3Wm0wLDEzLjU3djEuMzZIMTYuMTRWMzQuNDhhMC43MSwwLjcxLDAsMCwxLC43My0wLjY4aDE4LjlBMC43MSwwLjcxLDAsMCwxLDM2LjUsMzQuNDhaTTIxLjU3LDIzLjYydjguMTRoMS4zNlYyMy42MmgyLjcxdjguMTRIMjdWMjMuNjJoMi43MXY4LjE0aDEuMzZWMjMuNjJoMi43MXY4LjE0aDAuNjNhMC43MSwwLjcxLDAsMCwxLC43My42OHYwLjY4SDE3LjVWMzIuNDVhMC43MSwwLjcxLDAsMCwxLC43My0wLjY4aDAuNjNWMjMuNjJoMi43MVoiLz48Y2lyY2xlIGNsYXNzPSJjbHMtMiIgY3g9IjI3IiBjeT0iMjcuMTIiIHI9IjI2Ii8+PC9zdmc+';
-        var httpsIconSvgString = 'PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NCA1NCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiM3MTlmMmE7fS5jbHMtMntmaWxsOm5vbmU7c3Ryb2tlOiM1MzgyMDA7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5odHRwcyBpY29uPC90aXRsZT48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0zNC43MiwzNC44NGExLjI5LDEuMjksMCwwLDEtMS4yOSwxLjI5SDIwLjU3YTEuMjksMS4yOSwwLDAsMS0xLjI5LTEuMjlWMjcuMTJhMS4yOSwxLjI5LDAsMCwxLDEuMjktMS4yOUgyMVYyMy4yNmE2LDYsMCwwLDEsMTIsMHYyLjU3aDAuNDNhMS4yOSwxLjI5LDAsMCwxLDEuMjksMS4yOXY3LjcyWm0tNC4yOS05VjIzLjI2YTMuNDMsMy40MywwLDAsMC02Ljg2LDB2Mi41N2g2Ljg2WiIvPjxjaXJjbGUgY2xhc3M9ImNscy0yIiBjeD0iMjciIGN5PSIyNy4xMiIgcj0iMjYiLz48L3N2Zz4=';
-        var dotGovIconURI = this.getSvgUri(dotGovIconSvgString);
-        var httpsIconURI = this.getSvgUri(httpsIconSvgString);
-        this.innerHTML = "\n      <div class=\"usa-banner\">\n        <div class=\"usa-accordion\">\n            <header class=\"usa-banner__header\">\n                <div class=\"usa-banner__inner\">\n                    <div class=\"grid-col-auto\">\n                        <img class=\"usa-banner__header-flag\" src=".concat(smallUsFlagURI, " alt=\"U.S. flag\">\n                    </div>\n                    <div class=\"grid-col-fill tablet:grid-col-auto\">\n                        <p class=\"usa-banner__header-text\">An official website of the United States government</p>\n                        <p class=\"usa-banner__header-action\" aria-hidden=\"true\">Here\u2019s how you know</p>\n                    </div>\n                    <button class=\"usa-accordion__button usa-banner__button\" aria-expanded=\"false\" aria-controls=\"gov-banner\">\n                      <span class=\"usa-banner__button-text\">Here\u2019s how you know</span>\n                    </button>\n                </div>\n            </header>\n            <div class=\"usa-banner__content usa-accordion__content\" id=\"gov-banner\" hidden>\n                <div class=\"grid-row grid-gap-lg\">\n                    <div class=\"usa-banner__guidance tablet:grid-col-6\">\n                        <img class=\"usa-banner__icon usa-media-block__img\" src=").concat(dotGovIconURI, " alt=\"Dot gov\">\n                        <div class=\"usa-media-block__body\">\n                            <p>\n                                <strong>The .gov means it\u2019s official.</strong>\n                                <br> Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you\u2019re on a federal government site.\n                            </p>\n                        </div>\n                    </div>\n                    <div class=\"usa-banner__guidance tablet:grid-col-6\">\n                        <img class=\"usa-banner__icon usa-media-block__img\" src=").concat(httpsIconURI, " alt=\"Https\">\n                        <div class=\"usa-media-block__body\">\n                            <p>\n                                <strong>The site is secure.</strong>\n                                <br> The <strong>https://</strong> ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely.\n                            </p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n      </div>\n      ");
-      }
-    }]);
-
-    return GovBanner;
-  }(_wrapNativeSuper(HTMLElement));
-
-  customElements.define('gov-banner', GovBanner);
-})(); // let the browser know about the custom element
+  return GovBanner;
+}(_wrapNativeSuper(HTMLElement)); // let the browser know about the custom element
 
 /*global customElements*/
+
+
+customElements.define('gov-banner', GovBanner);
 "use strict";
 'use strict';
 
