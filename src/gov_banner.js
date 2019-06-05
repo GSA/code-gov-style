@@ -24,9 +24,7 @@
       this.bannerHeader = this.shadowRoot.querySelector('header.usa-banner__header');
       this.accordionContent = this.shadowRoot.querySelector('div.usa-banner__content');
       this.buttonToggle.addEventListener('click', this.toggleAccordion);
-
-      this.hasDarkAttribute = this.shadowRoot.hasAttribute('dark');
-      if (this.hasDarkAttribute) {
+      if (this.shadowRoot.hasAttribute('dark')) {
         this.themeStyleString = `
           .usa-banner {
             background-color: #323a45;
