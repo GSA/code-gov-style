@@ -403,10 +403,7 @@ function (_HTMLElement) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(GovBanner).call(this));
     _this.toggleAccordion = _this.toggleAccordion.bind(_assertThisInitialized(_this));
     return _this;
-  } // static get observedAttributes() {
-  //   return ['image', 'title'];
-  // }
-  // fires after the element has been attached to the DOM
+  } // fires after the element has been attached to the DOM
 
 
   _createClass(GovBanner, [{
@@ -426,12 +423,7 @@ function (_HTMLElement) {
       } else {
         this.expandBanner();
       }
-    } // attributeChangedCallback(attrName, oldVal, newVal) {
-    //   if (attrName === 'options') {
-    //     this.render();
-    //   }
-    // }
-
+    }
   }, {
     key: "disconnectedCallback",
     value: function disconnectedCallback() {

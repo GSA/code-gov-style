@@ -13,10 +13,6 @@ class GovBanner extends HTMLElement {
       this.toggleAccordion = this.toggleAccordion.bind(this);
   }
 
-  // static get observedAttributes() {
-  //   return ['image', 'title'];
-  // }
-
   // fires after the element has been attached to the DOM
   connectedCallback() {
     this.render();
@@ -33,12 +29,6 @@ class GovBanner extends HTMLElement {
       this.expandBanner();
     }
   }
-
-  // attributeChangedCallback(attrName, oldVal, newVal) {
-  //   if (attrName === 'options') {
-  //     this.render();
-  //   }
-  // }
 
   disconnectedCallback() {
     this.buttonToggle.removeEventListener('click', this.toggleAccordion);
