@@ -5,6 +5,20 @@
     constructor() {
         // establish prototype chain
         super();
+        this.render();
+        this.buttonToggle = this.querySelector('button.usa-accordion__button');
+        this.bannerHeader = this.querySelector('header.usa-banner__header');
+        this.accordionContent = this.querySelector('div.usa-banner__content');
+
+        this.buttonToggle.addEventListener('click', (event) => {
+          console.log('event', event);
+          console.log('i got clicked!');
+          if (this.buttonToggle.getAttribute('aria-expanded') === 'true') {
+            this.collapseBanner();
+          } else {
+            this.expandBanner();
+          }
+        });
         // this.handleClick = this.handleClick.bind(this);
     }
 
@@ -13,21 +27,22 @@
     // }
 
     // fires after the element has been attached to the DOM
-    connectedCallback() {
-      this.update();
-      this.buttonToggle = this.querySelector('button.usa-accordion__button');
-      this.bannerHeader = this.querySelector('header.usa-banner__header');
-      this.accordionContent = this.querySelector('div.usa-banner__content');
-
-      this.buttonToggle.addEventListener('click', () => {
-        console.log('i got clicked!');
-        if (this.buttonToggle.getAttribute('aria-expanded') === 'true') {
-          this.collaspseBanner();
-        } else {
-          this.expandBanner();
-        }
-      });
-    }
+    // connectedCallback() {
+    //   this.render();
+    //   this.buttonToggle = this.querySelector('button.usa-accordion__button');
+    //   this.bannerHeader = this.querySelector('header.usa-banner__header');
+    //   this.accordionContent = this.querySelector('div.usa-banner__content');
+    //
+    //   this.buttonToggle.addEventListener('click', (event) => {
+    //     console.log('event', event);
+    //     console.log('i got clicked!');
+    //     if (this.buttonToggle.getAttribute('aria-expanded') === 'true') {
+    //       this.collapseBanner();
+    //     } else {
+    //       this.expandBanner();
+    //     }
+    //   });
+    // }
 
     getSvgUri(svgString) {
       return `data:image/svg+xml;base64,${svgString}`;
@@ -35,7 +50,7 @@
 
     // attributeChangedCallback(attrName, oldVal, newVal) {
     //   if (attrName === 'options') {
-    //     this.update();
+    //     this.render();
     //   }
     // }
 
@@ -62,13 +77,13 @@
       this.bannerHeader.classlist.add('usa-banner__header--expanded');
     }
 
-    collaspseBanner() {
+    collapseBanner() {
       this.accordionContent.setAttribute('hidden', '');
       this.buttonToggle.setAttribute('aria-expanded', 'false');
       this.bannerHeader.classlist.remove('usa-banner__header--expanded');
     }
 
-    update() {
+    render() {
       const smallUsFlagURI = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAG1BMVEUdM7EeNLIeM7HgQCDaPh/bPh/bPx/////bPyBEby41AAAAUElEQVQI123MNw4CABDEwD3jC/9/MQ1BQrgeOSkIqYe2o2FZtthXgQLgbHVMZdlsfUQFQnHtjP1+8BUhBDKOqtmfot6ojqPzR7TjdU+f6vkED+IDPhTBcMAAAAAASUVORK5CYII=";
 
       const dotGovIconSvgString = 'PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NCA1NCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiMyMzc4YzM7fS5jbHMtMntmaWxsOm5vbmU7c3Ryb2tlOiMwMDVlYTI7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5kb3QgZ292IGljb248L3RpdGxlPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTM2LjUsMjAuOTF2MS4zNkgzNS4xNWEwLjcxLDAuNzEsMCwwLDEtLjczLjY4SDE4LjIzYTAuNzEsMC43MSwwLDAsMS0uNzMtMC42OEgxNi4xNFYyMC45MWwxMC4xOC00LjA3Wm0wLDEzLjU3djEuMzZIMTYuMTRWMzQuNDhhMC43MSwwLjcxLDAsMCwxLC43My0wLjY4aDE4LjlBMC43MSwwLjcxLDAsMCwxLDM2LjUsMzQuNDhaTTIxLjU3LDIzLjYydjguMTRoMS4zNlYyMy42MmgyLjcxdjguMTRIMjdWMjMuNjJoMi43MXY4LjE0aDEuMzZWMjMuNjJoMi43MXY4LjE0aDAuNjNhMC43MSwwLjcxLDAsMCwxLC43My42OHYwLjY4SDE3LjVWMzIuNDVhMC43MSwwLjcxLDAsMCwxLC43My0wLjY4aDAuNjNWMjMuNjJoMi43MVoiLz48Y2lyY2xlIGNsYXNzPSJjbHMtMiIgY3g9IjI3IiBjeT0iMjcuMTIiIHI9IjI2Ii8+PC9zdmc+';
@@ -122,8 +137,8 @@
       `;
     }
   }
-
-  // let the browser know about the custom element
-  /*global customElements*/
-  customElements.define('gov-banner', GovBanner);
 })();
+
+// let the browser know about the custom element
+/*global customElements*/
+customElements.define('gov-banner', GovBanner);
