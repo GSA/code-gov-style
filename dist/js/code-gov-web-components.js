@@ -423,7 +423,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
         this.accordionContent = this.shadowRoot.querySelector('div.usa-banner__content');
         this.buttonToggle.addEventListener('click', this.toggleAccordion);
 
-        if (this.shadowRoot.hasAttribute('dark')) {
+        if (this.hasAttribute('dark')) {
           this.themeStyleString = "\n          .usa-banner {\n            background-color: #323a45;\n            color: #ffffff;\n          }\n        ";
         }
       }
