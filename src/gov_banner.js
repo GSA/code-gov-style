@@ -52,7 +52,7 @@ class GovBanner extends HTMLElement {
   render() {
     this.shadowRoot.innerHTML = `
     <style>
-      @import url(${uswdsCdnUrl});
+      @import url("${uswdsCdnUrl}");
     </style>
     <div class="usa-banner">
       <div class="usa-accordion">
