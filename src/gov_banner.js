@@ -49,13 +49,13 @@ class GovBanner extends HTMLElement {
   expandBanner() {
     this.accordionContent.removeAttribute('hidden');
     this.buttonToggle.setAttribute('aria-expanded', 'true');
-    this.bannerHeader.classlist.add('usa-banner__header--expanded');
+    this.bannerHeader.classList.add('usa-banner__header--expanded');
   }
 
   collapseBanner() {
     this.accordionContent.setAttribute('hidden', '');
     this.buttonToggle.setAttribute('aria-expanded', 'false');
-    this.bannerHeader.classlist.remove('usa-banner__header--expanded');
+    this.bannerHeader.classList.remove('usa-banner__header--expanded');
   }
 
   render() {

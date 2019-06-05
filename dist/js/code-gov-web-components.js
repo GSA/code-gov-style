@@ -440,14 +440,14 @@ function (_HTMLElement) {
     value: function expandBanner() {
       this.accordionContent.removeAttribute('hidden');
       this.buttonToggle.setAttribute('aria-expanded', 'true');
-      this.bannerHeader.classlist.add('usa-banner__header--expanded');
+      this.bannerHeader.classList.add('usa-banner__header--expanded');
     }
   }, {
     key: "collapseBanner",
     value: function collapseBanner() {
       this.accordionContent.setAttribute('hidden', '');
       this.buttonToggle.setAttribute('aria-expanded', 'false');
-      this.bannerHeader.classlist.remove('usa-banner__header--expanded');
+      this.bannerHeader.classList.remove('usa-banner__header--expanded');
     }
   }, {
     key: "render",
