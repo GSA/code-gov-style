@@ -14,6 +14,7 @@
         super();
         this.attachShadow({ mode: 'open' });
         this.toggleAccordion = this.toggleAccordion.bind(this);
+        this.themeStyleString = '';
     }
 
     // fires after the element has been attached to the DOM
@@ -23,6 +24,16 @@
       this.bannerHeader = this.shadowRoot.querySelector('header.usa-banner__header');
       this.accordionContent = this.shadowRoot.querySelector('div.usa-banner__content');
       this.buttonToggle.addEventListener('click', this.toggleAccordion);
+
+      this.hasDarkAttribute = this.shadowRoot.hasAttribute('dark');
+      if (this.hasDarkAttribute) {
+        this.themeStyleString = `
+          .usa-banner {
+            background-color: #323a45;
+            color: #ffffff;
+          }
+        `;
+      }
     }
 
     toggleAccordion() {
@@ -53,6 +64,7 @@
       this.shadowRoot.innerHTML = `
       <style>
         @import url("${uswdsCdnUrl}");
+        ${this.themeStyleString}
       </style>
       <div class="usa-banner">
         <div class="usa-accordion">
