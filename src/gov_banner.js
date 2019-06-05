@@ -137,8 +137,10 @@
       `;
     }
   }
+
+  customElements.define('gov-banner', GovBanner);
 })();
 
 // let the browser know about the custom element
 /*global customElements*/
-customElements.define('gov-banner', GovBanner);
+

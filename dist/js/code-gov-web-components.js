@@ -493,12 +493,11 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
     return GovBanner;
   }(_wrapNativeSuper(HTMLElement));
+
+  customElements.define('gov-banner', GovBanner);
 })(); // let the browser know about the custom element
 
 /*global customElements*/
-
-
-customElements.define('gov-banner', GovBanner);
 "use strict";
 'use strict';
 
