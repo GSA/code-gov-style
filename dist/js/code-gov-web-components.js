@@ -395,50 +395,47 @@ function (_HTMLElement) {
   _inherits(GovBanner, _HTMLElement);
 
   function GovBanner() {
-    var _this;
-
     _classCallCheck(this, GovBanner);
 
     // establish prototype chain
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(GovBanner).call(this));
-
-    _this.render();
-
-    _this.buttonToggle = _this.querySelector('button.usa-accordion__button');
-    _this.bannerHeader = _this.querySelector('header.usa-banner__header');
-    _this.accordionContent = _this.querySelector('div.usa-banner__content');
-
-    _this.buttonToggle.addEventListener('click', function (event) {
-      console.log('event', event);
-      console.log('i got clicked!');
-
-      if (_this.buttonToggle.getAttribute('aria-expanded') === 'true') {
-        _this.collapseBanner();
-      } else {
-        _this.expandBanner();
-      }
-    });
-
-    return _this;
+    return _possibleConstructorReturn(this, _getPrototypeOf(GovBanner).call(this));
   } // static get observedAttributes() {
   //   return ['image', 'title'];
   // }
   // fires after the element has been attached to the DOM
-  // connectedCallback() {
-  // }
-  // attributeChangedCallback(attrName, oldVal, newVal) {
-  //   if (attrName === 'options') {
-  //     this.render();
-  //   }
-  // }
-  // disconnectedCallback() {
-  //   this.buttonToggle.removeEventListener('click', () => {
-  //
-  //   });
-  // }
 
 
   _createClass(GovBanner, [{
+    key: "connectedCallback",
+    value: function connectedCallback() {
+      var _this = this;
+
+      this.render();
+      this.buttonToggle = this.querySelector('button.usa-accordion__button');
+      this.bannerHeader = this.querySelector('header.usa-banner__header');
+      this.accordionContent = this.querySelector('div.usa-banner__content');
+      this.buttonToggle.addEventListener('click', function (event) {
+        console.log('event', event);
+        console.log('i got clicked!');
+
+        if (_this.buttonToggle.getAttribute('aria-expanded') === 'true') {
+          _this.collapseBanner();
+        } else {
+          _this.expandBanner();
+        }
+      });
+    } // attributeChangedCallback(attrName, oldVal, newVal) {
+    //   if (attrName === 'options') {
+    //     this.render();
+    //   }
+    // }
+    // disconnectedCallback() {
+    //   this.buttonToggle.removeEventListener('click', () => {
+    //
+    //   });
+    // }
+
+  }, {
     key: "expandBanner",
     value: function expandBanner() {
       this.accordionContent.removeAttribute('hidden');
