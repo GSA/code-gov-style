@@ -417,15 +417,16 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     _createClass(GovBanner, [{
       key: "connectedCallback",
       value: function connectedCallback() {
+        if (this.hasAttribute('dark')) {
+          this.themeStyleString = "\n          .usa-banner {\n            background-color: #323a45;\n            color: #ffffff;\n          }\n        ";
+        }
+
         this.render();
         this.buttonToggle = this.shadowRoot.querySelector('button.usa-accordion__button');
         this.bannerHeader = this.shadowRoot.querySelector('header.usa-banner__header');
         this.accordionContent = this.shadowRoot.querySelector('div.usa-banner__content');
         this.buttonToggle.addEventListener('click', this.toggleAccordion);
-
-        if (this.hasAttribute('dark')) {
-          this.themeStyleString = "\n          .usa-banner {\n            background-color: #323a45;\n            color: #ffffff;\n          }\n        ";
-        }
+        console.log("this.hasAttribute('dark')", this.hasAttribute('dark'));
       }
     }, {
       key: "toggleAccordion",

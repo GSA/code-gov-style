@@ -19,11 +19,6 @@
 
     // fires after the element has been attached to the DOM
     connectedCallback() {
-      this.render();
-      this.buttonToggle = this.shadowRoot.querySelector('button.usa-accordion__button');
-      this.bannerHeader = this.shadowRoot.querySelector('header.usa-banner__header');
-      this.accordionContent = this.shadowRoot.querySelector('div.usa-banner__content');
-      this.buttonToggle.addEventListener('click', this.toggleAccordion);
       if (this.hasAttribute('dark')) {
         this.themeStyleString = `
           .usa-banner {
@@ -32,6 +27,12 @@
           }
         `;
       }
+
+      this.render();
+      this.buttonToggle = this.shadowRoot.querySelector('button.usa-accordion__button');
+      this.bannerHeader = this.shadowRoot.querySelector('header.usa-banner__header');
+      this.accordionContent = this.shadowRoot.querySelector('div.usa-banner__content');
+      this.buttonToggle.addEventListener('click', this.toggleAccordion);
     }
 
     toggleAccordion() {
