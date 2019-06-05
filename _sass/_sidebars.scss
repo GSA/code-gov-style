@@ -44,11 +44,11 @@
     }
 
     &:hover {
-      color: $color-blue;
+      color:$brand-primary;
     }
 
     &.current {
-      color: $color-blue;
+      color: $brand-primary;
       font-weight: 700;
     }
 
@@ -91,7 +91,7 @@
       // first-level option
       > a {
         &.current {
-          border-left: 0.4rem solid $color-blue;
+          border-left: 0.4rem solid $brand-primary;
           padding-left: 1.1rem;
         }
       }
