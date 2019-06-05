@@ -10,6 +10,7 @@ class GovBanner extends HTMLElement {
   constructor() {
       // establish prototype chain
       super();
+      this.toggleAccordion = this.toggleAccordion.bind(this);
   }
 
   // static get observedAttributes() {
@@ -22,16 +23,15 @@ class GovBanner extends HTMLElement {
     this.buttonToggle = this.querySelector('button.usa-accordion__button');
     this.bannerHeader = this.querySelector('header.usa-banner__header');
     this.accordionContent = this.querySelector('div.usa-banner__content');
+    this.buttonToggle.addEventListener('click', this.toggleAccordion);
+  }
 
-    this.buttonToggle.addEventListener('click', (event) => {
-      console.log('event', event);
-      console.log('i got clicked!');
-      if (this.buttonToggle.getAttribute('aria-expanded') === 'true') {
-        this.collapseBanner();
-      } else {
-        this.expandBanner();
-      }
-    });
+  toggleAccordion() {
+    if (this.buttonToggle.getAttribute('aria-expanded') === 'true') {
+      this.collapseBanner();
+    } else {
+      this.expandBanner();
+    }
   }
 
   // attributeChangedCallback(attrName, oldVal, newVal) {
@@ -40,11 +40,9 @@ class GovBanner extends HTMLElement {
   //   }
   // }
 
-  // disconnectedCallback() {
-  //   this.buttonToggle.removeEventListener('click', () => {
-  //
-  //   });
-  // }
+  disconnectedCallback() {
+    this.buttonToggle.removeEventListener('click', this.toggleAccordion);
+  }
 
   expandBanner() {
     this.accordionContent.removeAttribute('hidden');

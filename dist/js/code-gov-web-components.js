@@ -395,10 +395,14 @@ function (_HTMLElement) {
   _inherits(GovBanner, _HTMLElement);
 
   function GovBanner() {
+    var _this;
+
     _classCallCheck(this, GovBanner);
 
     // establish prototype chain
-    return _possibleConstructorReturn(this, _getPrototypeOf(GovBanner).call(this));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(GovBanner).call(this));
+    _this.toggleAccordion = _this.toggleAccordion.bind(_assertThisInitialized(_this));
+    return _this;
   } // static get observedAttributes() {
   //   return ['image', 'title'];
   // }
@@ -408,33 +412,31 @@ function (_HTMLElement) {
   _createClass(GovBanner, [{
     key: "connectedCallback",
     value: function connectedCallback() {
-      var _this = this;
-
       this.render();
       this.buttonToggle = this.querySelector('button.usa-accordion__button');
       this.bannerHeader = this.querySelector('header.usa-banner__header');
       this.accordionContent = this.querySelector('div.usa-banner__content');
-      this.buttonToggle.addEventListener('click', function (event) {
-        console.log('event', event);
-        console.log('i got clicked!');
-
-        if (_this.buttonToggle.getAttribute('aria-expanded') === 'true') {
-          _this.collapseBanner();
-        } else {
-          _this.expandBanner();
-        }
-      });
+      this.buttonToggle.addEventListener('click', this.toggleAccordion);
+    }
+  }, {
+    key: "toggleAccordion",
+    value: function toggleAccordion() {
+      if (this.buttonToggle.getAttribute('aria-expanded') === 'true') {
+        this.collapseBanner();
+      } else {
+        this.expandBanner();
+      }
     } // attributeChangedCallback(attrName, oldVal, newVal) {
     //   if (attrName === 'options') {
     //     this.render();
     //   }
     // }
-    // disconnectedCallback() {
-    //   this.buttonToggle.removeEventListener('click', () => {
-    //
-    //   });
-    // }
 
+  }, {
+    key: "disconnectedCallback",
+    value: function disconnectedCallback() {
+      this.buttonToggle.removeEventListener('click', this.toggleAccordion);
+    }
   }, {
     key: "expandBanner",
     value: function expandBanner() {
