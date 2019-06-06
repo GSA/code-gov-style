@@ -6,32 +6,28 @@
 
   const httpsIconURI = 'data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NCA1NCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiM3MTlmMmE7fS5jbHMtMntmaWxsOm5vbmU7c3Ryb2tlOiM1MzgyMDA7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5odHRwcyBpY29uPC90aXRsZT48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0zNC43MiwzNC44NGExLjI5LDEuMjksMCwwLDEtMS4yOSwxLjI5SDIwLjU3YTEuMjksMS4yOSwwLDAsMS0xLjI5LTEuMjlWMjcuMTJhMS4yOSwxLjI5LDAsMCwxLDEuMjktMS4yOUgyMVYyMy4yNmE2LDYsMCwwLDEsMTIsMHYyLjU3aDAuNDNhMS4yOSwxLjI5LDAsMCwxLDEuMjksMS4yOXY3LjcyWm0tNC4yOS05VjIzLjI2YTMuNDMsMy40MywwLDAsMC02Ljg2LDB2Mi41N2g2Ljg2WiIvPjxjaXJjbGUgY2xhc3M9ImNscy0yIiBjeD0iMjciIGN5PSIyNy4xMiIgcj0iMjYiLz48L3N2Zz4=';
 
-  const uswdsCdnUrl = 'https://cdnjs.cloudflare.com/ajax/libs/uswds/2.0.2/css/uswds.min.css';
+  const themeStyleString = `
+    .usa-banner {
+      background-color: #323a45;
+      color: #ffffff;
+    }
+  `;
+
   /*global HTMLElement*/
   class GovBanner extends HTMLElement {
     constructor() {
         // establish prototype chain
         super();
-        this.attachShadow({ mode: 'open' });
         this.toggleAccordion = this.toggleAccordion.bind(this);
-        this.themeStyleString = '';
+        this.themeStyleString = this.hasAttribute('dark') ? themeStyleString : '';
     }
 
     // fires after the element has been attached to the DOM
     connectedCallback() {
-      if (this.hasAttribute('dark')) {
-        this.themeStyleString = `
-          .usa-banner {
-            background-color: #323a45;
-            color: #ffffff;
-          }
-        `;
-      }
-
       this.render();
-      this.buttonToggle = this.shadowRoot.querySelector('button.usa-accordion__button');
-      this.bannerHeader = this.shadowRoot.querySelector('header.usa-banner__header');
-      this.accordionContent = this.shadowRoot.querySelector('div.usa-banner__content');
+      this.buttonToggle = this.querySelector('button.usa-accordion__button');
+      this.bannerHeader = this.querySelector('header.usa-banner__header');
+      this.accordionContent = this.querySelector('div.usa-banner__content');
       this.buttonToggle.addEventListener('click', this.toggleAccordion);
     }
 
@@ -60,9 +56,8 @@
     }
 
     render() {
-      this.shadowRoot.innerHTML = `
+      this.innerHTML = `
       <style>
-        @import url("${uswdsCdnUrl}");
         ${this.themeStyleString}
       </style>
       <div class="usa-banner">
