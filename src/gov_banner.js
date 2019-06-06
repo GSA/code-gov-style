@@ -13,7 +13,7 @@
 
     .usa-banner__header-text,
     .usa-media-block__body {
-      color: #f0f0f0;
+      color: #ffffff;
     }
   `;
 
@@ -45,7 +45,7 @@
     }
 
     updateTheme() {
-      this.themeStyleString = this.hasAttribute('dark') && this.getAttribute('dark') === ''
+      this.themeStyleString = this.hasAttribute('dark') && ['', true, 'true', 'True'].contains(this.getAttribute('dark'))
         ? themeStyleString : '';
     }
 
