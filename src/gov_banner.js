@@ -9,7 +9,11 @@
   const themeStyleString = `
     .usa-banner {
       background-color: #323a45;
-      color: #ffffff;
+    }
+
+    .usa-banner__header-text,
+    .usa-media-block__body {
+      color: #f0f0f0;
     }
   `;
 
@@ -19,16 +23,30 @@
         // establish prototype chain
         super();
         this.toggleAccordion = this.toggleAccordion.bind(this);
-        this.themeStyleString = this.hasAttribute('dark') ? themeStyleString : '';
+        this.updateTheme();
+        this.isCollapsed = true;
+    }
+
+    static get observedAttributes() {
+      return ['dark'];
     }
 
     // fires after the element has been attached to the DOM
     connectedCallback() {
       this.render();
+      this.postRenderActions();
+    }
+
+    postRenderActions() {
       this.buttonToggle = this.querySelector('button.usa-accordion__button');
       this.bannerHeader = this.querySelector('header.usa-banner__header');
       this.accordionContent = this.querySelector('div.usa-banner__content');
       this.buttonToggle.addEventListener('click', this.toggleAccordion);
+    }
+
+    updateTheme() {
+      this.themeStyleString = this.hasAttribute('dark') && this.getAttribute('dark') === ''
+        ? themeStyleString : '';
     }
 
     toggleAccordion() {
@@ -47,15 +65,28 @@
       this.accordionContent.removeAttribute('hidden');
       this.buttonToggle.setAttribute('aria-expanded', 'true');
       this.bannerHeader.classList.add('usa-banner__header--expanded');
+      this.isCollapsed = false;
     }
 
     collapseBanner() {
       this.accordionContent.setAttribute('hidden', '');
       this.buttonToggle.setAttribute('aria-expanded', 'false');
       this.bannerHeader.classList.remove('usa-banner__header--expanded');
+      this.isCollapsed = true;
+    }
+
+    attributeChangedCallback(attrName) {
+      if (attrName === 'dark') {
+        this.updateTheme();
+        this.render();
+        this.postRenderActions();
+      }
     }
 
     render() {
+      const { isCollapsed } = this;
+      const hiddenString = isCollapsed ? 'hidden' : '';
+      const ariaExpandedString = isCollapsed ? 'false' : 'true';
       this.innerHTML = `
       <style>
         ${this.themeStyleString}
@@ -71,12 +102,12 @@
                         <p class="usa-banner__header-text">An official website of the United States government</p>
                         <p class="usa-banner__header-action" aria-hidden="true">Here’s how you know</p>
                     </div>
-                    <button class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner">
+                    <button class="usa-accordion__button usa-banner__button" aria-expanded=${ariaExpandedString} aria-controls="gov-banner">
                       <span class="usa-banner__button-text">Here’s how you know</span>
                     </button>
                 </div>
             </header>
-            <div class="usa-banner__content usa-accordion__content" id="gov-banner" hidden>
+            <div class="usa-banner__content usa-accordion__content" id="gov-banner" ${hiddenString}>
                 <div class="grid-row grid-gap-lg">
                     <div class="usa-banner__guidance tablet:grid-col-6">
                         <img class="usa-banner__icon usa-media-block__img" src=${dotGovIconURI} alt="Dot gov">
