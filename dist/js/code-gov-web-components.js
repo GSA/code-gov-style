@@ -429,7 +429,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     }, {
       key: "updateTheme",
       value: function updateTheme() {
-        this.themeStyleString = this.hasAttribute('dark') && ['', true, 'true', 'True'].contains(this.getAttribute('dark')) ? themeStyleString : '';
+        this.themeStyleString = this.hasAttribute('dark') && ['', true, 'true', 'True'].includes(this.getAttribute('dark')) ? themeStyleString : '';
       }
     }, {
       key: "toggleAccordion",

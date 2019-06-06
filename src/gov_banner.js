@@ -45,7 +45,7 @@
     }
 
     updateTheme() {
-      this.themeStyleString = this.hasAttribute('dark') && ['', true, 'true', 'True'].contains(this.getAttribute('dark'))
+      this.themeStyleString = this.hasAttribute('dark') && ['', true, 'true', 'True'].includes(this.getAttribute('dark'))
         ? themeStyleString : '';
     }
 
