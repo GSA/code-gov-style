@@ -1,0 +1,48 @@
+.grid-col-auto{
+  -webkit-box-flex:0;
+      -ms-flex:0 0 auto;
+          flex:0 0 auto;
+  width:auto;
+  max-width:100%;
+}
+
+.grid-col-fill{
+  -webkit-box-flex:1;
+      -ms-flex:1 0 0px;
+          flex:1 0 0;
+  width:auto;
+  max-width:100%;
+}
+
+.tablet\:grid-col-auto{
+  -webkit-box-flex:0;
+      -ms-flex:0 0 auto;
+          flex:0 0 auto;
+  width:auto;
+  max-width:100%;
+}
+
+.grid-row{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-wrap:wrap;
+      flex-wrap:wrap;
+}
+
+.grid-row.grid-gap-lg{
+  margin-left:-0.75rem;
+  margin-right:-0.75rem;
+}
+
+.grid-row.grid-gap-lg > *{
+  padding-left:0.75rem;
+  padding-right:0.75rem;
+}
+
+.tablet\:grid-col-6{
+  -webkit-box-flex:0;
+      -ms-flex:0 0 auto;
+          flex:0 0 auto;
+  width:50%;
+}
