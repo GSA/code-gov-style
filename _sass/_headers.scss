@@ -84,7 +84,7 @@ header.main {
     box-shadow: none;
     padding-left: 0.5rem;
     position: fixed;
-    top: 0;
+    top: 19px;
     transition: 0.5s box-shadow, 0.5s background-color;
     width: 100%;
     z-index: 3;
@@ -92,6 +92,10 @@ header.main {
     &.not-at-top,
     &.expanded {
       box-shadow: 0 0 10px 0 $color-black;
+
+      @media screen and (max-width: 639px) {
+        top: 40px;
+      }
     }
 
     @media screen and (min-width: $header-switch) {
