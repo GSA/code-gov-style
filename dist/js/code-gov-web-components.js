@@ -403,17 +403,18 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
       // establish prototype chain
       _this = _possibleConstructorReturn(this, _getPrototypeOf(GovBanner).call(this));
-      _this.toggleAccordion = _this.toggleAccordion.bind(_assertThisInitialized(_this));
-
-      _this.updateTheme();
+      _this.toggleAccordion = _this.toggleAccordion.bind(_assertThisInitialized(_this)); // this.updateTheme();
 
       _this.isCollapsed = true;
       return _this;
-    }
+    } // static get observedAttributes() {
+    //   return ['dark'];
+    // }
+    // fires after the element has been attached to the DOM
+
 
     _createClass(GovBanner, [{
       key: "connectedCallback",
-      // fires after the element has been attached to the DOM
       value: function connectedCallback() {
         this.render();
         this.postRenderActions();
@@ -425,12 +426,11 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
         this.bannerHeader = this.querySelector('header.usa-banner__header');
         this.accordionContent = this.querySelector('div.usa-banner__content');
         this.buttonToggle.addEventListener('click', this.toggleAccordion);
-      }
-    }, {
-      key: "updateTheme",
-      value: function updateTheme() {
-        this.themeStyleString = this.hasAttribute('dark') && ['', true, 'true', 'True'].includes(this.getAttribute('dark')) ? themeStyleString : '';
-      }
+      } // updateTheme() {
+      //   this.themeStyleString = this.hasAttribute('dark') && ['', true, 'true', 'True'].includes(this.getAttribute('dark'))
+      //     ? themeStyleString : '';
+      // }
+
     }, {
       key: "toggleAccordion",
       value: function toggleAccordion() {
@@ -460,28 +460,21 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
         this.buttonToggle.setAttribute('aria-expanded', 'false');
         this.bannerHeader.classList.remove('usa-banner__header--expanded');
         this.isCollapsed = true;
-      }
-    }, {
-      key: "attributeChangedCallback",
-      value: function attributeChangedCallback(attrName) {
-        if (attrName === 'dark') {
-          this.updateTheme();
-          this.render();
-          this.postRenderActions();
-        }
-      }
+      } // attributeChangedCallback(attrName) {
+      //   if (attrName === 'dark') {
+      //     this.updateTheme();
+      //     this.render();
+      //     this.postRenderActions();
+      //   }
+      // }
+
     }, {
       key: "render",
       value: function render() {
         var isCollapsed = this.isCollapsed;
         var hiddenString = isCollapsed ? 'hidden' : '';
         var ariaExpandedString = isCollapsed ? 'false' : 'true';
-        this.innerHTML = "\n      <style>\n        ".concat(this.themeStyleString, "\n      </style>\n      <div class=\"usa-banner\">\n        <div class=\"usa-accordion\">\n            <header class=\"usa-banner__header\">\n                <div class=\"usa-banner__inner\">\n                    <div class=\"grid-col-auto\">\n                        <img class=\"usa-banner__header-flag\" src=").concat(smallUsFlagURI, " alt=\"U.S. flag\">\n                    </div>\n                    <div class=\"grid-col-fill tablet:grid-col-auto\">\n                        <p class=\"usa-banner__header-text\">An official website of the United States government</p>\n                        <p class=\"usa-banner__header-action\" aria-hidden=\"true\">Here\u2019s how you know</p>\n                    </div>\n                    <button class=\"usa-accordion__button usa-banner__button\" aria-expanded=").concat(ariaExpandedString, " aria-controls=\"gov-banner\">\n                      <span class=\"usa-banner__button-text\">Here\u2019s how you know</span>\n                    </button>\n                </div>\n            </header>\n            <div class=\"usa-banner__content usa-accordion__content\" id=\"gov-banner\" ").concat(hiddenString, ">\n                <div class=\"grid-row grid-gap-lg\">\n                    <div class=\"usa-banner__guidance tablet:grid-col-6\">\n                        <img class=\"usa-banner__icon usa-media-block__img\" src=").concat(dotGovIconURI, " alt=\"Dot gov\">\n                        <div class=\"usa-media-block__body\">\n                            <p>\n                                <strong>The .gov means it\u2019s official.</strong>\n                                <br> Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you\u2019re on a federal government site.\n                            </p>\n                        </div>\n                    </div>\n                    <div class=\"usa-banner__guidance tablet:grid-col-6\">\n                        <img class=\"usa-banner__icon usa-media-block__img\" src=").concat(httpsIconURI, " alt=\"Https\">\n                        <div class=\"usa-media-block__body\">\n                            <p>\n                                <strong>The site is secure.</strong>\n                                <br> The <strong>https://</strong> ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely.\n                            </p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n      </div>\n      ");
-      }
-    }], [{
-      key: "observedAttributes",
-      get: function get() {
-        return ['dark'];
+        this.innerHTML = "\n      <div class=\"usa-banner\">\n        <div class=\"usa-accordion\">\n            <header class=\"usa-banner__header\">\n                <div class=\"usa-banner__inner\">\n                    <div class=\"grid-col-auto\">\n                        <img class=\"usa-banner__header-flag\" src=".concat(smallUsFlagURI, " alt=\"U.S. flag\">\n                    </div>\n                    <div class=\"grid-col-fill tablet:grid-col-auto\">\n                        <p class=\"usa-banner__header-text\">An official website of the United States government</p>\n                        <p class=\"usa-banner__header-action\" aria-hidden=\"true\">Here\u2019s how you know</p>\n                    </div>\n                    <button class=\"usa-accordion__button usa-banner__button\" aria-expanded=").concat(ariaExpandedString, " aria-controls=\"gov-banner\">\n                      <span class=\"usa-banner__button-text\">Here\u2019s how you know</span>\n                    </button>\n                </div>\n            </header>\n            <div class=\"usa-banner__content usa-accordion__content\" id=\"gov-banner\" ").concat(hiddenString, ">\n                <div class=\"grid-row grid-gap-lg\">\n                    <div class=\"usa-banner__guidance tablet:grid-col-6\">\n                        <img class=\"usa-banner__icon usa-media-block__img\" src=").concat(dotGovIconURI, " alt=\"Dot gov\">\n                        <div class=\"usa-media-block__body\">\n                            <p>\n                                <strong>The .gov means it\u2019s official.</strong>\n                                <br> Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you\u2019re on a federal government site.\n                            </p>\n                        </div>\n                    </div>\n                    <div class=\"usa-banner__guidance tablet:grid-col-6\">\n                        <img class=\"usa-banner__icon usa-media-block__img\" src=").concat(httpsIconURI, " alt=\"Https\">\n                        <div class=\"usa-media-block__body\">\n                            <p>\n                                <strong>The site is secure.</strong>\n                                <br> The <strong>https://</strong> ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely.\n                            </p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n      </div>\n      ");
       }
     }]);
 

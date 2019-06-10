@@ -23,13 +23,13 @@
         // establish prototype chain
         super();
         this.toggleAccordion = this.toggleAccordion.bind(this);
-        this.updateTheme();
+        // this.updateTheme();
         this.isCollapsed = true;
     }
 
-    static get observedAttributes() {
-      return ['dark'];
-    }
+    // static get observedAttributes() {
+    //   return ['dark'];
+    // }
 
     // fires after the element has been attached to the DOM
     connectedCallback() {
@@ -44,10 +44,10 @@
       this.buttonToggle.addEventListener('click', this.toggleAccordion);
     }
 
-    updateTheme() {
-      this.themeStyleString = this.hasAttribute('dark') && ['', true, 'true', 'True'].includes(this.getAttribute('dark'))
-        ? themeStyleString : '';
-    }
+    // updateTheme() {
+    //   this.themeStyleString = this.hasAttribute('dark') && ['', true, 'true', 'True'].includes(this.getAttribute('dark'))
+    //     ? themeStyleString : '';
+    // }
 
     toggleAccordion() {
       if (this.buttonToggle.getAttribute('aria-expanded') === 'true') {
@@ -75,22 +75,19 @@
       this.isCollapsed = true;
     }
 
-    attributeChangedCallback(attrName) {
-      if (attrName === 'dark') {
-        this.updateTheme();
-        this.render();
-        this.postRenderActions();
-      }
-    }
+    // attributeChangedCallback(attrName) {
+    //   if (attrName === 'dark') {
+    //     this.updateTheme();
+    //     this.render();
+    //     this.postRenderActions();
+    //   }
+    // }
 
     render() {
       const { isCollapsed } = this;
       const hiddenString = isCollapsed ? 'hidden' : '';
       const ariaExpandedString = isCollapsed ? 'false' : 'true';
       this.innerHTML = `
-      <style>
-        ${this.themeStyleString}
-      </style>
       <div class="usa-banner">
         <div class="usa-accordion">
             <header class="usa-banner__header">
