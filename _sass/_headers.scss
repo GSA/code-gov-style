@@ -89,13 +89,13 @@ header.main {
     width: 100%;
     z-index: 3;
 
+    @media screen and (max-width: 639px) {
+      top: 40px;
+    }
+
     &.not-at-top,
     &.expanded {
       box-shadow: 0 0 10px 0 $color-black;
-
-      @media screen and (max-width: 639px) {
-        top: 40px;
-      }
     }
 
     @media screen and (min-width: $header-switch) {
