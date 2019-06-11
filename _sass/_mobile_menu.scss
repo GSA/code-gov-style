@@ -1,7 +1,5 @@
 $menu-width: 320px;
 $item-height: 5rem;
-$mobile-menu-offset: 40px;
-$mobile-menu-offset-small: 21px;
 
 .mobile-menu-button {
   bottom: 0;
@@ -170,11 +168,11 @@ mobile-menu-button.dark {
   transition: 0.5s opacity;
   z-index: -1;
 
-  @media screen and (max-width: 799px) {
+  @media screen and (max-width: $mobile-menu-offset-switch-high) {
     top: calc(#{$header-height} + #{$mobile-menu-offset-small});
   }
 
-  @media screen and (max-width: 639px) {
+  @media screen and (max-width: $mobile-menu-offset-switch-low) {
     top: calc(#{$header-height} + #{$mobile-menu-offset});
   }
 
