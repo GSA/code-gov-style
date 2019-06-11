@@ -1,5 +1,7 @@
 # code-gov-style
 
+[![Build Status](https://circleci.com/gh/GSA/code-gov-style/tree/master.svg?style=svg)](https://circleci.com/gh/GSA/code-gov-style/tree/master)
+
 Style for code.gov including buttons, banners, and cards. Inspired by and somewhat based on USWDS.
 
 ## View
