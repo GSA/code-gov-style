@@ -1,5 +1,7 @@
 $menu-width: 320px;
 $item-height: 5rem;
+$mobile-menu-offset: 40px;
+$mobile-menu-offset-small: 21px;
 
 .mobile-menu-button {
   bottom: 0;
@@ -164,9 +166,17 @@ mobile-menu-button.dark {
   position: fixed;
   right: 0;
   top: 0;
-  top: calc(#{$header-height} + 40px);
+  top: calc(#{$header-height} + #{$mobile-menu-offset});
   transition: 0.5s opacity;
   z-index: -1;
+
+  @media screen and (max-width: 799px) {
+    top: calc(#{$header-height} + #{$mobile-menu-offset-small});
+  }
+
+  @media screen and (max-width: 639px) {
+    top: calc(#{$header-height} + #{$mobile-menu-offset});
+  }
 
   &.active {
     background-color: $color-gray-dark;
