@@ -89,8 +89,8 @@ header.main {
     width: 100%;
     z-index: 3;
 
-    @media screen and (max-width: 639px) {
-      top: 40px;
+    @media screen and (max-width: $mobile-menu-offset-switch-low) {
+      top: $mobile-menu-offset;
     }
 
     &.not-at-top,
