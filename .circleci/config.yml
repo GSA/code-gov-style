@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/node:8.12
+      - image: circleci/ruby:2.4-node
 
     working_directory: ~/code-gov-style
 
@@ -30,8 +30,9 @@ jobs:
 
       # run linting!
       - run: npm run lint
-      - run: npm run test-pa11y
-      
+      - run: gem install bundler
+      - run: npm run serve & sleep 5; npm run test-pa11y
+
 workflows:
   version: 2
   commit:
