@@ -31,6 +31,7 @@ jobs:
       # run linting!
       - run: npm run lint
       - run: gem install bundler
+      - run: bundle install
       - run: npm run serve & sleep 5; npm run test-pa11y
 
 workflows:
