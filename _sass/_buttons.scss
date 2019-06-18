@@ -38,13 +38,13 @@ button {
   }
 
   &.alt {
-    background-color: $brand-teal-medium !important;
-    border: 2px solid $brand-teal-medium;
+    background-color: $brand-primary !important;
+    border: 2px solid $brand-primary;
     font-weight: bold;
 
     &:hover {
-      background-color: $brand-teal-dark !important;
-      border-color: $brand-teal-dark !important;
+      background-color: $brand-blue-dark !important;
+      border-color: $brand-blue-dark !important;
     }
   }
 
