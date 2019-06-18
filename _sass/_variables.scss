@@ -90,6 +90,11 @@ $focus-outline: 2px dotted $color-gray-light !default;
 
 $header-height: 50px;
 
+$mobile-menu-offset: 40px;
+$mobile-menu-offset-small: 21px;
+$mobile-menu-offset-switch-high: 799px;
+$mobile-menu-offset-switch-low: 639px;
+
 @mixin center-vertically {
   position: absolute;
   transform: translateY(-50%);

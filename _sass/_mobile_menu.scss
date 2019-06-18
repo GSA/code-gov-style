@@ -164,9 +164,17 @@ mobile-menu-button.dark {
   position: fixed;
   right: 0;
   top: 0;
-  top: calc(#{$header-height} + 10px);
+  top: calc(#{$header-height} + #{$mobile-menu-offset});
   transition: 0.5s opacity;
   z-index: -1;
+
+  @media screen and (max-width: $mobile-menu-offset-switch-high) {
+    top: calc(#{$header-height} + #{$mobile-menu-offset-small});
+  }
+
+  @media screen and (max-width: $mobile-menu-offset-switch-low) {
+    top: calc(#{$header-height} + #{$mobile-menu-offset});
+  }
 
   &.active {
     background-color: $color-gray-dark;

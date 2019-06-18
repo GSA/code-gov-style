@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/node:8.12
+      - image: circleci/ruby:2.5.5-node-browsers
 
     working_directory: ~/code-gov-style
 
@@ -28,10 +28,11 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # run linting!
-      - run: npm run lint
-      - run: npm run test-pa11y
-      
+      - run: npm run lint # run linting!
+      - run: gem install bundler # install bundler
+      - run: bundle install # install needed ruby gems
+      - run: npm run serve & sleep 5; npm run test-pa11y # run server in background, then run accessibility testing
+
 workflows:
   version: 2
   commit:

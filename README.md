@@ -1,5 +1,7 @@
 # code-gov-style
 
+[![Build Status](https://circleci.com/gh/GSA/code-gov-style/tree/master.svg?style=svg)](https://circleci.com/gh/GSA/code-gov-style/tree/master)
+
 Style for code.gov including buttons, banners, and cards. Inspired by and somewhat based on USWDS.
 
 ## View
@@ -16,7 +18,7 @@ The code.gov Style Guide makes the search and usage of CSS classes easier by pro
 Clone the `code-gov-style` repository locally. After cloning locally, follow these steps:
 - In your terminal, run `npm install` to install all dependencies
 - In your terminal, run `bundle install` to add all ruby gems
-  - (Note - your Bundler version should be >1.17.3. To install Bundler, run `gem intall bundler` from your terminal)
+  - (Note - your Bundler version should be >1.17.3. To install Bundler, run `gem install bundler` from your terminal)
 - To serve the [Code.gov Style Guide](https://gsa.github.io/code-gov-style/) locally, in your terminal, run `npm run-script serve`
   - This should output what the server address is on your local machine.
 

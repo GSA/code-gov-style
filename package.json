@@ -1,6 +1,6 @@
 {
   "name": "@code.gov/code-gov-style",
-  "version": "1.15.0",
+  "version": "1.16.0",
   "description": "Style for code.gov including buttons, banners, and cards. Inspired by and somewhat based on USWDS.",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "test-pa11y": "./node_modules/.bin/pa11y-ci --config .pa11yci",
     "update-all": "npm i && npm run update-font && npm run update-custom-elements && npm run update-polyfills && npm run update-code-gov-web-components && npm run update-assets",
     "update-assets": "cp dist/js/* assets/js/. && cp node_modules/prismjs/prism.js assets/js/. && cp node_modules/@webcomponents/custom-elements/custom-elements.min.js.map assets/js/.",
-    "update-custom-elements": "npm install -S @webcomponents/custom-elements && cd node_modules/@webcomponents/custom-elements && npm install && npm build",
+    "update-custom-elements": "npm install -S @webcomponents/custom-elements && cd node_modules/@webcomponents/custom-elements && npm install",
     "update-font": "cd bash_scripts && bash update-font.sh",
     "update-polyfills": "cat ./node_modules/@babel/polyfill/dist/polyfill.min.js ./node_modules/custom-event-polyfill/polyfill.js ./node_modules/@webcomponents/custom-elements/custom-elements.min.js > dist/js/polyfills.js",
     "update-code-gov-web-components": "./node_modules/@babel/cli/bin/babel.js src/* > dist/js/code-gov-web-components.js"
@@ -34,7 +34,7 @@
   "homepage": "https://github.com/GSA/code-gov-style#readme",
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
-    "@code.gov/code-gov-font": "0.7.1",
+    "@code.gov/code-gov-font": "0.8.0",
     "@webcomponents/custom-elements": "^1.2.4",
     "custom-event-polyfill": "^1.0.6",
     "prismjs": "^1.15.0"
