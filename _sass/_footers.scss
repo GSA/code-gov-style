@@ -35,8 +35,8 @@ footer {
       padding: 0;
     }
   }
-  .footer-part {
 
+  .footer-part {
     ul {
       li {
         @media screen and (min-width: $breakpoint) {
@@ -59,17 +59,19 @@ footer {
       vertical-align: top;
       text-align: left;
 
-    @media screen and (min-width: $breakpoint) {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-    }
+      @media screen and (min-width: $breakpoint) {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
 
       ul {
         text-align: left;
+
         @media screen and (min-width: $breakpoint) {
           text-align: center;
         }
+
         li {
           a {
             border-bottom: 3px solid transparent;
@@ -90,17 +92,17 @@ footer {
     }
 
     &.logos {
-
-    @media screen and (min-width: $breakpoint) {
-      position: absolute;
-      text-align: left;
-      top: 25px;
-    }
+      @media screen and (min-width: $breakpoint) {
+        position: absolute;
+        text-align: left;
+        top: 25px;
+      }
 
       ul {
         li {
           a {
             text-decoration: none;
+
             img {
               @media screen and (min-width: $breakpoint) {
                 height: 7rem;
@@ -136,27 +138,28 @@ footer {
 
     &.socials {
       a {
-      text-decoration: none;
+        text-decoration: none;
       }
 
       li {
-       margin-top: 3rem;
-       margin-right: 0;
-       margin-bottom: 2rem;
-       margin-left: 0;
+        margin-top: 3rem;
+        margin-right: 0;
+        margin-bottom: 2rem;
+        margin-left: 0;
       }
+
       @media screen and (min-width: $breakpoint) {
         left: 85%;
         position: absolute;
         top: 80px;
       }
+
       .icon {
         color: $brand-gray;
         font-size: 30px;
       }
     }
   }
-  
 
   &.dark {
     background-color: $color-gray-dark;
@@ -180,7 +183,6 @@ footer {
           }
         }
       }
-
     }
   }
 }
