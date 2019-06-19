@@ -1,6 +1,7 @@
 $breakpoint: 937.5px;
 
 footer {
+  background-color: $brand-blue-light;
   clear: both;
   font-weight: 700;
   margin-left: auto;
@@ -9,9 +10,8 @@ footer {
   position: relative;
 
   @media screen and (min-width: $medium-screen) {
-    height: 18rem;
-    padding-bottom: 4rem;
-    padding-top: 4rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
   }
 
   // center if on small mobile device
@@ -25,18 +25,17 @@ footer {
   }
 
   .footer-content {
-    background-color: $brand-blue-light;
     height: 100%;
     margin: 0 auto;
+    max-width: 1024px;
     padding: 2rem;
     position: relative;
+
+    @media screen and (min-width: $breakpoint) {
+      padding: 0;
+    }
   }
   .footer-part {
-    padding: 0 1rem;
-  
-    @media screen and (min-width: 400.5px) {
-      padding: 0 3rem;
-    }
 
     ul {
       li {
@@ -61,11 +60,9 @@ footer {
       text-align: left;
 
     @media screen and (min-width: $breakpoint) {
-      left: 15%;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 50%;
     }
 
       ul {
@@ -95,10 +92,9 @@ footer {
     &.logos {
 
     @media screen and (min-width: $breakpoint) {
-      left: 15%;
       position: absolute;
       text-align: left;
-      top: 100px;
+      top: 25px;
     }
 
       ul {
@@ -150,10 +146,9 @@ footer {
        margin-left: 0;
       }
       @media screen and (min-width: $breakpoint) {
-        left: 60%;
+        left: 85%;
         position: absolute;
-        text-align: left;
-        top: 150px;
+        top: 80px;
       }
       .icon {
         color: $brand-gray;
