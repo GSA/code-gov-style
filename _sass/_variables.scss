@@ -7,20 +7,23 @@ $helvetica: (
 
 $header-font-family: 'TT Lakes', $helvetica;
 
-$brand-primary: #005289;
+$brand-primary: #07648d; //blue-cool-60v
 
-$brand-blue: #0071bc;
-$brand-blue-dark: #004370;
+$brand-blue: #07648d; //remove
+$brand-blue-dark: #074b69; //blue-cool-70v
+$brand-blue-light: #e1f3f8; //blue-cool-5v
 
-$brand-blue-gray-light: #71839d;
-$brand-blue-gray: #485568;
+$brand-blue-gray-light: #71839d;  //remove
+$brand-blue-gray: #485568; //remove
 
-$brand-teal: #43ddd7;
-$brand-teal-medium: #23c0ba;
-$brand-teal-dark: #00847f;
+$brand-gray: #3d4551;   //gray-cool-70
 
-$brand-purple: #42519f;
-$brand-purple-dark: #333f7b;
+$brand-teal: #1dc2ae; //mint-cool-30v
+$brand-teal-medium: #00a398; //mint-cool-40v
+$brand-teal-dark: #21827f; //mint-cool-50
+
+$brand-purple: #3f57a6; //indigo-cool-60
+$brand-purple-dark: #374274; //indigo-cool-70
 
 // USWDS Colors
 $color-primary:              #0071bc;

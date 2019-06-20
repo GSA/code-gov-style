@@ -7,7 +7,7 @@ html {
   body {
     background-color: $color-white;
     box-sizing: border-box;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
     font-feature-settings: "kern", "liga", "pnum";
     font-size: 14px;
     line-height: 1.42857143;
@@ -35,10 +35,14 @@ html {
       outline-offset: 3px;
     }
 
+    h2 {
+      font-weight: 700;
+    }
+
     h3 {
       font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
       font-size: 2rem;
-      font-weight: 500;
+      font-weight: 700;
       line-height: 1.3em;
     }
 

@@ -1,26 +1,22 @@
 $breakpoint: 937.5px;
 
 footer {
-  background-color: #e9e9e9;
+  background-color: $brand-blue-light;
   clear: both;
+  font-weight: 700;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 100px;
+  position: relative;
 
   @media screen and (min-width: $medium-screen) {
-    padding-bottom: 3rem;
-    padding-top: 0.75rem;
-    padding-right: 0;
-    padding-left: 0;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
   }
-
-  position: relative;
-  text-align: left;
 
   // center if on small mobile device
   @media screen and (max-width: $breakpoint) {
     height: auto;
-    text-align: center;
-    padding: 2rem;
 
     // don't show images on mobile
     img {
@@ -28,70 +24,100 @@ footer {
     }
   }
 
-  @media screen and (min-width: $medium-screen) {
-    height: 18rem;
-    padding-bottom: 4rem;
-    padding-top: 4rem;
-  }
-
   .footer-content {
     height: 100%;
     margin: 0 auto;
+    max-width: 1024px;
+    padding: 2rem;
     position: relative;
-    text-align: left;
 
-    .footer-part {
+    @media screen and (min-width: $breakpoint) {
+      padding: 0;
+    }
+  }
+
+  .footer-part {
+    ul {
+      li {
+        @media screen and (min-width: $breakpoint) {
+          display: inline-block;
+          margin: 2rem;
+
+          &:first-child {
+            margin-left: 0;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    &.links {
       overflow: hidden;
-      text-align: left;
       vertical-align: top;
-
-      @media screen and (max-width: 400.5px) {
-        padding: 0 1rem;
-      }
-
-      @media screen and (min-width: 400.5px) {
-        padding: 0 3rem;
-      }
-
-      @media screen and (max-width: $breakpoint) {
-        display: inline-block;
-        position: relative;
-      }
+      text-align: left;
 
       @media screen and (min-width: $breakpoint) {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: 50%;
       }
 
       ul {
-        li {
-          @media screen and (min-width: $breakpoint) {
-            display: inline-block;
-            margin: 2rem;
+        text-align: left;
 
-            &:first-child {
-              margin-left: 0;
+        @media screen and (min-width: $breakpoint) {
+          text-align: center;
+        }
+
+        li {
+          a {
+            border-bottom: 3px solid transparent;
+            color: $color-gray;
+            text-decoration: none;
+
+            &:hover {
+              border-color: $brand-blue-dark;
+              color: $brand-blue-dark;
             }
 
-            &:last-child {
-              margin-right: 0;
+            &:visited {
+              color: $color-gray;
             }
           }
         }
       }
+    }
 
-      &.links {
+    &.logos {
+      @media screen and (min-width: $breakpoint) {
+        position: absolute;
         text-align: left;
+        top: 25px;
+      }
 
-        @media screen and (min-width: $breakpoint) {
-          left: 5rem;
-        }
+      ul {
+        li {
+          a {
+            text-decoration: none;
 
-        ul {
-          li {
-            a {
+            img {
+              @media screen and (min-width: $breakpoint) {
+                height: 7rem;
+
+                + span {
+                  padding-left: 1.5rem;
+                }
+              }
+
+              @media screen and (min-width: 1000px) {
+                height: 10rem;
+              }
+            }
+
+            @media screen and (max-width: $breakpoint) {
               border-bottom: 3px solid transparent;
               color: $color-gray;
               text-decoration: none;
@@ -108,51 +134,29 @@ footer {
           }
         }
       }
+    }
 
-      &.logos {
-        @media screen and (max-width: $breakpoint) {
-          text-align: left;
-        }
+    &.socials {
+      a {
+        text-decoration: none;
+      }
 
-        @media screen and (min-width: $breakpoint) {
-          right: 5rem;
-          text-align: right;
-        }
+      li {
+        margin-top: 3rem;
+        margin-right: 0;
+        margin-bottom: 2rem;
+        margin-left: 0;
+      }
 
-        ul {
-          li {
-            a {
-              img {
-                @media screen and (min-width: $breakpoint) {
-                  height: 7rem;
+      @media screen and (min-width: $breakpoint) {
+        left: 85%;
+        position: absolute;
+        top: 80px;
+      }
 
-                  + span {
-                    display: none;
-                  }
-                }
-
-                @media screen and (min-width: 1000px) {
-                  height: 10rem;
-                }
-              }
-
-              @media screen and (max-width: $breakpoint) {
-                border-bottom: 3px solid transparent;
-                color: $color-gray;
-                text-decoration: none;
-
-                &:hover {
-                  border-color: $brand-teal-medium;
-                  color: $brand-blue-dark;
-                }
-
-                &:visited {
-                  color: $color-gray;
-                }
-              }
-            }
-          }
-        }
+      .icon {
+        color: $brand-gray;
+        font-size: 30px;
       }
     }
   }
@@ -174,26 +178,6 @@ footer {
 
               &:visited {
                 color: $color-gray-lighter;
-              }
-            }
-          }
-        }
-      }
-
-      div.logos {
-        ul {
-          li {
-            a {
-              @media screen and (max-width: $breakpoint) {
-                color: $color-gray-lighter;
-
-                &:hover {
-                  color: $color-gray-lighter;
-                }
-
-                &:visited {
-                  color: $color-gray-lighter;
-                }
               }
             }
           }

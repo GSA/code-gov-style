@@ -20,8 +20,8 @@ input {
 
   /* we're adding a border so it aligns with the input */
   + button.go {
-    background-color: $brand-teal-medium !important;
-    border: 2px solid $brand-teal-medium;
+    background-color: $brand-primary !important;
+    border: 2px solid $brand-primary;
     border-top-left-radius: 0;
     border-top-right-radius: 4px;
     border-bottom-left-radius: 0;
@@ -36,8 +36,8 @@ input {
     width: 40px;
 
     &:hover {
-      background-color: $brand-teal-dark !important;
-      border-color: $brand-teal-dark !important;
+      background-color: $brand-blue-dark !important;
+      border-color: $brand-blue-dark !important;
     }
 
     @media screen and (min-width: $small-screen) {
