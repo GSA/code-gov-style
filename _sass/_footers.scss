@@ -25,7 +25,6 @@ footer {
   }
 
   .footer-content {
-    height: 100%;
     margin: 0 auto;
     max-width: 1024px;
     padding: 2rem;
@@ -37,7 +36,22 @@ footer {
   }
 
   .footer-part {
+    @media screen and (min-width: $breakpoint) {
+      &.is-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+
+      &.is-inline {
+        display: inline-block;
+      }
+    }
+
     ul {
+      padding: 0;
+      margin: 0;
+
       li {
         @media screen and (min-width: $breakpoint) {
           display: inline-block;
@@ -55,16 +69,6 @@ footer {
     }
 
     &.links {
-      overflow: hidden;
-      vertical-align: top;
-      text-align: left;
-
-      @media screen and (min-width: $breakpoint) {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
       ul {
         text-align: left;
 
@@ -72,7 +76,19 @@ footer {
           text-align: center;
         }
 
+        &.left {
+          text-align: left;
+        }
+
         li {
+          @media screen and (min-width: $breakpoint) {
+            margin: 0 2rem 0 0;
+
+            &:not(:first-of-type) {
+              margin: 0 2rem;
+            }
+          }
+
           a {
             border-bottom: 3px solid transparent;
             color: $color-gray;
@@ -92,13 +108,16 @@ footer {
     }
 
     &.logos {
-      @media screen and (min-width: $breakpoint) {
-        position: absolute;
-        text-align: left;
-        top: 25px;
-      }
-
       ul {
+        @media screen and (max-width: $breakpoint) {
+          margin: 1em 0;
+        }
+
+        @media screen and (min-width: $breakpoint) {
+          // https://css-tricks.com/fighting-the-space-between-inline-block-elements/
+          font-size: 0;
+        }
+
         li {
           a {
             text-decoration: none;
@@ -106,9 +125,13 @@ footer {
             img {
               @media screen and (min-width: $breakpoint) {
                 height: 7rem;
+                display: inline-block;
 
                 + span {
                   padding-left: 1.5rem;
+                  font-size: initial;
+                  vertical-align: bottom;
+                  display: inline-block;
                 }
               }
 
@@ -137,26 +160,35 @@ footer {
     }
 
     &.socials {
-      a {
-        text-decoration: none;
+      &.is-inline {
+        position: relative;
+        top: -5px;
       }
 
-      li {
-        margin-top: 3rem;
-        margin-right: 0;
-        margin-bottom: 2rem;
-        margin-left: 0;
-      }
+      ul {
+        height: 30px;
+        margin: 0 0.5rem 0 0;
 
-      @media screen and (min-width: $breakpoint) {
-        left: 85%;
-        position: absolute;
-        top: 80px;
-      }
+        li {
+          display: inline-block;
+          margin: 0 0.5rem 0 0;
 
-      .icon {
-        color: $brand-gray;
-        font-size: 30px;
+          &:not(:first-of-type) {
+            margin: 0 0.5rem;
+          }
+
+          a {
+            text-decoration: none;
+            display: block;
+            height: inherit;
+
+            > div.icon {
+              margin: 0;
+              color: $brand-gray;
+              font-size: 30px;
+            }
+          }
+        }
       }
     }
   }
@@ -172,10 +204,7 @@ footer {
             a {
               color: $color-gray-lighter;
 
-              &:hover {
-                color: $color-gray-lighter;
-              }
-
+              &:hover,
               &:visited {
                 color: $color-gray-lighter;
               }
