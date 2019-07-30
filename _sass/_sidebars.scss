@@ -70,6 +70,10 @@
     position: relative;
   }
 
+  ul {
+    list-style-type: none;
+  }
+
   // first-level list
   > ul {
     background-color: transparent;
