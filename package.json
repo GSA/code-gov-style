@@ -4,6 +4,7 @@
   "description": "Style for code.gov including buttons, banners, and cards. Inspired by and somewhat based on USWDS.",
   "main": "index.js",
   "scripts": {
+    "licenses": "license-checker --json --relativeLicensePath --out dependency_licenses.json",
     "serve": "bundle exec jekyll serve",
     "serve-on-server": "sudo bundle exec jekyll serve --host=0.0.0.0 --port=80",
     "lint": "stylelint ./_sass/*.scss",
@@ -37,6 +38,7 @@
     "@code.gov/code-gov-font": "0.9.0",
     "@webcomponents/custom-elements": "^1.2.4",
     "custom-event-polyfill": "^1.0.6",
+    "license-checker": "^25.0.1",
     "prismjs": "^1.15.0"
   },
   "devDependencies": {
