@@ -72,8 +72,9 @@ filter-box {
         margin-top: 15px;
 
         label {
+          display: inline-block;
+
           span {
-            display: inline-block;
             padding-right: 1.75rem;
           }
         }
