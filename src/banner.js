@@ -25,11 +25,12 @@
 
     update() {
       this.innerHTML = `
-        <div class="banner" style="background-image: url('${this.getAttribute('image')}')">
-          <div class="banner-content">
-            <div class="banner-title">${this.getAttribute('title')}</div>
+        <section class="margin-top-8">
+          <div class="bg-primary padding-y-8">
+          
+            <div class="font-heading-3xl text-uppercase text-white text-center">${this.getAttribute('title')}</div>
           </div>
-        </div>
+        </section>
       `;
     }
 

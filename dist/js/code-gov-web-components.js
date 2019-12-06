@@ -56,7 +56,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     }, {
       key: "update",
       value: function update() {
-        this.innerHTML = "\n        <div class=\"banner\" style=\"background-image: url('".concat(this.getAttribute('image'), "')\">\n          <div class=\"banner-content\">\n            <div class=\"banner-title\">").concat(this.getAttribute('title'), "</div>\n          </div>\n        </div>\n      ");
+        this.innerHTML = "\n        <section class=\"margin-top-8\">\n          <div class=\"bg-primary padding-y-8\">\n          \n            <div class=\"font-heading-3xl text-uppercase text-white text-center\">".concat(this.getAttribute('title'), "</div>\n          </div>\n        </section>\n      ");
       }
     }], [{
       key: "observedAttributes",
