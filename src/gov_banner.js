@@ -71,7 +71,7 @@
                         <p class="usa-banner__header-action" aria-hidden="true">Here’s how you know</p>
                     </div>
                     <button class="usa-accordion__button usa-banner__button" aria-expanded=${ariaExpandedString} aria-controls="gov-banner">
-                      <span class="usa-banner__button-text">Here’s how you know</span>
+                      <span class="usa-banner__button-text text-secondary-light">Here’s how you know</span>
                     </button>
                 </div>
             </header>
