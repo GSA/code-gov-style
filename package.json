@@ -34,21 +34,21 @@
   },
   "homepage": "https://github.com/GSA/code-gov-style#readme",
   "dependencies": {
-    "@babel/polyfill": "^7.0.0",
+    "@babel/polyfill": "^7.8.7",
     "@code.gov/code-gov-font": "0.10.0",
     "@webcomponents/custom-elements": "^1.2.4",
     "custom-event-polyfill": "^1.0.6",
-    "license-checker": "^25.0.1",
+    "license-checker": "github:davglass/license-checker#pull/234/head",
     "prismjs": "^1.15.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.4",
-    "@babel/plugin-transform-arrow-functions": "^7.0.0",
-    "@babel/preset-env": "^7.4.4",
-    "@babel/preset-react": "^7.0.0",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-arrow-functions": "^7.8.3",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
     "glyphhanger": "^3.0.3",
-    "pa11y-ci": "^2.1.1",
+    "pa11y-ci": "^2.3.0",
     "stylelint": "^10.0.1",
     "stylelint-config-standard": "^18.3.0"
   }
