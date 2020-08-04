@@ -1,4 +1,8 @@
-# code-gov-style
+# Deprecated
+
+This project repo is no longer being maintained.
+
+## code-gov-style
 
 [![Build Status](https://circleci.com/gh/GSA/code-gov-style/tree/master.svg?style=svg)](https://circleci.com/gh/GSA/code-gov-style/tree/master)
 
